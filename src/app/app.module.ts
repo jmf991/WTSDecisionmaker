@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { GlobalElementsComponent } from "./global-elements/global-elements.component";
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 //Angular Material Components
 
 import { MatInputModule } from "@angular/material/input";
@@ -104,6 +104,7 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     MatCheckboxModule,
     MatInputModule,
+    FlexLayoutModule,
     MatAutocompleteModule,
     MatDatepickerModule,
     MatFormFieldModule,
