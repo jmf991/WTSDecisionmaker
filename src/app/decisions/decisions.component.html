@@ -1,0 +1,67 @@
+<div class="decisions">
+  <div class="inner">
+    <h2>DMN Models</h2>
+  </div>
+
+  <div class="list-container">
+    <!---->
+    <div class="actions">
+      <div class="inner">
+
+        <button mat-raised-button color="primary" (click)="openUploadDialog()">Upload</button>
+        <button mat-raised-button color="primary" (click)="openUploadDialog()">Search</button>
+        <button mat-raised-button color="primary" (click)="openUploadDialog()">Filter</button>
+        <button mat-raised-button color="primary" (click)="openUploadDialog()">Sort</button>
+      </div>
+    </div>
+    <!---->
+    <div class="inner">
+      <mat-card class="list-card">
+        <mat-list>
+          <mat-list-item>
+            <div class="header">
+              <span>Name</span>
+              <span>Category</span>
+              <span>Description</span>
+              <span>Owner</span>
+              <span>Status</span>
+            </div>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <!-- <ng-container *ngFor="let decision of decisions"> -->
+          <ng-container>
+            <!-- <mat-list-item (click)="navigateToDetail(decision.id)"> -->
+            <mat-list-item [routerLink]="['/decision-details']">
+              <div class="decision">
+                <span>TT-Aufsichtsratvergütung</span>
+                <span>Value added taxes</span>
+                <span>Placeholder description</span>
+                <span>Placeholder owner</span>
+                <span>DRAFT</span>
+              </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item [routerLink]="['/decision-details']">
+              <div class="decision">
+                <span>TT-Aufsichtsratvergütung</span>
+                <span>Value added taxes</span>
+                <span>Placeholder description</span>
+                <span>Placeholder owner</span>
+                <span>DRAFT</span>
+              </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <mat-list-item [routerLink]="['/decision-details']">
+              <div class="decision">
+                <span>TT-Aufsichtsratvergütung</span>
+                <span>Value added taxes</span>
+                <span>Placeholder description</span>
+                <span>Placeholder owner</span>
+                <span>DRAFT</span>
+              </div>
+            </mat-list-item>
+          </ng-container>
+        </mat-list>
+      </mat-card>
+    </div>
+  </div>

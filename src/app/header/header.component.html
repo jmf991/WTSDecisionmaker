@@ -1,0 +1,38 @@
+<div class="header">
+  <mat-toolbar>
+    <img style="max-width: 200px;" src="assets/images/wts-global-logo.svg" />
+    <span style="flex: 1 1 auto;"></span>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Pablo M.&nbsp;
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">account_circle
+            </mat-icon>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <button mat-raised-button color="primary" (click)="onSetTheme('dark-theme','')">Light theme</button>
+        <button mat-raised-button color="primary" (click)="onSetTheme('','dark-theme')">Dark theme</button>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-toolbar>
+  <mat-toolbar color="accent">
+    <mat-toolbar-row>
+      <a mat-button [routerLink]="['/global']">Global elements</a>
+      <a mat-button [routerLink]="['/']">Dashboard</a>
+      <a mat-button [routerLink]="['/wizard']">Wizard</a>
+      <a mat-button [routerLink]="['/login']">Login</a>
+      <a mat-button [routerLink]="['/forgottenPassword']">Forgotten password</a>
+      <a mat-button [routerLink]="['/reset-password']">Reset password</a>
+      <a mat-button [routerLink]="['/decisions']">DMN models</a>
+      <a mat-button [routerLink]="['/reports']">Reports</a>
+      <span style="flex: 1 1 auto;"></span>
+      <button mat-button>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+      </button>
+      <button mat-button>
+        <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+      </button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
