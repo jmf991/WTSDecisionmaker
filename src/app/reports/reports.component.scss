@@ -1,3 +1,5 @@
+@import "../../assets/styles/variables";
+
 .list-container {
   padding: 0;
   width: 100%;
@@ -71,6 +73,23 @@ span {
 }
 .list-input.search-input {
   margin-right: 10px;
+}
+
+@media (max-width: $mobile) {
+  .list-input {
+    width: 50% !important;
+    float: left;
+  }
+  .upload-input {
+    width: 100% !important;
+  }
+  .list-input.search-input {
+    margin-right: 0;
+  }
+  .list-input .inner {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
 }
 
 .list-input .mat-form-field-wrapper {
