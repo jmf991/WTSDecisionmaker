@@ -1,51 +1,109 @@
 
   <div class="reports">
     <div class="inner">
-      <h2>Reports</h2>
+      <h2>DMN Models</h2>
     </div>
     <div class="list-container">
       <div class="inner">
         <mat-card class="list-card">
-          <mat-list class="box-10">
+          <div class="actions-container">
+            <div class="box-2">
+              <div class="inner">
+                <button class="box-12 upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()">Upload
+                  <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="Example delete icon">
+                    cloud_upload</mat-icon></button>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <div class="box-2 list-input search-input">
+              <div class="inner">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Search</mat-label>
+                  <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
+                  <a href="javascript:;" title="search">
+                    <mat-icon class="input-icon" aria-hidden="false" aria-label="Example delete icon">search</mat-icon>
+                  </a>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="box-2 list-input">
+              <div class="inner">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Sort by</mat-label>
+                  <mat-select>
+                    <mat-option value="1">
+                      Name
+                    </mat-option>
+                    <mat-option value="2">
+                      Category
+                    </mat-option>
+                    <mat-option value="2">
+                      Description
+                    </mat-option>
+                    <mat-option value="2">
+                      Owner
+                    </mat-option>
+                    <mat-option value="2">
+                      State
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="box-2 list-input">
+              <div class="inner">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Filter</mat-label>
+                  <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
+                  <a href="javascript:;" title="filter">
+                    <mat-icon class="input-icon" aria-hidden="false" aria-label="filter list icon">filter_list
+                    </mat-icon>
+                  </a>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <mat-list class="box-12">
             <div class="inner">
               <ng-container>
                 <mat-list-item style="height:0;">
                 </mat-list-item>
                 <mat-list-item [routerLink]="['/report-details']">
-                  <div class="report">
-                    <span style="font-weight:bold;">TT-Aufsichtsratvergütung</span>
+                  <div class="list-item">
+                    <span class="name">TT-Aufsichtsratvergütung</span>
                     <span>2020-03-23T11:44:36</span>
                     <span>User, Dummy</span>
                   </div>
                 </mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item [routerLink]="['/report-details']">
-                  <div class="report">
-                    <span style="font-weight:bold;">TT-Aufsichtsratvergütung</span>
+                  <div class="list-item">
+                    <span class="name">TT-Aufsichtsratvergütung</span>
                     <span>2020-03-23T11:44:36</span>
                     <span>User, Dummy</span>
                   </div>
                 </mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item [routerLink]="['/report-details']">
-                  <div class="report">
-                    <span style="font-weight:bold;">TT-Aufsichtsratvergütung</span>
+                  <div class="list-item">
+                    <span class="name">TT-Aufsichtsratvergütung</span>
                     <span>2020-03-23T11:44:36</span>
                     <span>User, Dummy</span>
                   </div>
                 </mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item [routerLink]="['/report-details']">
-                  <div class="report">
-                    <span style="font-weight:bold;">TT-Aufsichtsratvergütung</span>
+                  <div class="list-item">
+                    <span class="name">TT-Aufsichtsratvergütung</span>
                     <span>2020-03-23T11:44:36</span>
                     <span>User, Dummy</span>
                   </div>
                 </mat-list-item>
                 <mat-divider></mat-divider>
                 <mat-list-item [routerLink]="['/report-details']">
-                  <div class="report">
-                    <span style="font-weight:bold;">TT-Aufsichtsratvergütung</span>
+                  <div class="list-item">
+                    <span class="name">TT-Aufsichtsratvergütung</span>
                     <span>2020-03-23T11:44:36</span>
                     <span>User, Dummy</span>
                   </div>
@@ -53,22 +111,7 @@
               </ng-container>
             </div>
           </mat-list>
-          <div class="box-2">
-            <div class="inner">
-              <button style="margin:5px;" class="box-12" mat-raised-button color="primary"
-                (click)="openUploadDialog()">Upload</button>
-              <button style="margin:5px;" class="box-12" mat-raised-button color="primary"
-                (click)="openSearchDialog()">Search</button>
-              <button style="margin:5px;" class="box-12" mat-raised-button color="primary"
-                (click)="openFilterDialog()">Filter</button>
-              <button style="margin:5px;" class="box-12" mat-raised-button color="primary"
-                (click)="openSortDialog()">Sort</button>
-              <div class="clearfix"></div>
-            </div>
-          </div>
           <div class="clearfix"></div>
         </mat-card>
       </div>
     </div>
-
-    <!---->

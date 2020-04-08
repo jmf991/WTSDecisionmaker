@@ -8,6 +8,7 @@ import { SearchDialogComponent } from "../shared/component/dialog/dialog.compone
 import { FilterDialogComponent } from "../shared/component/dialog/dialog.component";
 import { SortDialogComponent } from "../shared/component/dialog/dialog.component";
 
+
 @Component({
   selector: "app-decisions",
   templateUrl: "./decisions.component.html",

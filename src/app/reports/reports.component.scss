@@ -7,7 +7,7 @@
 }
 
 .header,
-.report {
+.list-item {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -19,8 +19,12 @@
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.report {
+.list-item {
   font-size: 14px;
+  justify-content: initial;
+}
+.list-item .name {
+  font-weight: bold;
 }
 
 mat-list-item:not(:first-child) {
@@ -38,7 +42,7 @@ span {
   overflow-x: hidden;
   // text-align: center;
 }
-// .report span {
+// .decision span {
 //   text-align: center;
 // }
 
@@ -55,4 +59,29 @@ span {
 }
 .list-card.mat-card .mat-list-base {
   padding-top: 0;
+}
+
+.input-icon {
+  position: absolute;
+  right: 0px;
+  bottom: 1px;
+}
+.list-input {
+  float: right;
+}
+.list-input.search-input {
+  margin-right: 10px;
+}
+
+.list-input .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.upload-btn {
+  margin: 5px;
+}
+
+.upload-icon {
+  left: 20px;
+  bottom: 8px;
 }
