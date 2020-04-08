@@ -7,8 +7,7 @@
 }
 
 .header,
-.report,
-.upload {
+.report {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -37,18 +36,23 @@ span {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow-x: hidden;
-  text-align: center;
+  // text-align: center;
+}
+// .report span {
+//   text-align: center;
+// }
+
+.actions {
+  text-align: right;
+}
+.actions button {
+  margin: 5px;
+  margin-bottom: 0;
 }
 
-::ng-deep .error-snackbar {
-  background: #fb003c;
-  color: black;
+.list-card.mat-card .mat-divider-horizontal {
+  position: relative;
 }
-::ng-deep .mat-simple-snackbar-action {
-  color: black;
-}
-
-::ng-deep .success-snackbar {
-  background: #35fd53;
-  color: black;
+.list-card.mat-card .mat-list-base {
+  padding-top: 0;
 }
