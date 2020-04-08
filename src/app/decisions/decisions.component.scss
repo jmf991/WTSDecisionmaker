@@ -7,7 +7,7 @@
 }
 
 .header,
-.decision  {
+.decision {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -36,10 +36,23 @@ span {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow-x: hidden;
+  // text-align: center;
+}
+.decision span {
   text-align: center;
 }
 
+.actions {
+  text-align: right;
+}
+.actions button {
+  margin: 5px;
+  margin-bottom: 0;
+}
 
-
-.actions{text-align:right;}
-.actions button{margin:5px; margin-bottom: 0;}
+.list-card.mat-card .mat-divider-horizontal {
+  position: relative;
+}
+.list-card.mat-card .mat-list-base {
+  padding-top: 0;
+}

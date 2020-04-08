@@ -50,6 +50,9 @@ import { ResetPasswordComponent } from "./reset-password/reset-password.componen
 import { ForgottenPasswordComponent } from "./forgottenPassword/forgottenPassword.component";
 import { DecisionsComponent } from "./decisions/decisions.component";
 import { UploadDialogComponent } from "./shared/component/dialog/dialog.component";
+import { SearchDialogComponent } from "./shared/component/dialog/dialog.component";
+import { FilterDialogComponent } from "./shared/component/dialog/dialog.component";
+import { SortDialogComponent } from "./shared/component/dialog/dialog.component";
 import { DecisionDetailsComponent } from "./decision-details/decision-details.component";
 import { DecisionEditComponent } from "./decision-edit/decision-edit.component";
 import { ReportsComponent } from "./reports/reports.component";
@@ -65,6 +68,9 @@ const appRoutes: Routes = [
   { path: "reset-password", component: ResetPasswordComponent },
   { path: "decisions", component: DecisionsComponent },
   { path: "dialog-upload", component: UploadDialogComponent },
+  { path: "dialog-search", component: SearchDialogComponent },
+  { path: "dialog-filter", component: FilterDialogComponent },
+  { path: "dialog-sort", component: SortDialogComponent },
   { path: "decision-details", component: DecisionDetailsComponent },
   { path: "decision-edit", component: DecisionEditComponent },
   { path: "reports", component: ReportsComponent },
@@ -85,6 +91,9 @@ const appRoutes: Routes = [
     ResetPasswordComponent,
     DecisionsComponent,
     UploadDialogComponent,
+    SearchDialogComponent,
+    FilterDialogComponent,
+    SortDialogComponent,
     DecisionDetailsComponent,
     DecisionEditComponent,
     ReportsComponent,

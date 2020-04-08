@@ -17,9 +17,11 @@ export class HeaderComponent implements OnInit {
   }
   onSetTheme(previousTheme, newTheme) {
     if (newTheme != '' && !this.document.body.classList.contains(newTheme)) {
+      this.document.getElementById("Decision-manager-application").classList.add(newTheme);
       this.document.body.classList.add(newTheme);
     }
     if (previousTheme != '' && this.document.body.classList.contains(previousTheme)) {
+      this.document.getElementById("Decision-manager-application").classList.remove(previousTheme);
       this.document.body.classList.remove(previousTheme);
     }
     this.componentCssClass = newTheme;
