@@ -62,12 +62,12 @@
           </div>
           <div class="clearfix"></div>
         </div>
-
+        <!--expanded-->
         <mat-divider></mat-divider>
         <mat-list-item class="list-item" [routerLink]="['/decision-details']">
           <div class="box-12">
             <div class="inner">
-              <h6 class="name" style="margin-bottom:0;">TT-Aufsichtsratvergütung</h6>
+              <h6 class="name" style="margin-bottom:0;">TT-Aufsichtsratvergütung (expanded)</h6>
             </div>
           </div>
           <div class="box-4 col-1">
@@ -86,17 +86,16 @@
             <div class="inner">
               <button class="box-12 action-btn" mat-raised-button color="primary"
                 [routerLink]="['/decision-details']">Details </button>
-                <div class="clearfix"></div>
+              <div class="clearfix"></div>
             </div>
           </div>
           <div class="clearfix"></div>
         </mat-list-item>
-
         <mat-divider></mat-divider>
         <mat-list-item class="list-item" [routerLink]="['/decision-details']">
           <div class="box-12">
             <div class="inner">
-              <h6 class="name" style="margin-bottom:0;">TT-Aufsichtsratvergütung</h6>
+              <h6 class="name" style="margin-bottom:0;">TT-Aufsichtsratvergütung (expanded) </h6>
             </div>
           </div>
           <div class="box-4 col-1">
@@ -115,12 +114,46 @@
             <div class="inner">
               <button class="box-12 action-btn" mat-raised-button color="primary"
                 [routerLink]="['/decision-details']">Details </button>
-                <div class="clearfix"></div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </mat-list-item>
+        <!-- / expanded-->
+        <!--expanded with description-->
+        <mat-divider></mat-divider>
+        <mat-list-item class="list-item" [routerLink]="['/decision-details']">
+          <div class="box-12">
+            <div class="inner">
+              <h6 class="name">TT-Aufsichtsratvergütung (expanded with description on top)</h6>
+              <p class="description" style="margin-bottom:0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+          </div>
+          <div class="box-4 col-1">
+            <div class="inner">
+              <p><span>Category:</span>&nbsp;&nbsp;Value added taxes</p>
+              <p><span>Owner:</span>&nbsp;&nbsp;Placeholder owner</p>
+            </div>
+          </div>
+          <div class="box-4 col-2">
+            <div class="inner">
+              <p><span>Status:</span>&nbsp;&nbsp;DRAFT</p>
+            </div>
+          </div>
+          <div class="box-4 col-3">
+            <div class="inner">
+              <button class="box-12 action-btn" mat-raised-button color="primary"
+                [routerLink]="['/decision-details']">Details </button>
+              <div class="clearfix"></div>
             </div>
           </div>
           <div class="clearfix"></div>
         </mat-list-item>
       </mat-card>
+      <!--expandable-->
       <mat-list class="box-12">
         <ng-container>
           <mat-list-item style="height:0;">
@@ -129,7 +162,7 @@
             <mat-expansion-panel class="mb10">
               <mat-expansion-panel-header>
                 <mat-panel-title><a class="list-item-title"
-                    [routerLink]="['/decision-details']">TT-Aufsichtsratvergütung</a> </mat-panel-title>
+                    [routerLink]="['/decision-details']">TT-Aufsichtsratvergütung (expandable)</a></mat-panel-title>
                 <mat-panel-description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore magna aliqua.
                 </mat-panel-description>
@@ -147,7 +180,8 @@
               </div>
               <div class="box-4 col-3">
                 <div class="inner">
-                  <button class="box-12 action-btn" mat-raised-button color="primary" [routerLink]="['/decision-details']">Details </button>
+                  <button class="box-12 action-btn" mat-raised-button color="primary"
+                    [routerLink]="['/decision-details']">Details </button>
                   <div class="clearfix"></div>
                 </div>
               </div>
@@ -159,7 +193,7 @@
             <mat-expansion-panel class="mb10">
               <mat-expansion-panel-header>
                 <mat-panel-title><a class="list-item-title"
-                    [routerLink]="['/decision-details']">TT-Aufsichtsratvergütung</a> </mat-panel-title>
+                    [routerLink]="['/decision-details']">TT-Aufsichtsratvergütung (expandable)</a></mat-panel-title>
                 <mat-panel-description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                   incididunt ut labore et dolore magna aliqua.
                 </mat-panel-description>
@@ -177,37 +211,8 @@
               </div>
               <div class="box-4 col-3">
                 <div class="inner">
-                  <button class="box-12 action-btn" mat-raised-button color="primary" [routerLink]="['/decision-details']">Details </button>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-              <div class="clearfix"></div>
-            </mat-expansion-panel>
-          </mat-accordion>
-          <mat-divider></mat-divider>
-          <mat-accordion class="list-item">
-            <mat-expansion-panel class="mb10">
-              <mat-expansion-panel-header>
-                <mat-panel-title><a class="list-item-title"
-                    [routerLink]="['/decision-details']">TT-Aufsichtsratvergütung</a> </mat-panel-title>
-                <mat-panel-description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua.
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <div class="box-4 col-1">
-                <div class="inner">
-                  <p><span>Category:</span>&nbsp;&nbsp;Value added taxes</p>
-                  <p><span>Owner:</span>&nbsp;&nbsp;Placeholder owner</p>
-                </div>
-              </div>
-              <div class="box-4 col-2">
-                <div class="inner">
-                  <p><span>Status:</span>&nbsp;&nbsp;DRAFT</p>
-                </div>
-              </div>
-              <div class="box-4 col-3">
-                <div class="inner">
-                  <button class="box-12 action-btn" mat-raised-button color="primary" [routerLink]="['/decision-details']">Details </button>
+                  <button class="box-12 action-btn" mat-raised-button color="primary"
+                    [routerLink]="['/decision-details']">Details </button>
                   <div class="clearfix"></div>
                 </div>
               </div>
@@ -216,6 +221,7 @@
           </mat-accordion>
         </ng-container>
       </mat-list>
+      <!-- / expandable-->
       <div class="clearfix"></div>
     </div>
   </div>
