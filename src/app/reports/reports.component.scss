@@ -8,11 +8,19 @@
   padding: 16px 0 16px 0;
 }
 
-.header,
+.list-container .mat-list-item {
+  height: 100%;
+}
+// .header,
 .list-item {
   width: 100%;
-  display: flex;
-  justify-content: space-around;
+  display: block;
+  height: 100%;
+  font-size: 14px;
+}
+
+.list-item .name {
+  font-weight: bold;
 }
 
 .header span {
@@ -21,22 +29,21 @@
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.list-item {
-  font-size: 14px;
-  justify-content: initial;
-}
-.list-item .name {
+// mat-list-item:not(:first-child) {
+//   cursor: pointer;
+//   &:hover {
+//     background-color: lightgrey;
+//   }
+// }
+
+.list-item span {
   font-weight: bold;
 }
-
-mat-list-item:not(:first-child) {
-  cursor: pointer;
-
-  &:hover {
-    background-color: lightgrey;
-  }
+.list-item-title:hover,
+.list-item-title:focus,
+.list-item-title.active {
+  text-decoration: underline;
 }
-
 span {
   width: 200px;
   text-overflow: ellipsis;
@@ -75,7 +82,7 @@ span {
   margin-right: 10px;
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet) {
   .list-input {
     width: 50% !important;
     float: left;
@@ -90,14 +97,28 @@ span {
     margin-bottom: 0;
     padding-bottom: 0;
   }
+
+  .action-btn {
+    float: left !important;
+  }
+  .col-1 .inner  {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .col-2 .inner {
+    margin-top: 0;
+    padding-top: 0;
+  }
 }
 
 .list-input .mat-form-field-wrapper {
   padding-bottom: 0;
 }
 
-.upload-btn {
+.action-btn {
   margin: 5px;
+  width: 33.33%;
+  float: right;
 }
 
 .upload-icon {
