@@ -1,5 +1,5 @@
 @import "../../assets/styles/_variables.scss";
-.header  {
+.header {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -12,5 +12,28 @@
 }
 
 @media (max-width: $mobile) {
-  .details-card .inner {margin-bottom: 0;padding-bottom: 0;margin-top: 0;padding-top: 0;}
+  .details-card .inner {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
   }
+}
+
+.upload-btn {
+  width: auto;
+  padding: 5px;
+  height: 30px;
+}
+.upload-icon {
+  left: 20px;
+  bottom: 3px !important;
+  position: absolute;
+  right: 0px;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn.active {
+  background-color: #333333;
+}

@@ -38,6 +38,16 @@
             </p>
           </div>
         </div>
+        <div class="box-4 upload-input">
+          <div class="inner">
+            <p style="color:rgba(0, 0, 0, 0.54);margin-bottom: 15px;">Upload file:</p>
+            <button class="upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()">
+              <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="Example delete icon">
+                cloud_upload</mat-icon>
+            </button>
+            <div class="clearfix"></div>
+          </div>
+        </div>
         <div class="box-12">
           <div class="inner">
             <button mat-raised-button color="primary" [routerLink]="['/report-details']">Save</button>&nbsp;
