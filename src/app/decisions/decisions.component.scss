@@ -4,14 +4,17 @@
   padding: 0;
   width: 100%;
 }
+
 .list-card {
+  cursor: pointer;
+  &:hover {
+    background-color: lightgrey;
+  }
   padding: 16px 0 16px 0;
+  margin: 5px 0;
+  height: 48px;
 }
 
-.list-container .mat-list-item {
-  height: 100%;
-}
-// .header,
 .list-item {
   width: 100%;
   display: block;
@@ -23,58 +26,39 @@
   font-weight: bold;
 }
 
-.header span {
-  font-weight: bold;
-  font-size: 16px;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+.description {
+  color: rgba(0, 0, 0, 0.54);
 }
 
-// mat-list-item:not(:first-child) {
-//   cursor: pointer;
-//   &:hover {
-//     background-color: lightgrey;
-//   }
-// }
+.item-actions .inner,
+.item-details .inner,
+.item-name .inner {
+  margin: 0 10px;
+  padding: 0 10px;
+}
 
-.list-item span {
+.item-name .inner div,
+.item-details .inner div{
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.item-name div {
+  margin-bottom: 0;
+  font-size: 15px;
+  color: $primary-color;
   font-weight: bold;
 }
-.list-item-title:hover,
-.list-item-title:focus,
-.list-item-title.active {
-  text-decoration: underline;
-}
+
 span {
   width: 200px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow-x: hidden;
-  // text-align: center;
-}
-// .decision span {
-//   text-align: center;
-// }
-
-.actions {
-  text-align: right;
-}
-.actions button {
-  margin: 5px;
-  margin-bottom: 0;
 }
 
-.list-card.mat-card .mat-divider-horizontal {
-  position: relative;
-}
-.list-card.mat-card .mat-list-base {
-  padding-top: 0;
-}
-
-.input-icon {
-  position: absolute;
-  right: 0px;
-  bottom: 1px;
-}
 .list-input {
   float: right;
 }
@@ -101,20 +85,6 @@ span {
   .action-btn {
     float: left !important;
   }
-  .col-1 .inner,
-  .col-2 .inner {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  .col-2 .inner,
-  .col-3 .inner {
-    margin-top: 0;
-    padding-top: 0;
-  }
-}
-
-.list-input .mat-form-field-wrapper {
-  padding-bottom: 0;
 }
 
 .action-btn {
@@ -123,11 +93,24 @@ span {
   float: right;
 }
 
+/*icons*/
+
 .upload-icon {
   left: 20px;
   bottom: 8px;
 }
 
-.description {
-  color: rgba(0, 0, 0, 0.54);
+.play-icon {
+  cursor: pointer;
+  &:hover {
+    color: #333333;
+  }
+  left: 20px !important;
+  bottom: -20px !important;
+}
+
+.input-icon {
+  position: absolute;
+  right: 0px;
+  bottom: 1px;
 }

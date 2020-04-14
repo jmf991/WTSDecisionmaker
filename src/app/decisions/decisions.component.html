@@ -4,224 +4,151 @@
   </div>
   <div class="list-container">
     <div class="inner">
-      <mat-card class="list-card">
-        <div class="actions-container">
-          <div class="box-2 upload-input">
-            <div class="inner">
-              <button class="box-12 upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()">Upload
-                <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="Example delete icon">
-                  cloud_upload</mat-icon></button>
-              <div class="clearfix"></div>
-            </div>
+      <div class="actions-container">
+        <div class="box-2 upload-input">
+          <div class="inner">
+            <button class="box-12 upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()">Upload
+              <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="Example delete icon">
+                cloud_upload</mat-icon></button>
+            <div class="clearfix"></div>
           </div>
-          <div class="box-2 list-input search-input">
-            <div class="inner">
-              <mat-form-field class="example-full-width">
-                <mat-label>Search</mat-label>
-                <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
-                <a href="javascript:;" title="search">
-                  <mat-icon class="input-icon" aria-hidden="false" aria-label="Example delete icon">search</mat-icon>
-                </a>
-              </mat-form-field>
-            </div>
-          </div>
-          <div class="box-2 list-input">
-            <div class="inner">
-              <mat-form-field class="example-full-width">
-                <mat-label>Sort by</mat-label>
-                <mat-select>
-                  <mat-option value="1">
-                    Name
-                  </mat-option>
-                  <mat-option value="2">
-                    Category
-                  </mat-option>
-                  <mat-option value="2">
-                    Description
-                  </mat-option>
-                  <mat-option value="2">
-                    Owner
-                  </mat-option>
-                  <mat-option value="2">
-                    State
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-            </div>
-          </div>
-          <div class="box-2 list-input">
-            <div class="inner">
-              <mat-form-field class="example-full-width">
-                <mat-label>Filter</mat-label>
-                <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
-                <a href="javascript:;" title="filter">
-                  <mat-icon class="input-icon" aria-hidden="false" aria-label="filter list icon">filter_list</mat-icon>
-                </a>
-              </mat-form-field>
-            </div>
-          </div>
-          <div class="clearfix"></div>
         </div>
-        <!--expanded-->
-        <mat-divider></mat-divider>
-        <mat-list-item class="list-item" [routerLink]="['/decision-details']">
+        <div class="box-2 list-input search-input">
+          <div class="inner">
+            <mat-form-field class="example-full-width">
+              <mat-label>Search</mat-label>
+              <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
+              <a href="javascript:;" title="search">
+                <mat-icon class="input-icon" aria-hidden="false" aria-label="Example delete icon">search</mat-icon>
+              </a>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="box-2 list-input">
+          <div class="inner">
+            <mat-form-field class="example-full-width">
+              <mat-label>Sort by</mat-label>
+              <mat-select>
+                <mat-option value="1">
+                  Name
+                </mat-option>
+                <mat-option value="2">
+                  Category
+                </mat-option>
+                <mat-option value="2">
+                  Description
+                </mat-option>
+                <mat-option value="2">
+                  Owner
+                </mat-option>
+                <mat-option value="2">
+                  State
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="box-2 list-input">
+          <div class="inner">
+            <mat-form-field class="example-full-width">
+              <mat-label>Filter</mat-label>
+              <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
+              <a href="javascript:;" title="filter">
+                <mat-icon class="input-icon" aria-hidden="false" aria-label="filter list icon">filter_list</mat-icon>
+              </a>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <!--card item-->
+      <mat-list-item class="list-item">
+        <mat-card class="list-card" [routerLink]="['/decision-details']">
           <div class="box-12">
-            <div class="inner">
-              <h6 class="name" style="margin-bottom:0;">TT-Aufsichtsratvergütung (expanded)</h6>
+            <div class="box-4 item-name">
+              <div class="inner">
+                <div>TT-Aufsichtsratvergütung</div>
+              </div>
             </div>
-          </div>
-          <div class="box-4 col-1">
-            <div class="inner">
-              <p><span>Category:</span>&nbsp;&nbsp;Value added taxes</p>
-              <p><span>Description:</span>&nbsp;&nbsp;Placeholder description</p>
+            <div class="box-7 item-details">
+              <div class="inner">
+                <div>Pastrami beef tongue, doner short ribs pig sausage capicola
+                  pancetta.</div>
+              </div>
             </div>
-          </div>
-          <div class="box-4 col-2">
-            <div class="inner">
-              <p><span>Owner:</span>&nbsp;&nbsp;Placeholder owner</p>
-              <p><span>Status:</span>&nbsp;&nbsp;DRAFT</p>
-            </div>
-          </div>
-          <div class="box-4 col-3">
-            <div class="inner">
-              <button class="box-12 action-btn" mat-raised-button color="primary"
-                [routerLink]="['/decision-details']">Details </button>
-              <div class="clearfix"></div>
+            <div class="box-1 item-actions">
+              <div class="inner">
+                <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
+                  <mat-icon class="input-icon play-icon" aria-hidden="false" aria-label="Run decision buton"
+                    color="primary">play_circle_outline</mat-icon>
+                </button>
+              </div>
             </div>
           </div>
           <div class="clearfix"></div>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-        <mat-list-item class="list-item" [routerLink]="['/decision-details']">
+        </mat-card>
+      </mat-list-item>
+      <!-- / card item-->
+      <!--card item-->
+      <mat-list-item class="list-item">
+        <mat-card class="list-card" [routerLink]="['/decision-details']">
           <div class="box-12">
-            <div class="inner">
-              <h6 class="name" style="margin-bottom:0;">TT-Aufsichtsratvergütung (expanded) </h6>
+            <div class="box-4 item-name">
+              <div class="inner">
+                <div>TT-Aufsichtsratvergütung TT-Aufsichtsratvergütung Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+              </div>
             </div>
-          </div>
-          <div class="box-4 col-1">
-            <div class="inner">
-              <p><span>Category:</span>&nbsp;&nbsp;Value added taxes</p>
-              <p><span>Description:</span>&nbsp;&nbsp;Placeholder description</p>
+            <div class="box-7 item-details">
+              <div class="inner">
+                <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                  pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                  pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                  pancetta.</div>
+              </div>
             </div>
-          </div>
-          <div class="box-4 col-2">
-            <div class="inner">
-              <p><span>Owner:</span>&nbsp;&nbsp;Placeholder owner</p>
-              <p><span>Status:</span>&nbsp;&nbsp;DRAFT</p>
-            </div>
-          </div>
-          <div class="box-4 col-3">
-            <div class="inner">
-              <button class="box-12 action-btn" mat-raised-button color="primary"
-                [routerLink]="['/decision-details']">Details </button>
-              <div class="clearfix"></div>
+            <div class="box-1 item-actions">
+              <div class="inner">
+                <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
+                  <mat-icon class="input-icon play-icon" aria-hidden="false" aria-label="Run decision buton"
+                    color="primary">play_circle_outline</mat-icon>
+                </button>
+              </div>
             </div>
           </div>
           <div class="clearfix"></div>
-        </mat-list-item>
-        <!-- / expanded-->
-        <!--expanded with description-->
-        <mat-divider></mat-divider>
-        <mat-list-item class="list-item" [routerLink]="['/decision-details']">
+        </mat-card>
+      </mat-list-item>
+      <!-- / card item-->
+      <!--card item-->
+      <mat-list-item class="list-item">
+        <mat-card class="list-card" [routerLink]="['/decision-details']">
           <div class="box-12">
-            <div class="inner">
-              <h6 class="name">TT-Aufsichtsratvergütung (expanded with description on top)</h6>
-              <p class="description" style="margin-bottom:0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.</p>
+            <div class="box-4 item-name">
+              <div class="inner">
+                <div>TT-Aufsichtsratvergütung example </div>
+              </div>
             </div>
-          </div>
-          <div class="box-4 col-1">
-            <div class="inner">
-              <p><span>Category:</span>&nbsp;&nbsp;Value added taxes</p>
-              <p><span>Owner:</span>&nbsp;&nbsp;Placeholder owner</p>
+            <div class="box-7 item-details">
+              <div class="inner">
+                <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                  pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                  pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                  pancetta.</div>
+              </div>
             </div>
-          </div>
-          <div class="box-4 col-2">
-            <div class="inner">
-              <p><span>Status:</span>&nbsp;&nbsp;DRAFT</p>
-            </div>
-          </div>
-          <div class="box-4 col-3">
-            <div class="inner">
-              <button class="box-12 action-btn" mat-raised-button color="primary"
-                [routerLink]="['/decision-details']">Details </button>
-              <div class="clearfix"></div>
+            <div class="box-1 item-actions">
+              <div class="inner">
+                <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
+                  <mat-icon class="input-icon play-icon" aria-hidden="false" aria-label="Run decision buton"
+                    color="primary">play_circle_outline</mat-icon>
+                </button>
+              </div>
             </div>
           </div>
           <div class="clearfix"></div>
-        </mat-list-item>
-      </mat-card>
-      <!--expandable-->
-      <mat-list class="box-12">
-        <ng-container>
-          <mat-list-item style="height:0;">
-          </mat-list-item>
-          <mat-accordion class="list-item">
-            <mat-expansion-panel class="mb10">
-              <mat-expansion-panel-header>
-                <mat-panel-title><a class="list-item-title"
-                    [routerLink]="['/decision-details']">TT-Aufsichtsratvergütung (expandable)</a></mat-panel-title>
-                <mat-panel-description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua.
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <div class="box-4 col-1">
-                <div class="inner">
-                  <p><span>Category:</span>&nbsp;&nbsp;Value added taxes</p>
-                  <p><span>Owner:</span>&nbsp;&nbsp;Placeholder owner</p>
-                </div>
-              </div>
-              <div class="box-4 col-2">
-                <div class="inner">
-                  <p><span>Status:</span>&nbsp;&nbsp;DRAFT</p>
-                </div>
-              </div>
-              <div class="box-4 col-3">
-                <div class="inner">
-                  <button class="box-12 action-btn" mat-raised-button color="primary"
-                    [routerLink]="['/decision-details']">Details </button>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-              <div class="clearfix"></div>
-            </mat-expansion-panel>
-          </mat-accordion>
-          <mat-divider></mat-divider>
-          <mat-accordion class="list-item">
-            <mat-expansion-panel class="mb10">
-              <mat-expansion-panel-header>
-                <mat-panel-title><a class="list-item-title"
-                    [routerLink]="['/decision-details']">TT-Aufsichtsratvergütung (expandable)</a></mat-panel-title>
-                <mat-panel-description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua.
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <div class="box-4 col-1">
-                <div class="inner">
-                  <p><span>Category:</span>&nbsp;&nbsp;Value added taxes</p>
-                  <p><span>Owner:</span>&nbsp;&nbsp;Placeholder owner</p>
-                </div>
-              </div>
-              <div class="box-4 col-2">
-                <div class="inner">
-                  <p><span>Status:</span>&nbsp;&nbsp;DRAFT</p>
-                </div>
-              </div>
-              <div class="box-4 col-3">
-                <div class="inner">
-                  <button class="box-12 action-btn" mat-raised-button color="primary"
-                    [routerLink]="['/decision-details']">Details </button>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-              <div class="clearfix"></div>
-            </mat-expansion-panel>
-          </mat-accordion>
-        </ng-container>
-      </mat-list>
-      <!-- / expandable-->
+        </mat-card>
+      </mat-list-item>
+      <!-- / card item-->
       <div class="clearfix"></div>
     </div>
   </div>
