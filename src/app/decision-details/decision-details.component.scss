@@ -12,5 +12,21 @@ span {
 }
 
 @media (max-width: $mobile) {
-.details-card .inner {margin-bottom: 0;padding-bottom: 0;margin-top: 0;padding-top: 0;}
+  .details-card .inner {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+.icon-link:hover .mat-icon,
+.icon-link:focus .mat-icon,
+.icon-link.active .mat-icon {
+  color: $primary-color;
+}
+
+.icon-link .mat-line {
+  font-size: 14px;
+  font-weight: 500;
 }

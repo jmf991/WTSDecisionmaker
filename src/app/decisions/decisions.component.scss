@@ -111,10 +111,15 @@ span {
   padding: 5px;
   height: 30px;
 }
-
 .upload-icon {
   left: 20px;
   bottom: 3px !important;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn.active {
+  background-color: #333333;
 }
 
 .play-icon {
@@ -151,6 +156,16 @@ span {
     padding: 0px !important;
     float: right;
   }
+
+  .search-icon:hover,
+  .search-icon:focus,
+  .search-icon.active,
+  ::ng-deep .mat-expansion-panel-header:hover .mat-icon,
+  ::ng-deep .mat-expansion-panel-header:focus .mat-icon,
+  ::ng-deep .mat-expansion-panel-header.active .mat-icon {
+    color: #333333;
+  }
+
   ::ng-deep .mat-expansion-panel .mat-icon {
     position: relative;
     height: 24px;
