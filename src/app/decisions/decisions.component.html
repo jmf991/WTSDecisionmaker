@@ -3,152 +3,299 @@
     <h2>DMN Models</h2>
   </div>
   <div class="list-container">
-    <div class="inner">
-      <div class="actions-container">
-        <div class="box-2 upload-input">
-          <div class="inner">
-            <button class="box-12 upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()">Upload
-              <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="Example delete icon">
-                cloud_upload</mat-icon></button>
+    <div class="actions-container">
+      <div class="box-2 upload-input">
+        <div class="inner">
+          <button class="upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()">
+            <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="Example delete icon">
+              cloud_upload</mat-icon>
+          </button>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="list-input">
+        <div class="inner">
+          <!-- <button class="box-12" mat-raised-button color="primary" (click)="openFilterDialog()">
+            <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+              filter_list</mat-icon>
+          </button> -->
+
+          <mat-accordion>
+            <mat-expansion-panel style="border: none;
+            border-radius: 0;
+            box-shadow: none;">
+              <mat-expansion-panel-header style="height: 48px;
+              width: 50px;
+              padding: 10px;
+              float: right;">
+                <mat-panel-title>
+                  <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
+                    color="primary">filter_list</mat-icon>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-card>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Select filter</mat-label>
+                    <mat-select>
+                      <mat-option value="1">
+                        Name
+                      </mat-option>
+                      <mat-option value="2">
+                        Category
+                      </mat-option>
+                      <mat-option value="2">
+                        Description
+                      </mat-option>
+                      <mat-option value="2">
+                        Owner
+                      </mat-option>
+                      <mat-option value="2">
+                        State
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Value</mat-label>
+                    <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
+                  </mat-form-field>
+                </p>
+              </mat-card>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+      <div class="list-input search-input">
+        <div class="inner">
+          <mat-form-field>
+            <mat-label>Search</mat-label>
+            <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
+            <a href="javascript:;" title="search">
+              <mat-icon class="input-icon" aria-hidden="false" aria-label="Example delete icon">search</mat-icon>
+            </a>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="list-input">
+        <div class="inner">
+          <mat-form-field>
+            <mat-label>Sort by</mat-label>
+            <mat-select>
+              <mat-option value="1">
+                Name
+              </mat-option>
+              <mat-option value="2">
+                Category
+              </mat-option>
+              <mat-option value="2">
+                Description
+              </mat-option>
+              <mat-option value="2">
+                Owner
+              </mat-option>
+              <mat-option value="2">
+                State
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <div class="items-list">
+      <div class="inner">
+        <!--card item-->
+        <mat-list-item class="list-item">
+          <mat-card class="list-card" [routerLink]="['/decision-details']">
+            <div class="box-12">
+              <div class="box-4 item-name">
+                <div class="inner">
+                  <div>TT-Aufsichtsratvergütung</div>
+                </div>
+              </div>
+              <div class="box-7 item-details">
+                <div class="inner">
+                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola
+                    pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner">
+                  <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
+                      color="primary">play_circle_outline</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
             <div class="clearfix"></div>
-          </div>
-        </div>
-        <div class="box-2 list-input search-input">
-          <div class="inner">
-            <mat-form-field class="example-full-width">
-              <mat-label>Search</mat-label>
-              <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
-              <a href="javascript:;" title="search">
-                <mat-icon class="input-icon" aria-hidden="false" aria-label="Example delete icon">search</mat-icon>
-              </a>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="box-2 list-input">
-          <div class="inner">
-            <mat-form-field class="example-full-width">
-              <mat-label>Sort by</mat-label>
-              <mat-select>
-                <mat-option value="1">
-                  Name
-                </mat-option>
-                <mat-option value="2">
-                  Category
-                </mat-option>
-                <mat-option value="2">
-                  Description
-                </mat-option>
-                <mat-option value="2">
-                  Owner
-                </mat-option>
-                <mat-option value="2">
-                  State
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-        </div>
-        <div class="box-2 list-input">
-          <div class="inner">
-            <mat-form-field class="example-full-width">
-              <mat-label>Filter</mat-label>
-              <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
-              <a href="javascript:;" title="filter">
-                <mat-icon class="input-icon" aria-hidden="false" aria-label="filter list icon">filter_list</mat-icon>
-              </a>
-            </mat-form-field>
-          </div>
-        </div>
+          </mat-card>
+        </mat-list-item>
+        <!-- / card item-->
+        <!--card item-->
+        <mat-list-item class="list-item">
+          <mat-card class="list-card" [routerLink]="['/decision-details']">
+            <div class="box-12">
+              <div class="box-4 item-name">
+                <div class="inner">
+                  <div>TT-Aufsichtsratvergütung TT-Aufsichtsratvergütung Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+              </div>
+              <div class="box-7 item-details">
+                <div class="inner">
+                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
+                    fatback
+                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
+                    fatback
+                    pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner">
+                  <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
+                      color="primary">play_circle_outline</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </mat-card>
+        </mat-list-item>
+        <!-- / card item-->
+        <!--card item-->
+        <mat-list-item class="list-item">
+          <mat-card class="list-card" [routerLink]="['/decision-details']">
+            <div class="box-12">
+              <div class="box-4 item-name">
+                <div class="inner">
+                  <div>TT-Aufsichtsratvergütung example </div>
+                </div>
+              </div>
+              <div class="box-7 item-details">
+                <div class="inner">
+                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
+                    fatback
+                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
+                    fatback
+                    pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner">
+                  <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
+                      color="primary">play_circle_outline</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </mat-card>
+        </mat-list-item>
+        <!-- / card item-->
+        <!--card item-->
+        <mat-list-item class="list-item">
+          <mat-card class="list-card" [routerLink]="['/decision-details']">
+            <div class="box-12">
+              <div class="box-4 item-name">
+                <div class="inner">
+                  <div>TT-Aufsichtsratvergütung example </div>
+                </div>
+              </div>
+              <div class="box-7 item-details">
+                <div class="inner">
+                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
+                    fatback
+                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
+                    fatback
+                    pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner">
+                  <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
+                      color="primary">play_circle_outline</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </mat-card>
+        </mat-list-item>
+        <!-- / card item-->
+        <!--card item-->
+        <mat-list-item class="list-item">
+          <mat-card class="list-card" [routerLink]="['/decision-details']">
+            <div class="box-12">
+              <div class="box-4 item-name">
+                <div class="inner">
+                  <div>TT-Aufsichtsratvergütung example </div>
+                </div>
+              </div>
+              <div class="box-7 item-details">
+                <div class="inner">
+                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
+                    fatback
+                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
+                    fatback
+                    pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner">
+                  <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
+                      color="primary">play_circle_outline</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </mat-card>
+        </mat-list-item>
+        <!-- / card item-->
+        <!--card item-->
+        <mat-list-item class="list-item">
+          <mat-card class="list-card" [routerLink]="['/decision-details']">
+            <div class="box-12">
+              <div class="box-4 item-name">
+                <div class="inner">
+                  <div>TT-Aufsichtsratvergütung example </div>
+                </div>
+              </div>
+              <div class="box-7 item-details">
+                <div class="inner">
+                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
+                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
+                    fatback
+                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
+                    fatback
+                    pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner">
+                  <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
+                      color="primary">play_circle_outline</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </mat-card>
+        </mat-list-item>
+        <!-- / card item-->
         <div class="clearfix"></div>
       </div>
-      <!--card item-->
-      <mat-list-item class="list-item">
-        <mat-card class="list-card" [routerLink]="['/decision-details']">
-          <div class="box-12">
-            <div class="box-4 item-name">
-              <div class="inner">
-                <div>TT-Aufsichtsratvergütung</div>
-              </div>
-            </div>
-            <div class="box-7 item-details">
-              <div class="inner">
-                <div>Pastrami beef tongue, doner short ribs pig sausage capicola
-                  pancetta.</div>
-              </div>
-            </div>
-            <div class="box-1 item-actions">
-              <div class="inner">
-                <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
-                  <mat-icon class="input-icon play-icon" aria-hidden="false" aria-label="Run decision buton"
-                    color="primary">play_circle_outline</mat-icon>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </mat-card>
-      </mat-list-item>
-      <!-- / card item-->
-      <!--card item-->
-      <mat-list-item class="list-item">
-        <mat-card class="list-card" [routerLink]="['/decision-details']">
-          <div class="box-12">
-            <div class="box-4 item-name">
-              <div class="inner">
-                <div>TT-Aufsichtsratvergütung TT-Aufsichtsratvergütung Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-              </div>
-            </div>
-            <div class="box-7 item-details">
-              <div class="inner">
-                <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                  pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                  pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                  pancetta.</div>
-              </div>
-            </div>
-            <div class="box-1 item-actions">
-              <div class="inner">
-                <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
-                  <mat-icon class="input-icon play-icon" aria-hidden="false" aria-label="Run decision buton"
-                    color="primary">play_circle_outline</mat-icon>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </mat-card>
-      </mat-list-item>
-      <!-- / card item-->
-      <!--card item-->
-      <mat-list-item class="list-item">
-        <mat-card class="list-card" [routerLink]="['/decision-details']">
-          <div class="box-12">
-            <div class="box-4 item-name">
-              <div class="inner">
-                <div>TT-Aufsichtsratvergütung example </div>
-              </div>
-            </div>
-            <div class="box-7 item-details">
-              <div class="inner">
-                <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                  pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                  pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                  pancetta.</div>
-              </div>
-            </div>
-            <div class="box-1 item-actions">
-              <div class="inner">
-                <button class="box-12" mat-raised-button color="primary" [routerLink]="['/wizard']">
-                  <mat-icon class="input-icon play-icon" aria-hidden="false" aria-label="Run decision buton"
-                    color="primary">play_circle_outline</mat-icon>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="clearfix"></div>
-        </mat-card>
-      </mat-list-item>
-      <!-- / card item-->
-      <div class="clearfix"></div>
     </div>
   </div>

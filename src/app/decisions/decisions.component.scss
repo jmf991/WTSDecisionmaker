@@ -38,7 +38,7 @@
 }
 
 .item-name .inner div,
-.item-details .inner div{
+.item-details .inner div {
   width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -62,9 +62,6 @@ span {
 .list-input {
   float: right;
 }
-.list-input.search-input {
-  margin-right: 10px;
-}
 
 @media (max-width: $tablet) {
   .list-input {
@@ -74,9 +71,7 @@ span {
   .upload-input {
     width: 100% !important;
   }
-  .list-input.search-input {
-    margin-right: 0;
-  }
+
   .list-input .inner {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -85,8 +80,25 @@ span {
   .action-btn {
     float: left !important;
   }
+  .list-card {
+    height: 90px;
+  }
+  .play-icon {
+    left: 0 !important;
+    bottom: -30px !important;
+  }
+  .actions-container .list-input {
+    width: 100% !important;
+  }
+  .actions-container {
+    ::ng-deep .mat-expansion-panel-content {
+      float: left !important;
+    }
+    ::ng-deep .mat-expansion-panel-body {
+      padding: 0 !important;
+    }
+  }
 }
-
 .action-btn {
   margin: 5px;
   width: 33.33%;
@@ -94,23 +106,57 @@ span {
 }
 
 /*icons*/
+.upload-btn {
+  width: auto;
+  padding: 5px;
+  height: 30px;
+}
 
 .upload-icon {
   left: 20px;
-  bottom: 8px;
+  bottom: 3px !important;
 }
 
 .play-icon {
+  position: absolute;
   cursor: pointer;
   &:hover {
     color: #333333;
   }
-  left: 20px !important;
-  bottom: -20px !important;
+  left: 20px;
+  bottom: -20px;
 }
 
 .input-icon {
   position: absolute;
   right: 0px;
   bottom: 1px;
+}
+
+.actions-container {
+  ::ng-deep .mat-expansion-indicator::after {
+    display: none;
+  }
+  ::ng-deep .mat-expansion-panel {
+    background: #fafafa;
+    width: 50px;
+    overflow: visible;
+  }
+  ::ng-deep .mat-expansion-panel-content {
+    display: block;
+    float: right;
+  }
+  ::ng-deep .mat-expansion-panel-header {
+    width: 70px !important;
+    padding: 0px !important;
+    float: right;
+  }
+  ::ng-deep .mat-expansion-panel .mat-icon {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    display: block;
+    bottom: 0 !important;
+    left: 25px !important;
+  }
 }
