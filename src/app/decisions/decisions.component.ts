@@ -22,7 +22,7 @@ export class DecisionsComponent implements OnInit {
   openUploadDialog(): void {
     const dialogRef = this.dialog.open(UploadDialogComponent, {
       width: '500px',
-      height: '300px'
+      height: '330px'
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
@@ -32,7 +32,7 @@ export class DecisionsComponent implements OnInit {
   openSearchDialog(): void {
     const dialogRef = this.dialog.open(SearchDialogComponent, {
       width: '500px',
-      height: '300px'
+      height: '330px'
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
@@ -42,7 +42,7 @@ export class DecisionsComponent implements OnInit {
   openFilterDialog(): void {
     const dialogRef = this.dialog.open(FilterDialogComponent, {
       width: '500px',
-      height: '300px'
+      height: '330px'
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
@@ -52,7 +52,7 @@ export class DecisionsComponent implements OnInit {
   openSortDialog(): void {
     const dialogRef = this.dialog.open(SortDialogComponent, {
       width: '500px',
-      height: '300px'
+      height: '330px'
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');

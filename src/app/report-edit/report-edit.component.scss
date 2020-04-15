@@ -12,11 +12,15 @@
 }
 
 @media (max-width: $mobile) {
-  .details-card .inner {
+  .custom-card .inner {
     margin-bottom: 0;
     padding-bottom: 0;
     margin-top: 0;
     padding-top: 0;
+  }
+  .upload-input .inner {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -36,4 +40,21 @@
 .upload-btn:focus,
 .upload-btn.active {
   background-color: #333333;
+}
+
+.uploadfilecontainer {
+  background-image: url("../../assets/images/cloud-icon.png");
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position: center;
+  height: 75px;
+  width: 100%;
+  border: 2px dashed #9ecbec;
+  border-radius: 10px;
+}
+
+.uploadfilecontainer:hover {
+  cursor: pointer;
+  background-color: #9ecbec !important;
+  opacity: 0.8;
 }

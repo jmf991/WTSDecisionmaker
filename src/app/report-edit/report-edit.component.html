@@ -5,7 +5,7 @@
 
   <div class="details-container">
     <div class="inner">
-      <mat-card class="details-card">
+      <mat-card class="custom-card">
         <div class="box-4">
           <div class="inner">
             <p>
@@ -40,11 +40,18 @@
         </div>
         <div class="box-4 upload-input">
           <div class="inner">
-            <p style="color:rgba(0, 0, 0, 0.54);margin-bottom: 15px;">Upload file:</p>
-            <button class="upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()">
+            <p style="color:rgba(0, 0, 0, 0.54);margin-bottom: 15px;">Drag and drop files here, or click and browse to upload a file</p>
+            <!-- <button class="upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()">
               <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="Example delete icon">
                 cloud_upload</mat-icon>
-            </button>
+            </button> -->
+
+            <div class="file-upload-container">
+              <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop
+                (onFileDropped)="uploadFile($event)">
+                <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+              </div>
+            </div>
             <div class="clearfix"></div>
           </div>
         </div>

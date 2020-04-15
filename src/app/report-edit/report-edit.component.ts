@@ -19,11 +19,20 @@ export class ReportEditComponent implements OnInit {
   openUploadDialog(): void {
     const dialogRef = this.dialog.open(UploadDialogComponent, {
       width: '500px',
-      height: '300px'
+      height: '330px'
     });
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
+  }
+
+  files: any = [];
+
+  uploadFile(event) {
+    for (let index = 0; index < event.length; index++) {
+      const element = event[index];
+      this.files.push(element.name)
+    }
   }
 
 }
