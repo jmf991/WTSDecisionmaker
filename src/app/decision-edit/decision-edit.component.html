@@ -75,8 +75,18 @@
                 </mat-select>
               </mat-form-field>
             </p>
+            <p style="color:rgba(0, 0, 0, 0.54);margin-bottom: 15px;">Drag and drop files here, or click and browse to upload a file</p>
+            <div class="file-upload-container">
+              <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop
+                (onFileDropped)="uploadFile($event)">
+                <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+              </div>
+            </div>
+            <div class="clearfix"></div>
           </div>
-        </div>
+          </div>
+
+
         <div class="box-12">
           <div class="inner">
             <button mat-raised-button color="primary" [routerLink]="['/decision-details']">Save</button>&nbsp;
