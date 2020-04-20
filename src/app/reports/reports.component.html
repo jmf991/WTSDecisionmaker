@@ -195,55 +195,62 @@
     </div>
     <div class="list-container">
       <div class="actions-container">
-        <div class="list-input">
-          <div class="inner">
-            <mat-accordion>
-              <mat-expansion-panel style="border: none;
-              border-radius: 0;
-              box-shadow: none;">
-                <mat-expansion-panel-header style="height: 48px;
-                width: 50px;
-                padding: 10px;
-                float: right;">
-                  <mat-panel-title>
-                    <mat-icon class="input-icon" aria-hidden="false" aria-label="Run decision buton"
-                      color="primary">filter_list</mat-icon>
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <mat-card>
-                  <p>
-                    <mat-form-field class="example-full-width">
-                      <mat-label>Select filter</mat-label>
-                      <mat-select>
-                        <mat-option value="1">
-                          Name
-                        </mat-option>
-                        <mat-option value="2">
-                          Category
-                        </mat-option>
-                        <mat-option value="2">
-                          Description
-                        </mat-option>
-                        <mat-option value="2">
-                          Owner
-                        </mat-option>
-                        <mat-option value="2">
-                          State
-                        </mat-option>
-                      </mat-select>
-                    </mat-form-field>
-                  </p>
-                  <p>
-                    <mat-form-field class="example-full-width">
-                      <mat-label>Value</mat-label>
-                      <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
-                    </mat-form-field>
-                  </p>
-                </mat-card>
-              </mat-expansion-panel>
-            </mat-accordion>
-          </div>
+
+      <div class="list-input">
+        <div class="inner" style="position: relative;">
+          <!-- <button class="box-12" mat-raised-button color="primary" (click)="openFilterDialog()">
+            <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+              filter_list</mat-icon>
+          </button> -->
+
+          <mat-accordion>
+            <mat-expansion-panel style="border: none;
+            border-radius: 0;
+            box-shadow: none;">
+              <mat-expansion-panel-header style="height: 48px;
+              width: 50px;
+              padding: 10px;
+              float: right;">
+                <mat-panel-title>
+                  <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
+                    color="primary">filter_list</mat-icon>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-card>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Select filter</mat-label>
+                    <mat-select>
+                      <mat-option value="1">
+                        Name
+                      </mat-option>
+                      <mat-option value="2">
+                        Category
+                      </mat-option>
+                      <mat-option value="2">
+                        Description
+                      </mat-option>
+                      <mat-option value="2">
+                        Owner
+                      </mat-option>
+                      <mat-option value="2">
+                        State
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Value</mat-label>
+                    <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
+                  </mat-form-field>
+                </p>
+              </mat-card>
+            </mat-expansion-panel>
+          </mat-accordion>
+          <div class="clearfix"></div>
         </div>
+      </div>
         <div class="list-input search-input">
           <div class="inner">
             <mat-form-field>

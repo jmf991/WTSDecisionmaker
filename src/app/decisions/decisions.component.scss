@@ -152,14 +152,21 @@ span {
     width: 50px;
     overflow: visible;
   }
+
   ::ng-deep .mat-expansion-panel-content {
     display: block;
     float: right;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 1;
   }
+
   ::ng-deep .mat-expansion-panel-header {
     width: 70px !important;
     padding: 0px !important;
-    float: right;
+    right: 10px;
+    position: absolute;
   }
 
   .search-icon:hover,
