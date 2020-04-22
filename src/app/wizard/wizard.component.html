@@ -14,7 +14,7 @@
       <button mat-button color="accent">
         <mat-icon>attachment</mat-icon> Download PDF Document
       </button>&nbsp;
-      </mat-card>
+    </mat-card>
   </div>
 </div>
 
@@ -26,24 +26,15 @@
     <mat-vertical-stepper [linear]="isLinear" #stepper>
       <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
-          <ng-template matStepLabel
-            >Flank leberkas sausage biltong shank brisket, fatback boudin ball
-            tip andouille salami ham hock. ?</ng-template
-          >
+          <ng-template matStepLabel>Flank leberkas sausage biltong shank brisket, fatback boudin ball
+            tip andouille salami ham hock. ?</ng-template>
           <p>
-            <small
-              >Ribeye strip steak tenderloin, burgdoggen tongue kevin kielbasa
-              buffalo cupim beef meatball beef ribs brisket short loin.</small
-            >
+            <small>Ribeye strip steak tenderloin, burgdoggen tongue kevin kielbasa
+              buffalo cupim beef meatball beef ribs brisket short loin.</small>
           </p>
           <mat-form-field>
             <mat-label>Name</mat-label>
-            <input
-              matInput
-              placeholder="Last name, First name"
-              formControlName="firstCtrl"
-              required
-            />
+            <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required />
           </mat-form-field>
 
           <div>
@@ -55,25 +46,25 @@
       </mat-step>
       <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
-          <ng-template matStepLabel
-            >Pastrami beef tongue, doner short ribs pig sausage capicola ham
-            landjaeger leberkas pork fatback pancetta.</ng-template
-          >
+          <ng-template matStepLabel>Pastrami beef tongue, doner short ribs pig sausage capicola ham
+            landjaeger leberkas pork fatback pancetta.</ng-template>
           <p>
-            <small
-              >Ribeye strip steak tenderloin, burgdoggen tongue kevin kielbasa
-              buffalo cupim beef meatball beef ribs brisket short loin.</small
-            >
+            <small>Ribeye strip steak tenderloin, burgdoggen tongue kevin kielbasa
+              buffalo cupim beef meatball beef ribs brisket short loin.</small>
           </p>
-          <mat-form-field>
-            <mat-label>Name</mat-label>
-            <input
-              matInput
-              placeholder="Last name, First name"
-              formControlName="firstCtrl"
-              required
-            />
-          </mat-form-field>
+          <p>
+            <mat-form-field class="example-full-width">
+              <mat-label>Select dropdown</mat-label>
+              <mat-select>
+                <mat-option value="1">
+                  1
+                </mat-option>
+                <mat-option value="2">
+                  2
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </p>
           <div>
             <button mat-raised-button color="primary" matStepperNext>
               Next
@@ -83,24 +74,15 @@
       </mat-step>
       <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
-          <ng-template matStepLabel
-            >Leberkas pork belly meatloaf pancetta pork loin.</ng-template
-          >
+          <ng-template matStepLabel>Leberkas pork belly meatloaf pancetta pork loin.</ng-template>
           <p>
-            <small
-              >Ribeye strip steak tenderloin, burgdoggen tongue kevin kielbasa
-              buffalo cupim beef meatball beef ribs brisket short loin.</small
-            >
+            <label id="radio-group-label"><small>Pick your option</small></label>
           </p>
-          <mat-form-field>
-            <mat-label>Name</mat-label>
-            <input
-              matInput
-              placeholder="Last name, First name"
-              formControlName="firstCtrl"
-              required
-            />
-          </mat-form-field>
+          <mat-radio-group aria-labelledby="radio-group-label" class="radio-group">
+            <mat-radio-button class="radio-button" *ngFor="let option of options" [value]="option">
+              {{option}}
+            </mat-radio-button>
+          </mat-radio-group>
           <div>
             <button mat-raised-button color="primary" matStepperNext>
               Next
@@ -110,25 +92,17 @@
       </mat-step>
       <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
-          <ng-template matStepLabel
-            >Sausage biltong shank brisket, fatback boudin ball tip andouille
-            salami ?</ng-template
-          >
+          <ng-template matStepLabel>Sausage biltong shank brisket, fatback boudin ball tip andouille
+            salami ?</ng-template>
           <p>
-            <small
-              >Ribeye strip steak tenderloin, burgdoggen tongue kevin kielbasa
-              buffalo cupim beef meatball beef ribs brisket short loin.</small
-            >
+            <small>Ribeye strip steak tenderloin, burgdoggen tongue kevin kielbasa
+              buffalo cupim beef meatball beef ribs brisket short loin.</small>
           </p>
-          <mat-form-field>
-            <mat-label>Name</mat-label>
-            <input
-              matInput
-              placeholder="Last name, First name"
-              formControlName="firstCtrl"
-              required
-            />
-          </mat-form-field>
+          <div class="checkbox-group">
+            <mat-checkbox class="checkbox">Option 1</mat-checkbox>
+            <mat-checkbox class="checkbox">Option 2</mat-checkbox>
+            <mat-checkbox class="checkbox">Option 3</mat-checkbox>
+          </div>
           <div>
             <button mat-raised-button color="primary" matStepperNext>
               Next
@@ -142,7 +116,9 @@
         <div class="clearfix mb10"></div>
         <div class="notification notification-success">
           <div class="icon">
-            <i><mat-icon>info</mat-icon></i>
+            <i>
+              <mat-icon>info</mat-icon>
+            </i>
           </div>
           <div class="copy">
             <p>
@@ -165,8 +141,8 @@
             <mat-icon>done</mat-icon>&nbsp; Abschließen
           </button>
           <button mat-button (click)="stepper.reset()">
-            <mat-icon>replay</mat-icon>&nbsp;Reset</button
-          >&nbsp;
+            <mat-icon>replay</mat-icon>&nbsp;Reset
+          </button>&nbsp;
         </div>
       </mat-step>
     </mat-vertical-stepper>

@@ -5,6 +5,7 @@ import {
   Validators,
   FormControl
 } from "@angular/forms";
+
 @Component({
   selector: "app-wizard",
   templateUrl: "./wizard.component.html",
@@ -14,6 +15,7 @@ export class WizardComponent implements OnInit {
   isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
+  options: string[] = ['Option 1', 'Option 2', 'Option 3'];
 
   constructor() {}
 
