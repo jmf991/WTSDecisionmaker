@@ -2,6 +2,17 @@
   <mat-toolbar>
     <img style="max-width: 200px;" src="assets/images/wts-global-logo.svg" />
     <span style="flex: 1 1 auto;"></span>
+
+    <div class="search-container inner tablet-hidden">
+      <mat-form-field>
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Ex. Lorem" value="" />
+        <a href="javascript:;" title="search">
+          <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search
+          </mat-icon>
+        </a>
+      </mat-form-field>
+    </div>
     <mat-accordion class="user-actions-container">
       <mat-expansion-panel>
         <mat-expansion-panel-header>
@@ -32,9 +43,20 @@
     <div fxShow="true" fxHide.gt-sm="true">
 
       <!-- <a href="#" (click)="sidenav.toggle()">Show Side Menu</a> -->
-      <button mat-icon-button  color="primary" (click)="sidenav.toggle()" aria-label="Display menu">
+      <button mat-icon-button color="primary" (click)="sidenav.toggle()" aria-label="Display menu">
         <mat-icon>more_vert</mat-icon>
       </button>
+    </div>
+
+    <div class="search-container inner tablet-displayed">
+      <mat-form-field>
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Ex. Lorem" value="" />
+        <a href="javascript:;" title="search">
+          <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search
+          </mat-icon>
+        </a>
+      </mat-form-field>
     </div>
   </mat-toolbar>
   <mat-sidenav-container fxFlexFill class="example-container">
@@ -51,9 +73,11 @@
         <a mat-button [routerLink]="['/reports']">Reports</a>
       </div>
     </mat-sidenav>
-    <mat-sidenav-content fxFlexFill><div class="box-container">
-      <router-outlet></router-outlet>
-    </div></mat-sidenav-content>
+    <mat-sidenav-content fxFlexFill>
+      <div class="box-container">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
   </mat-sidenav-container>
 
   <!---->

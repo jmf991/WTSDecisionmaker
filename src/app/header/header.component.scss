@@ -12,6 +12,41 @@
   margin-right: 10px;
 }
 
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  font-size: 15px;
+}
+
+.search-container {
+  margin-right: 45px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0 10px;
+}
+
+.search-container ::ng-deep .mat-form-field-wrapper {
+  padding-bottom: 12px;
+}
+
+.mat-toolbar .mat-form-field {
+  font-size: 15px;
+}
+.mat-toolbar ::ng-deep .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  transform: translateY(-0.8em) scale(0.75) perspective(100px)
+    translateZ(0.001px);
+}
+
+.search-container .search-icon:hover,
+.search-container .search-icon:focus,
+.search-container .search-icon.active {
+  color: #333333;
+}
+
+::ng-deep .dark-theme .search-container .search-icon:hover,
+::ng-deep .dark-theme .search-container .search-icon:focus,
+::ng-deep .dark-theme .search-container .search-icon.active {
+  color: #ffffff !important;
+}
+
 @media (max-width: $tablet) {
   .user-actions-container .mat-icon {
     margin-left: 10px;
@@ -24,10 +59,10 @@
     margin-top: 10px;
   }
 
+  .user-actions-container .mat-toolbar.mat-accent {
+    margin-bottom: 55px;
+  }
   .header .mat-accordion > .mat-expansion-panel-spacing:first-child {
     margin-top: 110px;
-  }
-  .mat-toolbar.mat-accent {
-    margin-bottom: 55px;
   }
 }
