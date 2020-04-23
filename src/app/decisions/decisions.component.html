@@ -3,7 +3,7 @@
     <h1 class="page-title ">DMN Models</h1>
   </div>
   <div class="list-container">
-    <div class="actions-container">
+    <div class="actions-container tablet-hidden">
       <div class="box-2 upload-input">
         <div class="inner">
           <button class="upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()">
@@ -16,16 +16,11 @@
       <div class="list-input">
         <div class="inner" style="position: relative;">
           <mat-accordion>
-            <mat-expansion-panel style="border: none;
-            border-radius: 0;
-            box-shadow: none;">
-              <mat-expansion-panel-header style="height: 48px;
-              width: 50px;
-              padding: 10px;
-              float: right;">
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
                 <mat-panel-title>
-                  <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
-                    color="primary">filter_list</mat-icon>
+                  <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                    filter_list</mat-icon>
                 </mat-panel-title>
               </mat-expansion-panel-header>
               <mat-card>
@@ -69,7 +64,8 @@
             <mat-label>Search</mat-label>
             <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
             <a href="javascript:;" title="search">
-              <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search</mat-icon>
+              <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search
+              </mat-icon>
             </a>
           </mat-form-field>
         </div>
@@ -100,6 +96,123 @@
       </div>
       <div class="clearfix"></div>
     </div>
+    <!-------->
+    <div class="actions-container tablet-displayed">
+      <div style="margin-bottom:40px;">
+        <div class="mobile-list-actions upload-input">
+          <div class="inner">
+            <button class="upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()">
+              <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="Example delete icon">
+                cloud_upload</mat-icon>
+            </button>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="mobile-list-actions">
+          <div class="inner">
+            <div class="list-input">
+              <div style="position: relative;">
+                <mat-accordion class="filter-accordion">
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                          filter_list</mat-icon>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <mat-card>
+                      <p>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Select filter</mat-label>
+                          <mat-select>
+                            <mat-option value="1">
+                              Name
+                            </mat-option>
+                            <mat-option value="2">
+                              Category
+                            </mat-option>
+                            <mat-option value="2">
+                              Description
+                            </mat-option>
+                            <mat-option value="2">
+                              Owner
+                            </mat-option>
+                            <mat-option value="2">
+                              State
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </p>
+                      <p>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Value</mat-label>
+                          <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
+                        </mat-form-field>
+                      </p>
+                    </mat-card>
+                  </mat-expansion-panel>
+                </mat-accordion>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+
+            <mat-accordion class="actions-accordion">
+              <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon class="more-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                      more_vert</mat-icon>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-card>
+                  <div class="list-input search-input">
+                    <div class="inner">
+                      <mat-form-field>
+                        <mat-label>Search</mat-label>
+                        <input matInput placeholder="Ex. Lorem" value="" />
+                        <a href="javascript:;" title="search">
+                          <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">
+                            search
+                          </mat-icon>
+                        </a>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="list-input">
+                    <div class="inner">
+                      <mat-form-field>
+                        <mat-label>Sort by</mat-label>
+                        <mat-select>
+                          <mat-option value="1">
+                            Name
+                          </mat-option>
+                          <mat-option value="2">
+                            Category
+                          </mat-option>
+                          <mat-option value="2">
+                            Description
+                          </mat-option>
+                          <mat-option value="2">
+                            Owner
+                          </mat-option>
+                          <mat-option value="2">
+                            State
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                </mat-card>
+              </mat-expansion-panel>
+            </mat-accordion>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-------->
     <div class="items-list">
       <div class="inner">
         <!--card item-->
@@ -120,8 +233,8 @@
               <div class="box-1 item-actions">
                 <div class="inner">
                   <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
-                      color="primary">play_circle_outline</mat-icon>
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                      play_circle_outline</mat-icon>
                   </div>
                 </div>
               </div>
@@ -153,8 +266,8 @@
               <div class="box-1 item-actions">
                 <div class="inner">
                   <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
-                      color="primary">play_circle_outline</mat-icon>
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                      play_circle_outline</mat-icon>
                   </div>
                 </div>
               </div>
@@ -185,8 +298,8 @@
               <div class="box-1 item-actions">
                 <div class="inner">
                   <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
-                      color="primary">play_circle_outline</mat-icon>
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                      play_circle_outline</mat-icon>
                   </div>
                 </div>
               </div>
@@ -217,8 +330,8 @@
               <div class="box-1 item-actions">
                 <div class="inner">
                   <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
-                      color="primary">play_circle_outline</mat-icon>
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                      play_circle_outline</mat-icon>
                   </div>
                 </div>
               </div>
@@ -249,8 +362,8 @@
               <div class="box-1 item-actions">
                 <div class="inner">
                   <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
-                      color="primary">play_circle_outline</mat-icon>
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                      play_circle_outline</mat-icon>
                   </div>
                 </div>
               </div>
@@ -281,8 +394,8 @@
               <div class="box-1 item-actions">
                 <div class="inner">
                   <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
-                      color="primary">play_circle_outline</mat-icon>
+                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                      play_circle_outline</mat-icon>
                   </div>
                 </div>
               </div>

@@ -157,15 +157,6 @@ span {
   background-color: transparent !important;
 }
 
-.actions-container ::ng-deep .mat-expansion-panel .mat-icon {
-  position: relative;
-  height: 24px;
-  width: 24px;
-  display: block;
-  bottom: 0 !important;
-  left: 25px !important;
-}
-
 /*dark theme*/
 ::ng-deep .dark-theme .search-icon:hover,
 ::ng-deep .dark-theme .search-icon:focus,
@@ -179,8 +170,8 @@ span {
 ::ng-deep .dark-theme .upload-btn:hover,
 ::ng-deep .dark-theme .upload-btn:focus,
 ::ng-deep .dark-theme .upload-btn.active {
-  background-color:#ffffff !important;
-  background:#ffffff !important;
+  background-color: #ffffff !important;
+  background: #ffffff !important;
 }
 ::ng-deep .dark-theme .upload-btn:hover .mat-icon,
 ::ng-deep .dark-theme .upload-btn:focus .mat-icon,
@@ -188,7 +179,7 @@ span {
   color: $primary-color !important;
 }
 ::ng-deep .dark-theme .item-details {
-  color:#ffffff;
+  color: #ffffff;
 }
 
 /*Responsive*/
@@ -233,6 +224,59 @@ span {
     }
     ::ng-deep .mat-expansion-panel-body {
       padding: 0 !important;
+    }
+
+    ::ng-deep .mat-expansion-panel .mat-icon {
+      position: relative;
+      height: 24px;
+      width: 24px;
+      display: block;
+      bottom: 0 !important;
+      left: 25px !important;
+    }
+
+    ::ng-deep .mat-expansion-panel {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    ::ng-deep .mat-expansion-panel-header {
+      height: 48px;
+      width: 50px;
+      padding: 10px;
+      float: right;
+      display: block;
+    }
+    ::ng-deep .mat-card {
+      min-height: 200px;
+    }
+    ::ng-deep .mat-expansion-panel-content {
+      top: 170px;
+      width: 70%;
+      right: 15px;
+    }
+    ::ng-deep .filter-accordion .mat-expansion-panel-content {
+      width: auto;
+      top: 40px;
+    }
+
+
+    ::ng-deep .mat-expansion-panel-content .mat-form-field {
+      width: 100%;
+    }
+
+    ::ng-deep .mat-expansion-panel-content .search-input .mat-icon {
+      float: right;
+      left: auto !important;
+      bottom: auto !important;
+    }
+    .mobile-list-actions {
+      width: 50% !important;
+      float: left;
+    }
+    .mobile-list-actions .list-input{
+      width: 50% !important;
     }
   }
 

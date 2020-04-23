@@ -2,7 +2,7 @@
 @import "../../assets/styles/global";
 
 .header .mat-accordion {
-  z-index: 1;
+  z-index: 2;
 }
 .header .mat-accordion > .mat-expansion-panel-spacing:first-child {
   margin-top: 65px;
@@ -51,10 +51,10 @@
   .user-actions-container .mat-icon {
     margin-left: 10px;
   }
-  .user-actions-container .mat-raised-button {
-    width: 100%;
-    float: left;
-  }
+  // .user-actions-container .mat-raised-button {
+  //   width: 100%;
+  //   float: left;
+  // }
   .user-actions-container .mat-raised-button:last-child {
     margin-top: 10px;
   }
@@ -62,7 +62,7 @@
   .user-actions-container .mat-toolbar.mat-accent {
     margin-bottom: 55px;
   }
-  .header .mat-accordion > .mat-expansion-panel-spacing:first-child {
-    margin-top: 110px;
-  }
+  // .header .mat-accordion > .mat-expansion-panel-spacing:first-child {
+  //   margin-top: 110px;
+  // }
 }
