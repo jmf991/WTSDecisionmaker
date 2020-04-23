@@ -187,6 +187,10 @@ span {
 ::ng-deep .dark-theme .upload-btn.active .mat-icon {
   color: $primary-color !important;
 }
+::ng-deep .dark-theme .item-details {
+  color:#ffffff;
+}
+
 /*Responsive*/
 @media (max-width: $tablet) {
   .list-input {

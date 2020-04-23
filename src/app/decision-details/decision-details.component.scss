@@ -18,6 +18,15 @@ span {
     margin-top: 0;
     padding-top: 0;
   }
+  .details-page-container {
+    display: grid;
+  }
+  .documents-container {
+    order: 2;
+  }
+  .details-container {
+    order: 1;
+  }
 }
 
 .icon-link:hover .mat-icon,
