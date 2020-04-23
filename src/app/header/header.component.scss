@@ -1,3 +1,6 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/global";
+
 .header .mat-accordion {
   z-index: 1;
 }
@@ -7,4 +10,24 @@
 
 .header .mat-accordion .mat-raised-button.mat-primary:first-child {
   margin-right: 10px;
+}
+
+@media (max-width: $tablet) {
+  .user-actions-container .mat-icon {
+    margin-left: 10px;
+  }
+  .user-actions-container .mat-raised-button {
+    width: 100%;
+    float: left;
+  }
+  .user-actions-container .mat-raised-button:last-child {
+    margin-top: 10px;
+  }
+
+  .header .mat-accordion > .mat-expansion-panel-spacing:first-child {
+    margin-top: 110px;
+  }
+  .mat-toolbar.mat-accent {
+    margin-bottom: 55px;
+  }
 }
