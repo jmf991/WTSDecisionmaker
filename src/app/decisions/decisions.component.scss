@@ -86,11 +86,17 @@ span {
     float: left !important;
   }
   .list-card {
-    height: 90px;
+    height: 80px;
   }
   .play-icon {
-    left: 0 !important;
-    bottom: -30px !important;
+    // left: 0 !important;
+    // bottom: -30px !important;
+    left: -25px !important;
+    bottom: 20px !important;
+    font-size: 35px;
+    height: 35px;
+    width: 35px;
+    position: relative !important;
   }
   .actions-container .list-input {
     width: 100% !important;
@@ -103,6 +109,17 @@ span {
       padding: 0 !important;
     }
   }
+  .item-name {
+    margin-bottom: 10px;
+  }
+  .item-name,
+  .item-details {
+    width: 90%;
+  }
+  .item-actions {
+    width: 10%;
+  }
+
 }
 .action-btn {
   margin: 5px;
@@ -128,13 +145,14 @@ span {
 }
 
 .play-icon {
-  position: absolute;
+  position: relative;
   cursor: pointer;
   &:hover {
     color: #333333;
   }
-  left: 20px;
-  bottom: -20px;
+  left: 30px;
+  bottom: 7px;
+  font-size: 30px;
 }
 
 .input-icon {
