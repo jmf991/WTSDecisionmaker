@@ -67,3 +67,10 @@ hr {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.mat-drawer {
+  width: 60%;
+}
+.mat-drawer-inner-container .mat-button {
+  min-height: 40px;
+}
