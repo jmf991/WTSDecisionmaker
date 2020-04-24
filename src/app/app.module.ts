@@ -60,6 +60,7 @@ import { ReportDetailsComponent } from "./report-details/report-details.componen
 import { ReportEditComponent } from "./report-edit/report-edit.component";
 import { SearchComponent } from "./search/search.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   { path: "global", component: GlobalElementsComponent },
