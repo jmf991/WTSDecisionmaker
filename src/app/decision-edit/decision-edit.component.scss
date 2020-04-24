@@ -15,6 +15,12 @@
   color: #ffffff !important;
 }
 
+.icon-link:hover .mat-icon,
+.icon-link:focus .mat-icon,
+.icon-link.active .mat-icon {
+  color: $primary-color;
+}
+
 @media (max-width: $mobile) {
   .inner {
     margin-bottom: 0;

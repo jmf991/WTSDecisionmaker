@@ -231,8 +231,8 @@ span {
       height: 24px;
       width: 24px;
       display: block;
-      bottom: 0 !important;
-      left: 25px !important;
+      bottom: 5px !important;
+      left: 0 !important;
     }
 
     ::ng-deep .mat-expansion-panel {
@@ -240,27 +240,25 @@ span {
       border-radius: 0;
       box-shadow: none;
     }
-
+    ::ng-deep .mobile-list-actions .mat-expansion-panel {
+      position: relative;
+    }
+    ::ng-deep .actions-accordion .mat-expansion-panel-header {
+      height: 20px !important;
+    }
     ::ng-deep .mat-expansion-panel-header {
-      height: 48px;
-      width: 50px;
-      padding: 10px;
-      float: right;
+      float: left;
+      position: relative !important;
       display: block;
     }
     ::ng-deep .mat-card {
       min-height: 200px;
     }
     ::ng-deep .mat-expansion-panel-content {
-      top: 170px;
-      width: 70%;
-      right: 15px;
-    }
-    ::ng-deep .filter-accordion .mat-expansion-panel-content {
       width: auto;
       top: 40px;
+      right: 15px;
     }
-
 
     ::ng-deep .mat-expansion-panel-content .mat-form-field {
       width: 100%;
@@ -271,12 +269,12 @@ span {
       left: auto !important;
       bottom: auto !important;
     }
-    .mobile-list-actions {
-      width: 50% !important;
-      float: left;
-    }
-    .mobile-list-actions .list-input{
-      width: 50% !important;
+
+    // .mobile-list-actions .list-input{
+    //   width: 50% !important;
+    // }
+    .list-inputs .box-6 {
+      width: 50%;
     }
   }
 
