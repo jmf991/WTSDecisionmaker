@@ -58,6 +58,7 @@ import { DecisionEditComponent } from "./decision-edit/decision-edit.component";
 import { ReportsComponent } from "./reports/reports.component";
 import { ReportDetailsComponent } from "./report-details/report-details.component";
 import { ReportEditComponent } from "./report-edit/report-edit.component";
+import { SearchComponent } from "./search/search.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -75,7 +76,8 @@ const appRoutes: Routes = [
   { path: "decision-edit", component: DecisionEditComponent },
   { path: "reports", component: ReportsComponent },
   { path: "report-details", component: ReportDetailsComponent },
-  { path: "report-edit", component: ReportEditComponent }
+  { path: "report-edit", component: ReportEditComponent },
+  { path: "search", component: SearchComponent }
 ];
 
 @NgModule({
@@ -98,7 +100,8 @@ const appRoutes: Routes = [
     DecisionEditComponent,
     ReportsComponent,
     ReportDetailsComponent,
-    ReportEditComponent
+    ReportEditComponent,
+    SearchComponent
   ],
   imports: [
     RouterModule.forRoot(

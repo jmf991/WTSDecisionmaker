@@ -1,0 +1,293 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/global";
+
+span {
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.page-title {
+  margin-bottom: 0;
+}
+
+/*list*/
+.list-container {
+  padding: 0;
+  width: 100%;
+}
+
+.list-card {
+  cursor: pointer;
+  &:hover {
+    background-color: lightgrey;
+  }
+  padding: 16px 0 16px 0;
+  margin: 5px 0;
+  height: 48px;
+}
+
+.items-list .inner {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.list-item {
+  width: 100%;
+  display: block;
+  height: 100%;
+  font-size: 14px;
+}
+
+.list-item .name {
+  font-weight: bold;
+}
+
+.list-input {
+  float: right;
+}
+
+.upload-input .inner,
+.list-input .inner {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/*list item*/
+
+.item-details {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.item-actions .inner,
+.item-details .inner,
+.item-name .inner {
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+.item-name .inner div,
+.item-details .inner div {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.item-name div {
+  margin-bottom: 0;
+  font-size: 15px;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+/*icons*/
+.upload-btn {
+  width: auto;
+  padding: 5px;
+  height: 30px;
+}
+
+.upload-icon {
+  left: 20px;
+  bottom: 3px !important;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn.active {
+  background-color: #333333;
+}
+
+.play-icon {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    color: #333333;
+  }
+  left: 30px;
+  bottom: 7px;
+  font-size: 30px;
+}
+
+.input-icon {
+  position: absolute;
+  right: 0px;
+  bottom: 1px;
+}
+
+/*actions*/
+.actions-container ::ng-deep .mat-expansion-indicator::after {
+  display: none;
+}
+.actions-container ::ng-deep .mat-expansion-panel {
+  background: #fafafa;
+  width: 50px;
+  overflow: visible;
+}
+
+.actions-container ::ng-deep .mat-expansion-panel-content {
+  display: block;
+  float: right;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  z-index: 1;
+}
+
+.actions-container ::ng-deep .mat-expansion-panel-header {
+  width: 70px !important;
+  padding: 0px !important;
+  right: 10px;
+  position: absolute;
+}
+
+.search-icon:hover,
+.search-icon:focus,
+.search-icon.active,
+.actions-container ::ng-deep .mat-expansion-panel-header:hover .mat-icon,
+.actions-container ::ng-deep .mat-expansion-panel-header:focus .mat-icon,
+.actions-container ::ng-deep .mat-expansion-panel-header.active .mat-icon {
+  color: #333333;
+}
+::ng-deep .actions-container .mat-expansion-panel-header:hover,
+::ng-deep .actions-container .mat-expansion-panel-header:focus,
+::ng-deep .actions-container .mat-expansion-panel-header.active {
+  background-color: transparent !important;
+}
+
+/*dark theme*/
+::ng-deep .dark-theme .search-icon:hover,
+::ng-deep .dark-theme .search-icon:focus,
+::ng-deep .dark-theme .search-icon.active,
+::ng-deep .dark-theme .mat-expansion-panel-header:hover .mat-icon,
+::ng-deep .dark-theme .mat-expansion-panel-header:focus .mat-icon,
+::ng-deep .dark-theme .mat-expansion-panel-header.active .mat-icon {
+  color: #ffffff !important;
+}
+
+::ng-deep .dark-theme .upload-btn:hover,
+::ng-deep .dark-theme .upload-btn:focus,
+::ng-deep .dark-theme .upload-btn.active {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+}
+::ng-deep .dark-theme .upload-btn:hover .mat-icon,
+::ng-deep .dark-theme .upload-btn:focus .mat-icon,
+::ng-deep .dark-theme .upload-btn.active .mat-icon {
+  color: $primary-color !important;
+}
+::ng-deep .dark-theme .item-details {
+  color: #ffffff;
+}
+
+/*Responsive*/
+@media (max-width: $tablet) {
+  .list-input {
+    width: 50% !important;
+    float: left;
+  }
+  .upload-input {
+    width: 100% !important;
+  }
+
+  .list-input .inner {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .action-btn {
+    float: left !important;
+  }
+
+  .list-card {
+    height: 80px;
+  }
+
+  .play-icon {
+    left: -25px !important;
+    bottom: 20px !important;
+    font-size: 35px;
+    height: 35px;
+    width: 35px;
+    position: relative !important;
+  }
+
+  .actions-container .list-input {
+    width: 100% !important;
+  }
+
+  .actions-container {
+    ::ng-deep .mat-expansion-panel-content {
+      float: left !important;
+    }
+    ::ng-deep .mat-expansion-panel-body {
+      padding: 0 !important;
+    }
+
+    ::ng-deep .mat-expansion-panel .mat-icon {
+      position: relative;
+      height: 24px;
+      width: 24px;
+      display: block;
+      bottom: 5px !important;
+      left: 0 !important;
+    }
+
+    ::ng-deep .mat-expansion-panel {
+      border: none;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    ::ng-deep .mobile-list-actions .mat-expansion-panel {
+      position: relative;
+    }
+    ::ng-deep .actions-accordion .mat-expansion-panel-header {
+      height: 20px !important;
+    }
+    ::ng-deep .mat-expansion-panel-header {
+      float: left;
+      position: relative !important;
+      display: block;
+    }
+    ::ng-deep .mat-card {
+      min-height: 200px;
+    }
+    ::ng-deep .mat-expansion-panel-content {
+      width: auto;
+      top: 40px;
+      right: 15px;
+    }
+
+    ::ng-deep .mat-expansion-panel-content .mat-form-field {
+      width: 100%;
+    }
+
+    ::ng-deep .mat-expansion-panel-content .search-input .mat-icon {
+      float: right;
+      left: auto !important;
+      bottom: auto !important;
+    }
+
+    // .mobile-list-actions .list-input{
+    //   width: 50% !important;
+    // }
+    .list-inputs .box-6 {
+      width: 50%;
+    }
+  }
+
+  .item-name {
+    margin-bottom: 10px;
+  }
+
+  .item-name,
+  .item-details {
+    width: 90%;
+  }
+
+  .item-actions {
+    width: 10%;
+  }
+}
