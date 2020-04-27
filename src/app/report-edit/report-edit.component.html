@@ -3,6 +3,14 @@
     <div class="inner">
       <mat-card class="example-card">
         <h3>Documents</h3>
+
+        <p style="color:rgba(0, 0, 0, 0.54);margin-bottom: 15px;">Drag and drop files here, or click and browse to
+          upload a file</p>
+        <div class="file-upload-container">
+          <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+            <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+          </div>
+        </div>
         <mat-list>
           <button class="icon-link" mat-button color="accent">
             <mat-icon>delete</mat-icon> Document 1 (2020-03-23)
@@ -55,25 +63,17 @@
         </div>
         <div class="box-4 upload-input">
           <div class="inner">
-            <p style="color:rgba(0, 0, 0, 0.54);margin-bottom: 15px;">Drag and drop files here, or click and browse to upload a file</p>
-
-            <div class="file-upload-container">
-              <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop
-                (onFileDropped)="uploadFile($event)">
-                <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
-              </div>
-            </div>
             <div class="clearfix"></div>
-          </div>
-        </div>
-        <div class="box-12">
-          <div class="inner">
-            <button mat-raised-button color="primary" [routerLink]="['/report-details']">Save</button>&nbsp;
-            <button mat-button mat-raised-button [routerLink]="['/report-details']">Discard</button>&nbsp;
           </div>
         </div>
         <div class="clearfix"></div>
       </mat-card>
+      <div class="box-12">
+        <div class="inner">
+          <button mat-raised-button color="primary" [routerLink]="['/decision-details']">Save</button>&nbsp;
+          <button mat-button mat-raised-button [routerLink]="['/decision-details']">Discard</button>&nbsp;
+        </div>
+      </div>
     </div>
   </div>
 </div>
