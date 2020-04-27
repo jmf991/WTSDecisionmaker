@@ -3,21 +3,16 @@
     <img style="max-width: 200px;" src="assets/images/wts-global-logo.svg" />
     <span style="flex: 1 1 auto;"></span>
 
-    <div class="search-container inner tablet-hidden">
-      <mat-form-field>
-        <mat-label>Search</mat-label>
-        <input matInput placeholder="Ex. Lorem" value="" type="text"/>
+    <div class="search-container inner">
         <a [routerLink]="['/search']" title="search">
           <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search
           </mat-icon>
         </a>
-      </mat-form-field>
     </div>
     <mat-accordion class="user-actions-container">
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title>
-            Username &nbsp;
             <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">account_circle
             </mat-icon>
           </mat-panel-title>
@@ -49,16 +44,6 @@
       </button>
     </div>
 
-    <div class="search-container inner tablet-displayed">
-      <mat-form-field>
-        <mat-label>Search</mat-label>
-        <input matInput placeholder="Ex. Lorem" value="" />
-        <a href="javascript:;" title="search">
-          <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search
-          </mat-icon>
-        </a>
-      </mat-form-field>
-    </div>
   </mat-toolbar>
   <mat-sidenav-container fxFlexFill class="example-container">
     <mat-sidenav #sidenav fxLayout="column">

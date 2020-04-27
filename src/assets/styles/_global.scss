@@ -71,13 +71,22 @@ hr {
 .mat-drawer {
   width: 60%;
 }
+
+::ng-deep .mat-drawer-container {
+  padding-top: 15px;
+  min-height: 100vh!important;
+}
+
 .mat-drawer-inner-container .mat-button {
   min-height: 40px;
+  font-size: 16px;
 }
 
 @media (max-width: $tablet) {
   .mat-toolbar.mat-accent {
     margin-bottom: 0;
   }
-  .mat-toolbar.mat-accent.mat-toolbar-single-row div:nth-child(2){flex: auto;}
+  .mat-toolbar.mat-accent.mat-toolbar-single-row div:nth-child(2) {
+    flex: auto;
+  }
 }
