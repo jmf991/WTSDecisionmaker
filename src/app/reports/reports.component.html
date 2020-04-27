@@ -4,13 +4,18 @@
   </div>
   <div class="list-container">
     <div class="actions-container tablet-hidden">
-      <div class="list-input">
+      <div class="box-2 upload-input">
+        <div class="inner">
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <div class="list-input filter-input">
         <div class="inner" style="position: relative;">
           <mat-accordion>
             <mat-expansion-panel>
               <mat-expansion-panel-header>
                 <mat-panel-title>
-                  <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                  <mat-icon class="filter-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
                     filter_list</mat-icon>
                 </mat-panel-title>
               </mat-expansion-panel-header>
@@ -87,60 +92,59 @@
       </div>
       <div class="clearfix"></div>
     </div>
-   <!-------->
-   <div class="actions-container tablet-displayed">
-    <div style="margin-bottom:40px;">
+    <!-------->
+    <div class="actions-container tablet-displayed">
       <div class="mobile-list-actions box-mobile-9 box-tablet-9">
-        <div class="inner">
+        <div class="inner" style="height: 50px;">
           <div class="clearfix"></div>
         </div>
       </div>
       <div class="mobile-list-actions list-inputs box-mobile-3 box-tablet-3">
-        <div class="box-mobile-6 box-tablet-6">
-          <div class="inner">
-            <mat-accordion class="filter-accordion">
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
-                      filter_list</mat-icon>
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <mat-card>
-                  <p>
-                    <mat-form-field class="example-full-width">
-                      <mat-label>Select filter</mat-label>
-                      <mat-select>
-                        <mat-option value="1">
-                          Name
-                        </mat-option>
-                        <mat-option value="2">
-                          Category
-                        </mat-option>
-                        <mat-option value="2">
-                          Description
-                        </mat-option>
-                        <mat-option value="2">
-                          Owner
-                        </mat-option>
-                        <mat-option value="2">
-                          State
-                        </mat-option>
-                      </mat-select>
-                    </mat-form-field>
-                  </p>
-                  <p>
-                    <mat-form-field class="example-full-width">
-                      <mat-label>Value</mat-label>
-                      <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
-                    </mat-form-field>
-                  </p>
-                </mat-card>
-              </mat-expansion-panel>
-            </mat-accordion>
-          </div>
+        <!-- <div class="box-mobile-6 box-tablet-6">
+        <div class="inner">
+          <mat-accordion class="filter-accordion">
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                    filter_list</mat-icon>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-card>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Select filter</mat-label>
+                    <mat-select>
+                      <mat-option value="1">
+                        Name
+                      </mat-option>
+                      <mat-option value="2">
+                        Category
+                      </mat-option>
+                      <mat-option value="2">
+                        Description
+                      </mat-option>
+                      <mat-option value="2">
+                        Owner
+                      </mat-option>
+                      <mat-option value="2">
+                        State
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Value</mat-label>
+                    <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
+                  </mat-form-field>
+                </p>
+              </mat-card>
+            </mat-expansion-panel>
+          </mat-accordion>
         </div>
-        <div class="box-mobile-6 box-tablet-6">
+      </div> -->
+        <div class="box-mobile-12 box-tablet-12">
           <div class="inner">
             <mat-accordion class="actions-accordion">
               <mat-expansion-panel>
@@ -157,8 +161,7 @@
                         <mat-label>Search</mat-label>
                         <input matInput placeholder="Ex. Lorem" value="" />
                         <a href="javascript:;" title="search">
-                          <mat-icon class="input-icon search-icon" aria-hidden="false"
-                            aria-label="Example delete icon">
+                          <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">
                             search
                           </mat-icon>
                         </a>
@@ -192,6 +195,7 @@
                 </mat-card>
               </mat-expansion-panel>
             </mat-accordion>
+            <div class="clearfix"></div>
           </div>
         </div>
         <div class="clearfix"></div>
@@ -199,8 +203,7 @@
 
       <div class="clearfix"></div>
     </div>
-  </div>
-  <!-------->
+    <!-------->
     <div class="items-list">
       <div class="inner">
         <!--card item-->

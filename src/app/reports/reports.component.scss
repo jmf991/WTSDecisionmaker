@@ -137,7 +137,7 @@ span {
 }
 
 .actions-container ::ng-deep .mat-expansion-panel-header {
-  width: 70px !important;
+  //width: 70px !important;
   padding: 0px !important;
   right: 10px;
   position: absolute;
@@ -181,7 +181,9 @@ span {
 ::ng-deep .dark-theme .item-details {
   color: #ffffff;
 }
-
+::ng-deep .filter-input .mat-expansion-panel-header-title {
+  margin-right: 20px;
+}
 /*Responsive*/
 @media (max-width: $tablet) {
   .list-input {
@@ -219,22 +221,18 @@ span {
   }
 
   .actions-container {
-    ::ng-deep .mat-expansion-panel-content {
-      float: left !important;
-    }
     ::ng-deep .mat-expansion-panel-body {
       padding: 0 !important;
     }
 
     ::ng-deep .mat-expansion-panel .mat-icon {
-      position: relative;
-      height: 24px;
-      width: 24px;
-      display: block;
-      bottom: 5px !important;
-      left: 0 !important;
+      width: 100%;
+      text-align: right;
+      font-size: 28px;
     }
-
+    ::ng-deep .mat-expansion-panel .mat-expansion-panel-header-title {
+      margin-right: 0;
+    }
     ::ng-deep .mat-expansion-panel {
       border: none;
       border-radius: 0;
@@ -242,9 +240,12 @@ span {
     }
     ::ng-deep .mobile-list-actions .mat-expansion-panel {
       position: relative;
+      float: right;
     }
     ::ng-deep .actions-accordion .mat-expansion-panel-header {
-      height: 20px !important;
+      height: 25px !important;
+      width: 65px;
+      position: absolute !important;
     }
     ::ng-deep .mat-expansion-panel-header {
       float: left;
@@ -255,6 +256,7 @@ span {
       min-height: 200px;
     }
     ::ng-deep .mat-expansion-panel-content {
+      float: left !important;
       width: auto;
       top: 40px;
       right: 15px;
