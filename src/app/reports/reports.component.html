@@ -11,8 +11,8 @@
       </div>
       <div class="list-input filter-input">
         <div class="inner" style="position: relative;">
-          <mat-accordion>
-            <mat-expansion-panel>
+          <mat-accordion #myaccordion="matAccordion" (clickOutside)="onClickedOutsideAccordion($event)" multi="true">
+            <mat-expansion-panel >
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   <mat-icon class="filter-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">

@@ -60,6 +60,7 @@ import { ReportDetailsComponent } from "./report-details/report-details.componen
 import { ReportEditComponent } from "./report-edit/report-edit.component";
 import { SearchComponent } from "./search/search.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ClickOutsideModule } from 'ng-click-outside';
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -110,6 +111,7 @@ const appRoutes: Routes = [
 
       { enableTracing: true, useHash: true } // <-- debugging purposes only
     ),
+    ClickOutsideModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

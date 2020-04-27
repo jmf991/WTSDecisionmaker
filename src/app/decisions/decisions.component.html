@@ -2,7 +2,7 @@
   <div class="inner">
     <h1 class="page-title ">DMN Models</h1>
   </div>
-  <div class="list-container" (click)="toggle(d.expanded)">
+  <div class="list-container">
     <div class="actions-container tablet-hidden">
       <div class="box-2 upload-input">
         <div class="inner">
@@ -15,8 +15,8 @@
       </div>
       <div class="list-input filter-input">
         <div class="inner" style="position: relative;">
-          <mat-accordion>
-            <mat-expansion-panel>
+          <mat-accordion #myaccordion="matAccordion" (clickOutside)="onClickedOutsideAccordion($event)" multi="true">
+            <mat-expansion-panel >
               <mat-expansion-panel-header>
                 <mat-panel-title>
                   <mat-icon class="filter-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
@@ -154,7 +154,7 @@
           </div> -->
         <div class="box-mobile-12 box-tablet-12">
           <div class="inner">
-            <mat-accordion class="actions-accordion" [expanded]="panelOpenState">
+            <mat-accordion class="actions-accordion">
               <mat-expansion-panel>
                 <mat-expansion-panel-header>
                   <mat-panel-title>
