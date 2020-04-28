@@ -29,7 +29,6 @@ export class ReportsComponent implements OnInit {
     this.myPanelsTabletFilter.closeAll();
   }
   onClickedOutsideAccordionTabletFilter(e: Event) {
-    //this.myPanelsTabletFilter.closeAll();
   }
 
 }

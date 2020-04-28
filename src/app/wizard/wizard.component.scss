@@ -1,4 +1,3 @@
-
 .checkbox-group,
 .radio-group {
   display: flex;
@@ -10,3 +9,13 @@
 .radio-button {
   margin: 5px;
 }
+::ng-deep .mat-step-header[ng-reflect-active="false"] {
+  display: none;
+}
+
+::ng-deep
+  .mat-step-header[ng-reflect-active="false"] +
+  .mat-stepper-vertical-line::before {
+  display: none;
+}
+::ng-deep .mat-stepper-vertical-line::before{    bottom: 0px !Important;}
