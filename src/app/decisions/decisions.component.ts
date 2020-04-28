@@ -14,8 +14,9 @@ import { MatAccordion } from '@angular/material/expansion';
 export class DecisionsComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
+
   @ViewChild('myaccordion') myPanels: MatAccordion;
-  panelOpenState = false;
+  @ViewChild('myaccordionTablet') myPanelsTablet: MatAccordion;
 
   openUploadDialog(): void {
     const dialogRef = this.dialog.open(UploadDialogComponent, {
@@ -32,5 +33,8 @@ export class DecisionsComponent implements OnInit {
 
   onClickedOutsideAccordion(e: Event) {
     this.myPanels.closeAll();
+  }
+  onClickedOutsideAccordionTablet(e: Event) {
+    this.myPanelsTablet.closeAll();
   }
 }

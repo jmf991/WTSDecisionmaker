@@ -12,17 +12,19 @@ import { MatAccordion } from '@angular/material/expansion';
 
 export class ReportsComponent implements OnInit {
 
-
   constructor(public dialog: MatDialog) { }
-  @ViewChild('myaccordion') myPanels: MatAccordion;
-  panelOpenState = false;
 
+  @ViewChild('myaccordion') myPanels: MatAccordion;
+  @ViewChild('myaccordionTablet') myPanelsTablet: MatAccordion;
 
   async ngOnInit() {
   }
 
   onClickedOutsideAccordion(e: Event) {
     this.myPanels.closeAll();
+  }
+  onClickedOutsideAccordionTablet(e: Event) {
+    this.myPanelsTablet.closeAll();
   }
 
 }

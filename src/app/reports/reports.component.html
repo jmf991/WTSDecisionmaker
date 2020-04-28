@@ -146,7 +146,7 @@
       </div> -->
         <div class="box-mobile-12 box-tablet-12">
           <div class="inner">
-            <mat-accordion class="actions-accordion">
+            <mat-accordion class="actions-accordion"  #myaccordionTablet="matAccordion" (clickOutside)="onClickedOutsideAccordionTablet($event)" multi="true">
               <mat-expansion-panel>
                 <mat-expansion-panel-header>
                   <mat-panel-title>
