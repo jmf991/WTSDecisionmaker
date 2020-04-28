@@ -16,6 +16,7 @@ export class ReportsComponent implements OnInit {
 
   @ViewChild('myaccordion') myPanels: MatAccordion;
   @ViewChild('myaccordionTablet') myPanelsTablet: MatAccordion;
+  @ViewChild('myaccordionTabletFilter') myPanelsTabletFilter: MatAccordion;
 
   async ngOnInit() {
   }
@@ -25,6 +26,10 @@ export class ReportsComponent implements OnInit {
   }
   onClickedOutsideAccordionTablet(e: Event) {
     this.myPanelsTablet.closeAll();
+    this.myPanelsTabletFilter.closeAll();
+  }
+  onClickedOutsideAccordionTabletFilter(e: Event) {
+    //this.myPanelsTabletFilter.closeAll();
   }
 
 }

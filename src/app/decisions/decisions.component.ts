@@ -17,6 +17,7 @@ export class DecisionsComponent implements OnInit {
 
   @ViewChild('myaccordion') myPanels: MatAccordion;
   @ViewChild('myaccordionTablet') myPanelsTablet: MatAccordion;
+  @ViewChild('myaccordionTabletFilter') myPanelsTabletFilter: MatAccordion;
 
   openUploadDialog(): void {
     const dialogRef = this.dialog.open(UploadDialogComponent, {
@@ -36,5 +37,9 @@ export class DecisionsComponent implements OnInit {
   }
   onClickedOutsideAccordionTablet(e: Event) {
     this.myPanelsTablet.closeAll();
+    this.myPanelsTabletFilter.closeAll();
   }
+  onClickedOutsideAccordionTabletFilter(e: Event) {
+  }
+
 }
