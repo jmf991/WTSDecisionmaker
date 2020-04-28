@@ -74,7 +74,11 @@ hr {
 
 ::ng-deep .mat-drawer-container {
   padding-top: 15px;
-  min-height: 100vh!important;
+  min-height: 100vh !important;
+}
+
+::ng-deep .mat-drawer-content {
+  overflow-y: inherit !important;
 }
 
 .mat-drawer-inner-container .mat-button {
