@@ -13,8 +13,7 @@
   display: none;
 }
 
-::ng-deep
-  .mat-step-header[ng-reflect-active="false"] +
+::ng-deep .mat-step-header[ng-reflect-active="false"] +
   .mat-stepper-vertical-line::before {
   display: none;
 }

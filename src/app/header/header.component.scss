@@ -3,7 +3,7 @@
 
 ::ng-deep .mat-toolbar .mat-accordion {
   z-index: 2;
-  width: 60px;
+  width: 165px;
   position: relative;
   height: auto;
 }
@@ -50,6 +50,7 @@
 ::ng-deep .mat-toolbar .mat-icon {
   height: 23px;
   width: 23px;
+  margin-left: 20px;
 }
 ::ng-deep
   .mat-toolbar
@@ -95,6 +96,12 @@
 }
 
 @media (max-width: $tablet) {
+  ::ng-deep .mat-toolbar .mat-accordion {
+    width: 60px;
+  }
+  .username {
+    display: none;
+  }
   .user-actions-container .mat-icon {
     margin-left: 10px;
   }
