@@ -1,58 +1,65 @@
 import { Component, OnInit } from "@angular/core";
 import {
 } from "@angular/forms";
-import {MatTableDataSource} from '@angular/material/table';
-import {SelectionModel} from '@angular/cdk/collections';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 export interface TableElement {
   position: number;
   name: string;
-  date:Date;
+  date: string;
+  delete: boolean;
+  edit: boolean;
+  copy: boolean;
 }
 
 const ELEMENT_DATA: TableElement[] = [
-  {position: 1,name: 'Document 3', date:new Date('2020-03-23')},
-  {position: 1,name: 'Document 3', date:new Date('2020-03-23')},
-  {position: 1,name: 'Document 3', date:new Date('2020-03-23')},
-  {position: 1,name: 'Document 3', date:new Date('2020-03-23')},
-  {position: 1,name: 'Document 3', date:new Date('2020-03-23')},
+  {
+    position: 1,
+    name: 'Document 1 (2020-03-23)',
+    date: '2020-03-23',
+    delete: true,
+    edit: true,
+    copy: true
+  }, {
+    position: 2,
+    name: 'Document 2 (2020-03-23)',
+    date: '2020-03-23',
+    delete: true,
+    edit: true,
+    copy: true
+  }, {
+    position: 3,
+    name: 'Document 3 (2020-03-23)',
+    date: '2020-03-23',
+    delete: true,
+    edit: true,
+    copy: true
+  }, {
+    position: 4,
+    name: 'Document 4 (2020-03-23)',
+    date: '2020-03-23',
+    delete: true,
+    edit: true,
+    copy: true
+  }
 ];
 
 @Component({
   selector: "app-decision-edit",
   templateUrl: "./decision-edit.component.html",
-  styleUrls: ["./decision-edit.component.scss"]
+  styleUrls: ["./decision-edit.component.scss"],
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({ height: '0px', minHeight: '0' })),
+      state('expanded', style({ height: '*' })),
+      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+    ]),
+  ],
 })
 export class DecisionEditComponent implements OnInit {
-
-  displayedColumns: string[] = ['name','date'];
-
-
-
-  dataSource = new MatTableDataSource<TableElement>(ELEMENT_DATA);
-  selection = new SelectionModel<TableElement>(true, []);
-
-  /** Whether the number of selected elements matches the total number of rows. */
-  isAllSelected() {
-    const numSelected = this.selection.selected.length;
-    const numRows = this.dataSource.data.length;
-    return numSelected === numRows;
-  }
-
-  /** Selects all rows if they are not all selected; otherwise clear selection. */
-  masterToggle() {
-    this.isAllSelected() ?
-        this.selection.clear() :
-        this.dataSource.data.forEach(row => this.selection.select(row));
-  }
-
-  /** The label for the checkbox on the passed row */
-  checkboxLabel(row?: TableElement): string {
-    if (!row) {
-      return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
-    }
-    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
-  }
+  dataSource = ELEMENT_DATA;
+  columnsToDisplay = ['name'];
+  expandedElement: TableElement | null;
 
 
   constructor() { }

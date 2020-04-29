@@ -5,57 +5,57 @@
         <h3>Documents</h3>
 
         <p style="color:rgba(0, 0, 0, 0.54);margin-bottom: 15px;">Drag and drop files here, or click and browse to
-          upload a file</p>
+          upload a file:</p>
         <div class="file-upload-container">
           <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
             <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
           </div>
         </div>
-        <mat-list>
-          <button class="icon-link" mat-button color="accent">
-            <mat-icon>delete</mat-icon> Document 1 (2020-03-23)
-          </button>&nbsp;
-          <button class="icon-link" mat-button color="accent">
-            <mat-icon>delete</mat-icon> Document 2 (2020-03-23)
-          </button>&nbsp;
-          <button class="icon-link" mat-button color="accent">
-            <mat-icon>delete</mat-icon> Document 3 (2020-03-23)
-          </button>&nbsp;
-        </mat-list>
-        <!---->
-        <!--------------------->
-        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-
-          <!-- Checkbox Column -->
-          <ng-container matColumnDef="select">
-            <th mat-header-cell *matHeaderCellDef>
-              <mat-checkbox (change)="$event ? masterToggle() : null"
-                [checked]="selection.hasValue() && isAllSelected()"
-                [indeterminate]="selection.hasValue() && !isAllSelected()" [aria-label]="checkboxLabel()">
-              </mat-checkbox>
-            </th>
-            <td mat-cell *matCellDef="let row">
-              <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null"
-                [checked]="selection.isSelected(row)" [aria-label]="checkboxLabel(row)">
-              </mat-checkbox>
+        <p style="color:rgba(0, 0, 0, 0.54);margin-bottom: 15px;">Uploaded files:</p>
+        <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
+          <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
+            <th mat-header-cell *matHeaderCellDef class="documents-table-header"> </th>
+            <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
+          </ng-container>
+          <ng-container matColumnDef="expandedDetail">
+            <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
+              <div class="element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+                <div class="element-description">
+                  <span class="element-description-attribution">
+                    <div class="box-4">
+                      <div class="">
+                        <button class="icon-link" mat-button color="accent" *ngIf="element.delete">
+                          <mat-icon>delete</mat-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="box-4">
+                      <div class="">
+                        <button class="icon-link" mat-button color="accent" *ngIf="element.edit">
+                          <mat-icon>edit</mat-icon>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="box-4">
+                      <div class="">
+                        <button class="icon-link" mat-button color="accent" *ngIf="element.copy">
+                          <mat-icon>link</mat-icon>
+                        </button>
+                      </div>
+                    </div>
+                  </span>
+                </div>
+              </div>
             </td>
           </ng-container>
 
-          <ng-container matColumnDef="name">
-            <th mat-header-cell *matHeaderCellDef> Name </th>
-            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-          </ng-container>
-          <ng-container matColumnDef="date">
-            <th mat-header-cell *matHeaderCellDef> Date </th>
-            <td mat-cell *matCellDef="let element"> ({{element.date | date:'MM-dd-yyyy'}}) </td>
-          </ng-container>
-
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+          <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+          <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="element-row"
+            [class.expanded-row]="expandedElement === element"
+            (click)="expandedElement = expandedElement === element ? null : element">
           </tr>
+          <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="detail-row"></tr>
         </table>
-        <!------------------>
-        <!---->
       </mat-card>
     </div>
   </div>
