@@ -1,14 +1,15 @@
-<h1 mat-dialog-title>Search</h1>
+<h1 mat-dialog-title>Edit</h1>
 <div mat-dialog-content>
   <div class="dialog-content-container">
     <p>
       <mat-form-field class="example-full-width">
-        <mat-label>Keyword</mat-label>
+        <mat-label>File name</mat-label>
         <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
       </mat-form-field>
     </p>
   </div>
 </div>
 <div mat-dialog-actions>
-  <button mat-raised-button (click)="onNoClick()">Submit</button>
+  <button mat-raised-button color="primary" (click)="onNoClick()">Submit</button>
+  <button mat-raised-button (click)="onNoClick()">Discard</button>
 </div>

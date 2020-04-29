@@ -53,6 +53,9 @@ import { UploadDialogComponent } from "./shared/component/dialog/dialog.componen
 import { SearchDialogComponent } from "./shared/component/dialog/dialog.component";
 import { FilterDialogComponent } from "./shared/component/dialog/dialog.component";
 import { SortDialogComponent } from "./shared/component/dialog/dialog.component";
+import { DeleteDialogComponent } from "./shared/component/dialog/dialog.component";
+import { CopyDialogComponent } from "./shared/component/dialog/dialog.component";
+import { EditDialogComponent } from "./shared/component/dialog/dialog.component";
 import { DecisionDetailsComponent } from "./decision-details/decision-details.component";
 import { DecisionEditComponent } from "./decision-edit/decision-edit.component";
 import { ReportsComponent } from "./reports/reports.component";
@@ -73,6 +76,9 @@ const appRoutes: Routes = [
   { path: "dialog-upload", component: UploadDialogComponent },
   { path: "dialog-search", component: SearchDialogComponent },
   { path: "dialog-filter", component: FilterDialogComponent },
+  { path: "dialog-delete", component: DeleteDialogComponent },
+  { path: "dialog-delete", component: CopyDialogComponent },
+  { path: "dialog-edit", component: EditDialogComponent },
   { path: "dialog-sort", component: SortDialogComponent },
   { path: "decision-details", component: DecisionDetailsComponent },
   { path: "decision-edit", component: DecisionEditComponent },
@@ -95,6 +101,9 @@ const appRoutes: Routes = [
     ResetPasswordComponent,
     DecisionsComponent,
     UploadDialogComponent,
+    DeleteDialogComponent,
+    CopyDialogComponent,
+    EditDialogComponent,
     SearchDialogComponent,
     FilterDialogComponent,
     SortDialogComponent,
