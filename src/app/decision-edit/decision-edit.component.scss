@@ -137,6 +137,10 @@ td.mat-cell:last-of-type {
   font-weight: 500;
 }
 
+tr.mat-row:hover {
+  cursor: pointer;
+}
+
 @media (max-width: $tablet) {
   .inner {
     margin-bottom: 0;
@@ -157,6 +161,10 @@ td.mat-cell:last-of-type {
     padding-bottom: 10px;
   }
 
-  .element-description-attribution .box-4{width:33.333332%}
-  td.mat-cell:last-of-type{text-align: center;}
+  .element-description-attribution .box-4 {
+    width: 33.333332%;
+  }
+  td.mat-cell:last-of-type {
+    text-align: center;
+  }
 }
