@@ -74,7 +74,7 @@ hr {
 
 ::ng-deep .mat-drawer-container {
   padding-top: 15px;
-  min-height: 100vh !important;
+  min-height: 100% !important;
 }
 
 ::ng-deep .mat-drawer-content {
@@ -82,8 +82,14 @@ hr {
 }
 
 .mat-drawer-inner-container .mat-button {
-  min-height: 40px;
-  font-size: 16px;
+  min-height: 55px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.header {
+  height: 100%;
+  min-height: 100vh;
 }
 
 @media (max-width: $tablet) {
@@ -92,5 +98,12 @@ hr {
   }
   .mat-toolbar.mat-accent.mat-toolbar-single-row div:nth-child(2) {
     flex: auto;
+  }
+  ::ng-deep .mat-drawer-container {
+    min-height: 100vh !important;
+    height: 100vh !important;
+  }
+  .header {
+    height: 100vh !important;
   }
 }
