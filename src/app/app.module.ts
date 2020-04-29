@@ -64,6 +64,7 @@ import { ReportEditComponent } from "./report-edit/report-edit.component";
 import { SearchComponent } from "./search/search.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ClickOutsideModule } from 'ng-click-outside';
+import { DocsListComponent } from './docs-list/docs-list.component';
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -112,7 +113,8 @@ const appRoutes: Routes = [
     ReportsComponent,
     ReportDetailsComponent,
     ReportEditComponent,
-    SearchComponent
+    SearchComponent,
+    DocsListComponent
   ],
   imports: [
     RouterModule.forRoot(
