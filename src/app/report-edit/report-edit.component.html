@@ -24,21 +24,21 @@
                  <span class="element-description-attribution">
                    <div class="box-4">
                      <div class="">
-                       <button class="icon-link" mat-button color="accent" *ngIf="element.delete">
+                       <button class="icon-link" mat-button color="accent" *ngIf="element.delete" (click)="openDeleteDialog()">
                          <mat-icon>delete</mat-icon>
                        </button>
                      </div>
                    </div>
                    <div class="box-4">
                      <div class="">
-                       <button class="icon-link" mat-button color="accent" *ngIf="element.edit">
+                       <button class="icon-link" mat-button color="accent" *ngIf="element.edit" (click)="openEditDialog()">
                          <mat-icon>edit</mat-icon>
                        </button>
                      </div>
                    </div>
                    <div class="box-4">
                      <div class="">
-                       <button class="icon-link" mat-button color="accent" *ngIf="element.copy">
+                       <button class="icon-link" mat-button color="accent" *ngIf="element.copy" (click)="openCopyDialog()">
                          <mat-icon>link</mat-icon>
                        </button>
                      </div>

@@ -4,6 +4,9 @@ import {
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { MatDialog } from '@angular/material/dialog';
 import { UploadDialogComponent } from "../shared/component/dialog/dialog.component";
+import { DeleteDialogComponent } from "../shared/component/dialog/dialog.component";
+import { EditDialogComponent } from "../shared/component/dialog/dialog.component";
+import { CopyDialogComponent } from "../shared/component/dialog/dialog.component";
 
 export interface TableElement {
   position: number;
@@ -64,6 +67,11 @@ export class ReportEditComponent implements OnInit {
 
   async ngOnInit() {
   }
+  dataSource = ELEMENT_DATA;
+  columnsToDisplay = ['name'];
+  expandedElement: TableElement | null;
+
+  /*Upload dialog*/
   openUploadDialog(): void {
     const dialogRef = this.dialog.open(UploadDialogComponent, {
       width: '500px',
@@ -74,10 +82,6 @@ export class ReportEditComponent implements OnInit {
     });
   }
 
-  dataSource = ELEMENT_DATA;
-  columnsToDisplay = ['name'];
-  expandedElement: TableElement | null;
-
   files: any = [];
 
   uploadFile(event) {
@@ -87,4 +91,36 @@ export class ReportEditComponent implements OnInit {
     }
   }
 
+  /*Delete dialog*/
+  openDeleteDialog(): void {
+    const dialogRef = this.dialog.open(DeleteDialogComponent, {
+      width: '500px',
+      height: '200px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  /*Delete dialog*/
+  openEditDialog(): void {
+    const dialogRef = this.dialog.open(EditDialogComponent, {
+      width: '500px',
+      height: '240px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  /*Copy dialog*/
+  openCopyDialog(): void {
+    const dialogRef = this.dialog.open(CopyDialogComponent, {
+      width: '500px',
+      height: '200px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }

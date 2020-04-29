@@ -2,6 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import {
 } from "@angular/forms";
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { MatDialog } from '@angular/material/dialog';
+import { DeleteDialogComponent } from "../shared/component/dialog/dialog.component";
+import { EditDialogComponent } from "../shared/component/dialog/dialog.component";
+import { CopyDialogComponent } from "../shared/component/dialog/dialog.component";
 
 export interface TableElement {
   position: number;
@@ -62,7 +66,7 @@ export class DecisionEditComponent implements OnInit {
   expandedElement: TableElement | null;
 
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   async ngOnInit() {
   }
@@ -76,4 +80,36 @@ export class DecisionEditComponent implements OnInit {
     }
   }
 
+  /*Delete dialog*/
+  openDeleteDialog(): void {
+    const dialogRef = this.dialog.open(DeleteDialogComponent, {
+      width: '500px',
+      height: '200px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  /*Delete dialog*/
+  openEditDialog(): void {
+    const dialogRef = this.dialog.open(EditDialogComponent, {
+      width: '500px',
+      height: '240px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  /*Copy dialog*/
+  openCopyDialog(): void {
+    const dialogRef = this.dialog.open(CopyDialogComponent, {
+      width: '500px',
+      height: '200px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }
