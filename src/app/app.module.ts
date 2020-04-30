@@ -65,6 +65,7 @@ import { SearchComponent } from "./search/search.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ClickOutsideModule } from 'ng-click-outside';
 import { DocsListComponent } from './docs-list/docs-list.component';
+import { ListActionsComponent } from './list-actions/list-actions.component';
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -114,7 +115,8 @@ const appRoutes: Routes = [
     ReportDetailsComponent,
     ReportEditComponent,
     SearchComponent,
-    DocsListComponent
+    DocsListComponent,
+    ListActionsComponent
   ],
   imports: [
     RouterModule.forRoot(
@@ -161,7 +163,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatBadgeModule
   ],
-  providers: [],
+  providers: [ListActionsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

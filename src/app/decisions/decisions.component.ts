@@ -3,6 +3,7 @@ import { } from "@angular/forms";
 import { MatDialog } from '@angular/material/dialog';
 import { UploadDialogComponent } from "../shared/component/dialog/dialog.component";
 import { MatAccordion } from '@angular/material/expansion';
+import { ListActionsComponent } from '../list-actions/list-actions.component';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { MatAccordion } from '@angular/material/expansion';
 
 export class DecisionsComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, public listActions: ListActionsComponent) { }
 
   @ViewChild('myaccordion') myPanels: MatAccordion;
   @ViewChild('myaccordionTablet') myPanelsTablet: MatAccordion;
@@ -30,6 +31,7 @@ export class DecisionsComponent implements OnInit {
   }
 
   async ngOnInit() {
+    this.listActions.showUploadInput = true;
   }
 
   onClickedOutsideAccordion(e: Event) {
