@@ -23,8 +23,8 @@
     <p class="h6">Prüfungsvorang</p>
     <h2>Fotoshooting 2015</h2>
 
-    <mat-vertical-stepper [linear]="isLinear" #stepper>
-      <mat-step [stepControl]="firstFormGroup">
+    <mat-vertical-stepper [linear]="isLinear" id="stepper1" #stepper>
+      <mat-step [stepControl]="firstFormGroup" id="step1">
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Flank leberkas sausage biltong shank brisket, fatback boudin ball
             tip andouille salami ham hock. ?</ng-template>
@@ -38,13 +38,13 @@
           </mat-form-field>
 
           <div>
-            <button mat-raised-button color="primary" matStepperNext>
+            <button mat-raised-button color="primary" matStepperNext (click)="showNextStep(1,this)">
               Next
             </button>
           </div>
         </form>
       </mat-step>
-      <mat-step [stepControl]="firstFormGroup" >
+      <mat-step [stepControl]="firstFormGroup" id="step2" [aria-labelledby]="stepHidden ? 'hidden-step' : ''">
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Pastrami beef tongue, doner short ribs pig sausage capicola ham
             landjaeger leberkas pork fatback pancetta.</ng-template>
@@ -66,13 +66,13 @@
             </mat-form-field>
           </p>
           <div>
-            <button mat-raised-button color="primary" matStepperNext>
+            <button mat-raised-button color="primary" matStepperNext (click)="showNextStep(2,this)">
               Next
             </button>
           </div>
         </form>
       </mat-step>
-      <mat-step [stepControl]="firstFormGroup" >
+      <mat-step [stepControl]="firstFormGroup" id="step3" [aria-labelledby]="stepHidden ? 'hidden-step' : ''">
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Leberkas pork belly meatloaf pancetta pork loin.</ng-template>
           <p>
@@ -84,13 +84,13 @@
             </mat-radio-button>
           </mat-radio-group>
           <div>
-            <button mat-raised-button color="primary" matStepperNext>
+            <button mat-raised-button color="primary" matStepperNext (click)="showNextStep(3,this)">
               Next
             </button>
           </div>
         </form>
       </mat-step>
-      <mat-step [stepControl]="firstFormGroup" >
+      <mat-step [stepControl]="firstFormGroup" id="step4" [aria-labelledby]="stepHidden ? 'hidden-step' : ''">
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Sausage biltong shank brisket, fatback boudin ball tip andouille
             salami ?</ng-template>
@@ -104,7 +104,7 @@
             <mat-checkbox class="checkbox">Option 3</mat-checkbox>
           </div>
           <div>
-            <button mat-raised-button color="primary" matStepperNext>
+            <button mat-raised-button color="primary" matStepperNext (click)="showNextStep(4,this)">
               Next
             </button>
           </div>
