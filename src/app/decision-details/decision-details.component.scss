@@ -11,6 +11,10 @@ span {
   font-weight: bold;
 }
 
+.details-container h2 {
+  color: $primary-color;
+}
+
 @media (max-width: $tablet) {
   .custom-card .inner {
     margin-bottom: 0;

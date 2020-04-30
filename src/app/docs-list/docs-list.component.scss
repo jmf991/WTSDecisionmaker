@@ -115,7 +115,13 @@ td.mat-cell:last-of-type {
 tr.mat-row:hover {
   cursor: pointer;
 }
+::ng-deep .dark-theme .mat-table {
+  box-shadow: none;
+}
 
+::ng-deep .dark-theme tr.element-row:not(.expanded-row):hover {
+  background-color: lightgrey;
+}
 @media (max-width: $tablet) {
   .inner {
     margin-bottom: 0;

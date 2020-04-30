@@ -25,6 +25,10 @@
   width: 100%;
 }
 
+.edit-container h2 {
+  color: $primary-color;
+}
+
 @media (max-width: $tablet) {
   .inner {
     margin-bottom: 0;

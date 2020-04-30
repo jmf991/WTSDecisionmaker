@@ -9,7 +9,7 @@
           </mat-icon>
         </a>
     </div>
-    <mat-accordion class="user-actions-container">
+    <mat-accordion #headerAccordion="matAccordion" class="user-actions-container" (clickOutside)="onClickedOutsideAccordion($event)" multi="true">
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title>

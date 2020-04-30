@@ -3,14 +3,14 @@
     <mat-card class="example-card">
       <h3>Documents</h3>
 
-      <p style="color:rgba(0, 0, 0, 0.54);margin-bottom: 15px;">Drag and drop files here, or click and browse to
+      <p>Drag and drop files here, or click and browse to
         upload a file:</p>
       <div class="file-upload-container">
         <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
           <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
         </div>
       </div>
-      <p style="color:rgba(0, 0, 0, 0.54);margin-bottom: 15px;">Uploaded files:</p>
+      <p>Uploaded files:</p>
       <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
         <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
           <th mat-header-cell *matHeaderCellDef class="documents-table-header"> </th>

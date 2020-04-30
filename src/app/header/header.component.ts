@@ -1,7 +1,7 @@
-import { Component, OnInit, HostBinding, Inject } from '@angular/core';
+import { Component, OnInit, HostBinding, Inject, ViewChild } from '@angular/core';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { DOCUMENT } from '@angular/common';
-import { stringify } from 'querystring';
+import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +11,7 @@ import { stringify } from 'querystring';
 export class HeaderComponent implements OnInit {
   constructor(public overlayContainer: OverlayContainer, @Inject(DOCUMENT) private document: Document) { }
   @HostBinding('class') componentCssClass;
+  @ViewChild('headerAccordion') myPanels: MatAccordion;
 
 
   ngOnInit(): void {
@@ -25,5 +26,8 @@ export class HeaderComponent implements OnInit {
       this.document.body.classList.remove(previousTheme);
     }
     this.componentCssClass = newTheme;
+  }
+  onClickedOutsideAccordion(e: Event) {
+    this.myPanels.closeAll();
   }
 }
