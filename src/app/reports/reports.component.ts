@@ -36,7 +36,9 @@ export class ReportsComponent implements OnInit {
     //@ViewChild('index') myActionsPanels: MatAccordion;
     //this.myActionsPanels.closeAll();
   }
-
+  closeThis(myaccordion: MatAccordion) {
+    myaccordion.closeAll();
+  }
   /*Delete dialog*/
   openDeleteDialog(): void {
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
