@@ -23,9 +23,15 @@ span {
   &:hover {
     background-color: lightgrey;
   }
-  padding: 16px 0 16px 0;
+  padding: 0;
   margin: 5px 0;
   height: 48px;
+}
+
+.item-name,
+.item-details,
+.item-actions{
+  padding: 16px 0 16px 0;
 }
 
 .items-list .inner {
