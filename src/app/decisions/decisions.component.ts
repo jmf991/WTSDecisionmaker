@@ -34,14 +34,4 @@ export class DecisionsComponent implements OnInit {
     this.listActions.showUploadInput = true;
   }
 
-  onClickedOutsideAccordion(e: Event) {
-    this.myPanels.closeAll();
-  }
-  onClickedOutsideAccordionTablet(e: Event) {
-    this.myPanelsTablet.closeAll();
-    this.myPanelsTabletFilter.closeAll();
-  }
-  onClickedOutsideAccordionTabletFilter(e: Event) {
-  }
-
 }

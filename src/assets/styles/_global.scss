@@ -79,6 +79,7 @@ hr {
 
 ::ng-deep .mat-drawer-content {
   overflow-y: inherit !important;
+  overflow-x: hidden;
 }
 .mat-drawer-inner-container {
   margin-top: 20px;

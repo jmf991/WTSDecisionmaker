@@ -26,24 +26,15 @@ export class ReportsComponent implements OnInit {
     this.listActions.showUploadInput = false;
   }
 
-  onClickedOutsideAccordion(e: Event) {
-    this.myPanels.closeAll();
-  }
-  onClickedOutsideAccordionTablet(e: Event) {
-    this.myPanelsTablet.closeAll();
-    this.myPanelsTabletFilter.closeAll();
-  }
-  onClickedOutsideAccordionTabletFilter(e: Event) {
-  }
   onClickedOutsideActionsAccordion(e: Event) {
     this.myActionsPanels.closeAll();
   }
 
-  setCurrent(index: string) {
+  setCurrent(index: any) {
     //this.step = index;
     console.log(index);
     //@ViewChild('index') myActionsPanels: MatAccordion;
-    this.myActionsPanels.closeAll();
+    //this.myActionsPanels.closeAll();
   }
 
   /*Delete dialog*/
