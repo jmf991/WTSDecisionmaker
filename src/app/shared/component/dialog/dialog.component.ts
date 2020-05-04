@@ -100,6 +100,23 @@ export class DeleteDialogComponent {
 
 }
 
+/*Anonymize dialog*/
+@Component({
+  selector: 'dialog-anonymize',
+  templateUrl: 'dialog-anonymize.component.html',
+  styleUrls: ['dialog.component.scss'],
+})
+export class AnonymizeDialogComponent {
+
+  constructor(
+    public dialogRef: MatDialogRef<AnonymizeDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+}
+
 /*Edit dialog*/
 @Component({
   selector: 'dialog-edit',

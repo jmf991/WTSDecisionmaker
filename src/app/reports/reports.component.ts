@@ -4,6 +4,8 @@ import {
 import { MatDialog } from '@angular/material/dialog';
 import { MatAccordion } from '@angular/material/expansion';
 import { ListActionsComponent } from '../list-actions/list-actions.component';
+import { DeleteDialogComponent } from "../shared/component/dialog/dialog.component";
+import { AnonymizeDialogComponent } from "../shared/component/dialog/dialog.component";
 
 @Component({
   selector: "app-reports",
@@ -18,6 +20,7 @@ export class ReportsComponent implements OnInit {
   @ViewChild('myaccordion') myPanels: MatAccordion;
   @ViewChild('myaccordionTablet') myPanelsTablet: MatAccordion;
   @ViewChild('myaccordionTabletFilter') myPanelsTabletFilter: MatAccordion;
+  @ViewChild('myaccordionActions') myActionsPanels: MatAccordion;
 
   async ngOnInit() {
     this.listActions.showUploadInput = false;
@@ -32,5 +35,29 @@ export class ReportsComponent implements OnInit {
   }
   onClickedOutsideAccordionTabletFilter(e: Event) {
   }
+  onClickedOutsideActionsAccordion(e: Event) {
+    this.myActionsPanels.closeAll();
+  }
 
+  /*Delete dialog*/
+  openDeleteDialog(): void {
+    const dialogRef = this.dialog.open(DeleteDialogComponent, {
+      width: '500px',
+      height: '200px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
+
+  /*Delete dialog*/
+  openAnonymizeDialog(): void {
+    const dialogRef = this.dialog.open(AnonymizeDialogComponent, {
+      width: '500px',
+      height: '200px'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }

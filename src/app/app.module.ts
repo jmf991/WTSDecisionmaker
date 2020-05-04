@@ -54,6 +54,7 @@ import { SearchDialogComponent } from "./shared/component/dialog/dialog.componen
 import { FilterDialogComponent } from "./shared/component/dialog/dialog.component";
 import { SortDialogComponent } from "./shared/component/dialog/dialog.component";
 import { DeleteDialogComponent } from "./shared/component/dialog/dialog.component";
+import { AnonymizeDialogComponent } from "./shared/component/dialog/dialog.component";
 import { CopyDialogComponent } from "./shared/component/dialog/dialog.component";
 import { EditDialogComponent } from "./shared/component/dialog/dialog.component";
 import { DecisionDetailsComponent } from "./decision-details/decision-details.component";
@@ -79,6 +80,7 @@ const appRoutes: Routes = [
   { path: "dialog-search", component: SearchDialogComponent },
   { path: "dialog-filter", component: FilterDialogComponent },
   { path: "dialog-delete", component: DeleteDialogComponent },
+  { path: "dialog-anonymize", component: AnonymizeDialogComponent },
   { path: "dialog-delete", component: CopyDialogComponent },
   { path: "dialog-edit", component: EditDialogComponent },
   { path: "dialog-sort", component: SortDialogComponent },
@@ -104,6 +106,7 @@ const appRoutes: Routes = [
     DecisionsComponent,
     UploadDialogComponent,
     DeleteDialogComponent,
+    AnonymizeDialogComponent,
     CopyDialogComponent,
     EditDialogComponent,
     SearchDialogComponent,

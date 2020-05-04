@@ -8,17 +8,35 @@
       <div class="inner">
         <!--card item-->
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/report-details']">
+          <mat-card class="list-card">
             <div class="box-12">
-              <div class="box-4 item-name">
+              <div class="box-4 item-name" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>TT-Aufsichtsratvergütung</div>
                 </div>
               </div>
-              <div class="box-7 item-details">
+              <div class="box-7 item-details" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>Pastrami beef tongue, doner short ribs pig sausage capicola
                     pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner" style="position: relative;">
+                  <mat-accordion class="item-accordion" #myaccordion="matAccordion"  multi="true">
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card>
+                        <p><button mat-raised-button color="primary" (click)="openDeleteDialog()">Delete</button></p>
+                        <p><button mat-raised-button color="primary" (click)="openAnonymizeDialog()">Anonimize</button></p>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
                 </div>
               </div>
             </div>
@@ -28,17 +46,35 @@
         <!-- / card item-->
         <!--card item-->
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/report-details']">
+          <mat-card class="list-card">
             <div class="box-12">
-              <div class="box-4 item-name">
+              <div class="box-4 item-name" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>TT-Aufsichtsratvergütung</div>
                 </div>
               </div>
-              <div class="box-7 item-details">
+              <div class="box-7 item-details" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>Pastrami beef tongue, doner short ribs pig sausage capicola
                     pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner" style="position: relative;">
+                  <mat-accordion class="item-accordion" #myaccordion="matAccordion" multi="true">
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card>
+                        <p><button mat-raised-button color="primary" (click)="openDeleteDialog()">Delete</button></p>
+                        <p><button mat-raised-button color="primary" (click)="openAnonymizeDialog()">Anonimize</button></p>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
                 </div>
               </div>
             </div>
@@ -48,17 +84,35 @@
         <!-- / card item-->
         <!--card item-->
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/report-details']">
+          <mat-card class="list-card">
             <div class="box-12">
-              <div class="box-4 item-name">
+              <div class="box-4 item-name" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>TT-Aufsichtsratvergütung</div>
                 </div>
               </div>
-              <div class="box-7 item-details">
+              <div class="box-7 item-details" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>Pastrami beef tongue, doner short ribs pig sausage capicola
                     pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner" style="position: relative;">
+                  <mat-accordion class="item-accordion" #myaccordion="matAccordion" multi="true">
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card>
+                        <p><button mat-raised-button color="primary" (click)="openDeleteDialog()">Delete</button></p>
+                        <p><button mat-raised-button color="primary" (click)="openAnonymizeDialog()">Anonimize</button></p>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
                 </div>
               </div>
             </div>
@@ -68,17 +122,35 @@
         <!-- / card item-->
         <!--card item-->
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/report-details']">
+          <mat-card class="list-card">
             <div class="box-12">
-              <div class="box-4 item-name">
+              <div class="box-4 item-name" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>TT-Aufsichtsratvergütung</div>
                 </div>
               </div>
-              <div class="box-7 item-details">
+              <div class="box-7 item-details" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>Pastrami beef tongue, doner short ribs pig sausage capicola
                     pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner" style="position: relative;">
+                  <mat-accordion class="item-accordion" #myaccordion="matAccordion" multi="true">
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card>
+                        <p><button mat-raised-button color="primary" (click)="openDeleteDialog()">Delete</button></p>
+                        <p><button mat-raised-button color="primary" (click)="openAnonymizeDialog()">Anonimize</button></p>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
                 </div>
               </div>
             </div>
@@ -88,17 +160,35 @@
         <!-- / card item-->
         <!--card item-->
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/report-details']">
+          <mat-card class="list-card">
             <div class="box-12">
-              <div class="box-4 item-name">
+              <div class="box-4 item-name" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>TT-Aufsichtsratvergütung</div>
                 </div>
               </div>
-              <div class="box-7 item-details">
+              <div class="box-7 item-details" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>Pastrami beef tongue, doner short ribs pig sausage capicola
                     pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner" style="position: relative;">
+                  <mat-accordion class="item-accordion" #myaccordion="matAccordion" multi="true">
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card>
+                        <p><button mat-raised-button color="primary" (click)="openDeleteDialog()">Delete</button></p>
+                        <p><button mat-raised-button color="primary" (click)="openAnonymizeDialog()">Anonimize</button></p>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
                 </div>
               </div>
             </div>
@@ -108,17 +198,35 @@
         <!-- / card item-->
         <!--card item-->
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/report-details']">
+          <mat-card class="list-card">
             <div class="box-12">
-              <div class="box-4 item-name">
+              <div class="box-4 item-name" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>TT-Aufsichtsratvergütung</div>
                 </div>
               </div>
-              <div class="box-7 item-details">
+              <div class="box-7 item-details" [routerLink]="['/report-details']">
                 <div class="inner">
                   <div>Pastrami beef tongue, doner short ribs pig sausage capicola
                     pancetta.</div>
+                </div>
+              </div>
+              <div class="box-1 item-actions">
+                <div class="inner" style="position: relative;">
+                  <mat-accordion class="item-accordion" #myaccordion="matAccordion" multi="true">
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card>
+                        <p><button mat-raised-button color="primary" (click)="openDeleteDialog()">Delete</button></p>
+                        <p><button mat-raised-button color="primary" (click)="openAnonymizeDialog()">Anonimize</button></p>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
                 </div>
               </div>
             </div>

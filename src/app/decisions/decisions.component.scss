@@ -77,6 +77,7 @@ span {
 }
 
 /*icons*/
+.more-icon,
 .play-icon {
   position: relative;
   cursor: pointer;
@@ -88,6 +89,42 @@ span {
   font-size: 30px;
 }
 
+::ng-deep .item-actions .mat-accordion {
+  position: absolute;
+  bottom: -32px;
+  right: 0;
+  height: 48px;
+  width: 50px;
+  z-index: 1;
+}
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header {
+  //height: 30px !important;
+  max-height: 48px !important;
+  width: 50px;
+  padding: 0 5px;
+}
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header:hover,
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header:focus,
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header.active {
+  background: transparent !important;
+}
+::ng-deep .item-actions .mat-expansion-indicator {
+  display: none;
+}
+::ng-deep .item-actions .more-icon {
+  left: 0;
+  bottom: 0px;
+  font-size: 20px;
+}
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel:last-of-type {
+  box-shadow: none;
+  background: transparent;
+  overflow: visible;
+}
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel-body {
+  padding: 0;
+  min-width: 130px;
+}
 /*dark theme*/
 ::ng-deep .dark-theme .item-details {
   color: #ffffff;
@@ -98,7 +135,7 @@ span {
   .list-card {
     height: 80px;
   }
-
+  .more-icon,
   .play-icon {
     left: -25px !important;
     bottom: 20px !important;
@@ -119,5 +156,17 @@ span {
 
   .item-actions {
     width: 10%;
+  }
+
+  ::ng-deep .item-actions .mat-accordion {
+    bottom: -20px;
+  }
+  ::ng-deep .item-actions .more-icon {
+    left: 0 !important;
+    bottom: 0 !important;
+  }
+
+  ::ng-deep .item-actions .mat-card {
+    right: 60px;
   }
 }
