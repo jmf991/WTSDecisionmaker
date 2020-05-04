@@ -8,42 +8,7 @@ span {
   overflow-x: hidden;
 }
 
-.page-title {
-  margin-bottom: 0;
-}
-
 /*list*/
-.list-container {
-  padding: 0;
-  width: 100%;
-}
-
-.list-card {
-  cursor: pointer;
-  &:hover {
-    background-color: lightgrey;
-  }
-  padding: 16px 0 16px 0;
-  margin: 5px 0;
-  height: 48px;
-}
-
-.items-list .inner {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.list-item {
-  width: 100%;
-  display: block;
-  height: 100%;
-  font-size: 14px;
-}
-
-.list-item .name {
-  font-weight: bold;
-}
-
 .list-input {
   float: right;
 }
@@ -56,34 +21,6 @@ span {
 .list-input .inner {
   margin-bottom: 0;
   padding-bottom: 0;
-}
-
-/*list item*/
-
-.item-details {
-  color: rgba(0, 0, 0, 0.54);
-}
-
-.item-actions .inner,
-.item-details .inner,
-.item-name .inner {
-  margin: 0 10px;
-  padding: 0 10px;
-}
-
-.item-name .inner div,
-.item-details .inner div {
-  width: 100%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow-x: hidden;
-}
-
-.item-name div {
-  margin-bottom: 0;
-  font-size: 15px;
-  color: $primary-color;
-  font-weight: bold;
 }
 
 /*icons*/
@@ -125,6 +62,7 @@ span {
 .actions-container ::ng-deep .mat-expansion-indicator::after {
   display: none;
 }
+
 .actions-container ::ng-deep .mat-expansion-panel {
   background: #fafafa;
   width: 50px;
@@ -182,9 +120,7 @@ span {
 ::ng-deep .dark-theme .upload-btn.active .mat-icon {
   color: $primary-color !important;
 }
-::ng-deep .dark-theme .item-details {
-  color: #ffffff;
-}
+
 ::ng-deep .filter-input .mat-expansion-panel-header-title {
   margin-right: 20px;
 }
@@ -194,6 +130,7 @@ span {
     width: 50% !important;
     float: left;
   }
+
   .upload-input {
     width: 100% !important;
   }
@@ -201,14 +138,6 @@ span {
   .list-input .inner {
     margin-bottom: 0;
     padding-bottom: 0;
-  }
-
-  .action-btn {
-    float: left !important;
-  }
-
-  .list-card {
-    height: 80px;
   }
 
   .play-icon {
@@ -234,17 +163,19 @@ span {
       text-align: right;
       font-size: 28px;
     }
-    //
+
     ::ng-deep .mat-expansion-panel .mat-icon {
       right: 0 !important;
       bottom: 0 !important;
     }
+
     ::ng-deep
       .mobile-list-actions
       .filter-accordion-tablet
       .mat-expansion-panel {
       width: 100%;
     }
+
     ::ng-deep
       .mobile-list-actions
       .filter-accordion-tablet
@@ -265,6 +196,7 @@ span {
       overflow: hidden;
       max-height: 155px;
     }
+
     ::ng-deep
       .mobile-list-actions
       .filter-accordion-tablet
@@ -273,6 +205,7 @@ span {
       transition: max-height 0.5s ease-out;
       max-height: 0;
     }
+
     ::ng-deep
       .mobile-list-actions
       .filter-accordion-tablet
@@ -281,18 +214,22 @@ span {
       position: relative !important;
       float: right;
     }
+
     ::ng-deep .mobile-list-actions .filter-accordion-tablet .mat-icon {
       left: 0 !important;
     }
+
     ::ng-deep .mobile-list-actions .mat-card.expanded-height {
       min-height: 360px;
     }
+
     ::ng-deep
       .mobile-list-actions
       .filter-accordion-tablet
       .mat-expansion-panel {
       background: none;
     }
+
     ::ng-deep
       .mobile-list-actions
       .filter-accordion-tablet
@@ -301,22 +238,17 @@ span {
       width: 65px;
       position: absolute !important;
     }
-    // ::ng-deep
-    //   .mobile-list-actions
-    //   .filter-accordion-tablet
-    //   .mat-expansion-panel:not(.mat-expanded)
-    //   .mat-expansion-panel-content {
-    //   display: none;
-    // }
-    //
+
     ::ng-deep .mat-expansion-panel .mat-expansion-panel-header-title {
       margin-right: 0;
     }
+
     ::ng-deep .mat-expansion-panel {
       border: none;
       border-radius: 0;
       box-shadow: none;
     }
+
     ::ng-deep .mobile-list-actions .mat-expansion-panel {
       position: relative;
       float: right;
@@ -343,9 +275,11 @@ span {
       position: relative !important;
       display: block;
     }
+
     ::ng-deep .mat-card {
       min-height: 200px;
     }
+
     ::ng-deep .mat-expansion-panel-content {
       float: left !important;
       width: auto;
@@ -363,24 +297,8 @@ span {
       bottom: 5px !important;
     }
 
-    // .mobile-list-actions .list-input{
-    //   width: 50% !important;
-    // }
     .list-inputs .box-6 {
       width: 50%;
     }
-  }
-
-  .item-name {
-    margin-bottom: 10px;
-  }
-
-  .item-name,
-  .item-details {
-    width: 90%;
-  }
-
-  .item-actions {
-    width: 10%;
   }
 }
