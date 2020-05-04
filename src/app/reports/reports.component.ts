@@ -39,6 +39,13 @@ export class ReportsComponent implements OnInit {
     this.myActionsPanels.closeAll();
   }
 
+  setCurrent(index: string) {
+    //this.step = index;
+    console.log(index);
+    //@ViewChild('index') myActionsPanels: MatAccordion;
+    this.myActionsPanels.closeAll();
+  }
+
   /*Delete dialog*/
   openDeleteDialog(): void {
     const dialogRef = this.dialog.open(DeleteDialogComponent, {
@@ -60,4 +67,5 @@ export class ReportsComponent implements OnInit {
       console.log('The dialog was closed');
     });
   }
+
 }

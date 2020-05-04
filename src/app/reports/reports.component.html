@@ -24,7 +24,7 @@
               <div class="box-1 item-actions">
                 <div class="inner" style="position: relative;">
                   <mat-accordion class="item-accordion" #myaccordion="matAccordion"  multi="true">
-                    <mat-expansion-panel>
+                    <mat-expansion-panel (opened)="setCurrent('#myaccordion')">
                       <mat-expansion-panel-header>
                         <mat-panel-title>
                           <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">

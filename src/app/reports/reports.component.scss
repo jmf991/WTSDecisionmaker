@@ -30,7 +30,7 @@ span {
 
 .item-name,
 .item-details,
-.item-actions{
+.item-actions {
   padding: 16px 0 16px 0;
 }
 
@@ -178,5 +178,14 @@ span {
 
   ::ng-deep .item-actions .mat-card {
     right: 60px;
+  }
+
+  .list-card {
+    padding: 16px 0 16px 0;
+  }
+  .item-name,
+  .item-details,
+  .item-actions {
+    padding: 0;
   }
 }
