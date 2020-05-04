@@ -105,8 +105,8 @@ hr {
     flex: auto;
   }
   ::ng-deep .mat-drawer-container {
-    // min-height: 100vh !important;
-    // height: 100vh !important;
+    min-height: 100vh !important;
+    height: auto !important;
   }
   .header {
     height: 100vh !important;
