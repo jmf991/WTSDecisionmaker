@@ -122,6 +122,12 @@ tr.mat-row:hover {
 ::ng-deep .dark-theme tr.element-row:not(.expanded-row):hover {
   background-color: lightgrey;
 }
+::ng-deep .element-row {
+  box-shadow:0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)
+}
+::ng-deep .detail-row {
+  box-shadow:0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 3px 0px rgba(0, 0, 0, 0.12)
+}
 @media (max-width: $tablet) {
   .inner {
     margin-bottom: 0;

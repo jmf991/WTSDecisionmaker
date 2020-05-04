@@ -120,6 +120,7 @@
 }
 
 @media (max-width: $tablet) {
+  // ::ng-deep .mat-toolbar .mat-icon-button.mat-primary{color: white;}
   ::ng-deep .mat-toolbar .mat-accordion {
     width: 60px;
   }
