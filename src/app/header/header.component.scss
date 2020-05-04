@@ -45,7 +45,9 @@
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
-
+::ng-deep .sidenav-btn .mat-icon {
+  margin-left: 0 !important;
+}
 ::ng-deep .mat-toolbar .mat-icon {
   height: 23px;
   width: 23px;
