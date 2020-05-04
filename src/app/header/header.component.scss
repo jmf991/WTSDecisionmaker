@@ -90,6 +90,22 @@
   transform: translateY(-0.8em) scale(0.75) perspective(100px)
     translateZ(0.001px);
 }
+//////
+::ng-deep .mat-toolbar .search-input .mat-icon {
+  float: right;
+  left: auto !important;
+  bottom: 10px !important;
+  position: absolute;
+  right: 0px;
+}
+::ng-deep
+  .mat-toolbar
+  .search-input
+  .mat-form-field-appearance-legacy
+  .mat-form-field-infix {
+  padding: 10px 0;
+}
+/////
 
 .search-container .search-icon:hover,
 .search-container .search-icon:focus,
