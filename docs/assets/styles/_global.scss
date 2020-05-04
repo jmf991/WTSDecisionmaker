@@ -80,11 +80,15 @@ hr {
 ::ng-deep .mat-drawer-content {
   overflow-y: inherit !important;
 }
-
+.mat-drawer-inner-container {
+  margin-top: 20px;
+}
 .mat-drawer-inner-container .mat-button {
   min-height: 55px;
   font-size: 20px;
+  text-align: left;
   padding: 10px;
+  margin: 0 20px;
 }
 
 .header {
@@ -105,5 +109,8 @@ hr {
   }
   .header {
     height: 100vh !important;
+  }
+  .mat-dialog-container {
+    min-height: 370px !important;
   }
 }

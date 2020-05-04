@@ -28,6 +28,12 @@ span {
   height: 48px;
 }
 
+// .item-name,
+// .item-details,
+// .item-actions{
+//   padding: 16px 0 16px 0;
+// }
+
 .items-list .inner {
   margin-top: 0;
   padding-top: 0;
@@ -95,7 +101,7 @@ span {
   right: 0;
   height: 48px;
   width: 50px;
-  z-index: 1;
+  //z-index: 1;
 }
 ::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header {
   //height: 30px !important;
@@ -124,7 +130,11 @@ span {
 ::ng-deep .item-actions .mat-accordion .mat-expansion-panel-body {
   padding: 0;
   min-width: 130px;
+  z-index: 1;
 }
+// ::ng-deep .item-actions .mat-accordion .mat-expansion-panel-body button{
+//   margin: 0 5px;
+// }
 /*dark theme*/
 ::ng-deep .dark-theme .item-details {
   color: #ffffff;
