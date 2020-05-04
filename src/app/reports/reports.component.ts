@@ -26,16 +26,6 @@ export class ReportsComponent implements OnInit {
     this.listActions.showUploadInput = false;
   }
 
-  onClickedOutsideActionsAccordion(e: Event) {
-    this.myActionsPanels.closeAll();
-  }
-
-  setCurrent(index: any) {
-    //this.step = index;
-    console.log(index);
-    //@ViewChild('index') myActionsPanels: MatAccordion;
-    //this.myActionsPanels.closeAll();
-  }
   closeThis(myaccordion: MatAccordion) {
     myaccordion.closeAll();
   }

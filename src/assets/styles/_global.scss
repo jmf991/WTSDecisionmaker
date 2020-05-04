@@ -74,7 +74,7 @@ hr {
 
 ::ng-deep .mat-drawer-container {
   padding-top: 15px;
-  min-height: 100% !important;
+  //min-height: 100% !important;
 }
 
 ::ng-deep .mat-drawer-content {
@@ -105,8 +105,8 @@ hr {
     flex: auto;
   }
   ::ng-deep .mat-drawer-container {
-    min-height: 100vh !important;
-    height: 100vh !important;
+    // min-height: 100vh !important;
+    // height: 100vh !important;
   }
   .header {
     height: 100vh !important;
