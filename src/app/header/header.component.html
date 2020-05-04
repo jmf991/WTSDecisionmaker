@@ -3,13 +3,24 @@
     <img style="max-width: 200px;" src="assets/images/wts-global-logo.svg" />
     <span style="flex: 1 1 auto;"></span>
 
-    <div class="search-container inner">
+    <div class="search-container inner tablet-hidden">
+      <mat-form-field>
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Ex. Lorem" value="" type="text" />
         <a [routerLink]="['/search']" title="search">
           <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search
           </mat-icon>
         </a>
+      </mat-form-field>
     </div>
-    <mat-accordion #headerAccordion="matAccordion" class="user-actions-container" (clickOutside)="onClickedOutsideAccordion($event)" multi="true">
+    <div class="search-container inner tablet-displayed">
+      <a [routerLink]="['/search']" title="search">
+        <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search
+        </mat-icon>
+      </a>
+  </div>
+    <mat-accordion #headerAccordion="matAccordion" class="user-actions-container"
+      (clickOutside)="onClickedOutsideAccordion($event)" multi="true">
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title>
