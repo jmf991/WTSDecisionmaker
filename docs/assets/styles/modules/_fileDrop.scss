@@ -15,7 +15,7 @@
 
     filter: brightness(90%);
     transition: filter 0.2s;
-    
+
 }
 .input-wrapper.file-drop-input-wrapper.error .file-drop-container {
     background-color: lighten($red, 30%);
@@ -29,12 +29,20 @@
     margin: 0.5em;
 }
 
+.daimler-theme .file-drop-placeholder{
+  color: $blue-primary-color;
+}
+
 .file-drop-placeholder-icon{
     color: white;
     font-size: 45px;
     background-color: $primary-color;
     padding: 0.7em;
     border-radius: 50%;
+}
+
+.daimler-theme .file-drop-placeholder-icon{
+  background-color: $blue-primary-color;
 }
 
 .file-drop-input{
@@ -272,7 +280,7 @@
 
     &> div:first-child{
         color: $red;
-  
+
     }
 
     &>div:last-child{
