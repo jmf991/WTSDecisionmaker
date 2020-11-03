@@ -2,10 +2,49 @@
 @import "../../assets/styles/global";
 
 ::ng-deep .mat-toolbar .mat-accordion {
-  z-index: 2;
-  width: 165px;
+  z-index: 3;
+  width: 55px;
   position: relative;
   height: auto;
+}
+.toolbar-column-left {
+  z-index: 1;
+}
+::ng-deep .daimler-logo {
+  max-width: 215px !important;
+  z-index: 1;
+  position: relative;
+}
+::ng-deep .dm-toolbar-icon {
+  max-width: 55px !important;
+}
+::ng-deep .default-logo {
+  max-width: 80px !important;
+}
+.app-title {
+  margin: 0 20px 0 0;
+  @extend .headers;
+}
+.app-image-wrapper img {
+  margin-bottom: -8px;
+}
+::ng-deep .daimler-theme .username,
+::ng-deep .daimler-theme .app-title,
+::ng-deep .daimler-theme.dark-theme .username,
+::ng-deep .daimler-theme.dark-theme .app-title {
+  color: #000000 !important;
+}
+.app-image-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  text-align: center;
+}
+.user-actions-wrapper {
+  margin-right: 0;
+  padding-right: 0;
 }
 ::ng-deep
   .mat-toolbar
@@ -13,14 +52,32 @@
   > .mat-expansion-panel-spacing:first-child {
   margin-top: 0;
 }
+.mat-accordion .mat-expansion-panel:last-of-type {
+  min-height: 64px;
+  max-width: 70px;
+  float: right;
+  overflow: visible;
+  box-shadow: none;
+  background: transparent;
+  max-width: 40px;
+}
+
 ::ng-deep .mat-toolbar .mat-expansion-panel-header {
   width: auto;
   padding: 10px;
-  height: 64px;
+  height: 64px !important;
+  max-width: 50px;
+  float: right;
 }
+
+::ng-deep .preserve-white-spaces {
+  white-space: pre !important;
+}
+
 ::ng-deep .mat-toolbar .mat-expansion-panel-body {
   padding: 24px 16px;
 }
+
 ::ng-deep
   .mat-toolbar
   .mat-expansion-panel:not(.mat-expanded)
@@ -28,33 +85,138 @@
   button {
     background-color: transparent;
     color: transparent;
+    box-shadow: none;
   }
 }
+
+::ng-deep .mat-toolbar .mat-expansion-panel-header:hover,
+::ng-deep .mat-toolbar .mat-expansion-panel-header:focus,
+::ng-deep .mat-toolbar .mat-expansion-panel-header.active {
+  background: transparent !important;
+}
+.logout-container:hover .mat-raised-button,
+.logout-container:focus .mat-raised-button,
+.logout-container.active .mat-raised-button {
+  background-color: #000000;
+}
+::ng-deep .settings-action:hover .mat-icon,
+::ng-deep .settings-action:focus .mat-icon,
+::ng-deep .settings-action.active .mat-icon,
+::ng-deep .mat-toolbar .mat-expansion-panel-header:hover .mat-icon,
+::ng-deep .mat-toolbar .mat-expansion-panel-header:focus .mat-icon,
+::ng-deep .mat-toolbar .mat-expansion-panel-header.active .mat-icon {
+  color: #000000;
+}
+
+::ng-deep .dark-theme .settings-action:hover .mat-icon,
+::ng-deep .dark-theme .settings-action:focus .mat-icon,
+::ng-deep .dark-theme .settings-action.active .mat-icon,
+::ng-deep .dark-theme .mat-toolbar .mat-expansion-panel-header:hover .mat-icon,
+::ng-deep .dark-theme .mat-toolbar .mat-expansion-panel-header:focus .mat-icon,
+::ng-deep
+  .dark-theme
+  .mat-toolbar
+  .mat-expansion-panel-header.active
+  .mat-icon {
+  color: #ffffff;
+}
+
+::ng-deep .daimler-theme.dark-theme .settings-action:hover .mat-icon,
+::ng-deep .daimler-theme.dark-theme .settings-action:focus .mat-icon,
+::ng-deep .daimler-theme.dark-theme .settings-action.active .mat-icon,
+::ng-deep
+  .daimler-theme.dark-theme
+  .mat-toolbar
+  .mat-expansion-panel-header:hover
+  .mat-icon,
+::ng-deep
+  .daimler-theme.dark-theme
+  .mat-toolbar
+  .mat-expansion-panel-header:focus
+  .mat-icon,
+::ng-deep
+  .daimler-theme.dark-theme
+  .mat-toolbar
+  .mat-expansion-panel-header.active
+  .mat-icon {
+  color: #000000 !important;
+}
+
+::ng-deep .daimler-theme.dark-theme .mat-snack-bar-container {
+  color: rgba(0, 0, 0, 0.87);
+  background: #fafafa;
+}
+::ng-deep .mat-toolbar .mat-expansion-indicator {
+  display: none;
+}
+
 ::ng-deep .mat-toolbar .mat-expansion-panel-content {
   width: auto;
   position: absolute;
-  right: 0px;
+  visibility: visible;
+  right: 0px !important;
+  top: 60px;
+  min-width: 200px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  bottom: -104px;
   padding: 10px;
   background: rgb(255, 255, 255);
   visibility: visible;
   box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
     0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
-
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
+
 ::ng-deep .sidenav-btn .mat-icon {
   margin-left: 0 !important;
 }
+
 ::ng-deep .mat-toolbar .mat-icon {
   height: 23px;
   width: 23px;
-  margin-left: 20px;
+  margin-left: 0px;
 }
-::ng-deep .mat-toolbar .search-container .mat-icon {
+
+::ng-deep .mat-toolbar .search-container.tablet-displayed .mat-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+::ng-deep .mat-toolbar .search-input .mat-icon {
+  float: right;
+  left: auto !important;
+  bottom: 10px !important;
+  position: absolute;
+  right: 0px;
   margin-left: 0;
+}
+
+::ng-deep .mat-toolbar .user-settings-icon {
+  left: 0 !important;
+  width: 50px;
+  text-align: center;
+  font-size: 28px;
+  right: 0 !important;
+  bottom: 0 !important;
+  height: 35px;
+  position: relative !important;
+  margin: 0;
+}
+
+::ng-deep .mat-toolbar .list-action-icon {
+  position: absolute;
+  left: 10px;
+  top: 2px;
+}
+
+::ng-deep .settings-container .mat-raised-button.mat-primary:first-child {
+  display: block;
 }
 ::ng-deep
   .mat-toolbar
@@ -63,41 +225,14 @@
   margin-right: 10px;
 }
 
-.mat-form-field-appearance-legacy .mat-form-field-infix {
-  font-size: 15px;
+.user-actions-container .mat-raised-button.mat-primary:first-child {
+  margin-right: 0;
+  margin: 0 auto;
+  float: none;
+  position: relative;
+  display: block;
 }
 
-.search-container {
-  // margin-right: 30px;
-  // height: 40px;
-  margin-right: 45px;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0 10px;
-}
-
-.search-container ::ng-deep .mat-form-field-wrapper {
-  padding-bottom: 12px;
-}
-
-.mat-toolbar .mat-form-field {
-  font-size: 15px;
-}
-.mat-toolbar
-  ::ng-deep
-  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float
-  .mat-form-field-label {
-  transform: translateY(-0.8em) scale(0.75) perspective(100px)
-    translateZ(0.001px);
-}
-//////
-::ng-deep .mat-toolbar .search-input .mat-icon {
-  float: right;
-  left: auto !important;
-  bottom: 10px !important;
-  position: absolute;
-  right: 0px;
-}
 ::ng-deep
   .mat-toolbar
   .search-input
@@ -105,8 +240,36 @@
   .mat-form-field-infix {
   padding: 10px 0;
 }
-/////
 
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  font-size: 15px;
+}
+
+/*Search*/
+.search-container {
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0 10px;
+}
+
+.search-container.tablet-displayed {
+  margin-right: 20px;
+  position: relative;
+  height: 23px;
+}
+
+::ng-deep .search-container .mat-form-field-wrapper {
+  padding-bottom: 12px;
+}
+
+::ng-deep
+  .dark-theme
+  .mat-toolbar
+  .mat-accordion.settings-container
+  .mat-expansion-panel-content {
+  background: #424242;
+}
 .search-container .search-icon:hover,
 .search-container .search-icon:focus,
 .search-container .search-icon.active {
@@ -119,30 +282,447 @@
   color: #ffffff !important;
 }
 
+.mat-toolbar .mat-form-field {
+  font-size: 15px;
+}
+.mat-toolbar
+  ::ng-deep
+  .mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float
+  .mat-form-field-label {
+  transform: translateY(-0.8em) scale(0.75) perspective(100px)
+    translateZ(0.001px);
+}
+
+::ng-deep
+  .mat-toolbar
+  .mat-accordion.settings-container
+  .mat-expansion-panel:not(.mat-expanded)
+  .mat-expansion-panel-content {
+  transition: max-height 0.5s ease-out;
+  max-height: 0;
+}
+
+::ng-deep
+  .mat-toolbar
+  .mat-accordion.settings-container
+  .mat-expansion-panel-content {
+  transition: max-height 0.2s ease-out;
+  // overflow: hidden;
+  max-height: 155px;
+  background: transparent;
+  position: absolute;
+  min-width: 100%;
+  width: auto;
+  left: -190px;
+  display: block;
+  max-height: 155px;
+  max-width: 135px;
+  background: #ffffff;
+  top: -5px;
+  padding: 16px;
+  z-index: 1;
+  flex-direction: column;
+  bottom: auto !important;
+  right: 0px !important;
+  float: left !important;
+  height: 0px;
+  visibility: hidden;
+  height: auto;
+}
+::ng-deep
+  .mat-toolbar
+  .mat-accordion.settings-container.language-container
+  .mat-expansion-panel-content {
+  left: -190px;
+}
+::ng-deep
+  .mat-toolbar
+  .mat-accordion.settings-container
+  .mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+::ng-deep .settings-container .mat-raised-button:last-child,
+::ng-deep .user-actions-container .mat-raised-button:last-child {
+  margin-top: 10px;
+}
+
+::ng-deep .mat-toolbar .mat-expansion-panel-header:hover,
+::ng-deep .mat-toolbar .mat-expansion-panel-header:focus,
+::ng-deep .mat-toolbar .mat-expansion-panel-header.active {
+  max-width: 170px;
+  user-select: none;
+  -webkit-user-drag: none;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+::ng-deep .settings-container .mat-expansion-panel-content {
+  padding: 16px 0 !important;
+}
+.settings-action {
+  position: relative;
+  cursor: pointer;
+  padding: 5px 15px;
+  width: 100%;
+}
+.settings-action p span {
+  margin-left: 30px;
+}
+.settings-action p {
+  margin-bottom: 0;
+}
+::ng-deep .settings-action.logout-wrapper{
+  padding: 0;
+}
+::ng-deep .settings-action button {
+  background: none;
+  min-height: 30px;
+  min-width: 200px;
+  text-align: left;
+  padding-left: 17px;
+  cursor: pointer;
+}
+.settings-action:hover,
+.settings-action:focus,
+.settings-action.active {
+  background: lightgrey;
+}
+
+::ng-deep .dark-theme .settings-action:hover,
+::ng-deep .dark-theme .settings-action:focus,
+::ng-deep .dark-theme .settings-action.active {
+  background: #9e9e9e !important;
+}
+::ng-deep .daimler-theme .main-nav-link {
+  font-weight: 600;
+  font-size: 14px;
+}
+::ng-deep .daimler-theme .mat-form-field {
+  font-size: 14px;
+}
+::ng-deep .daimler-theme.dark-theme .mat-drawer {
+  background-color: #424242;
+  color: white;
+}
+
+::ng-deep
+  .mat-toolbar
+  .mat-accordion.user-actions-container
+  .mat-expansion-panel-content {
+  padding: 0;
+}
+::ng-deep
+  .mat-toolbar
+  .mat-accordion.user-actions-container
+  .mat-expansion-panel-body {
+  padding: 24px 0;
+}
+.mode-icon,
+.mode-copy {
+  color: #ffffff;
+}
+::ng-deep .daimler-theme .mode-icon,
+::ng-deep .daimler-theme .mode-copy,
+::ng-deep .dark-theme .mode-icon,
+::ng-deep .dark-theme .mode-copy {
+  color: #000000 !important;
+}
+::ng-deep .daimler-theme .mat-elevation-z8 {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12) !important;
+}
+.mode-icon {
+  margin-right: 10px;
+  display: block;
+  float: left;
+}
+.mode-copy {
+  display: block;
+  float: left;
+  margin-top: 5px;
+}
+
+::ng-deep .daimler-theme .header-image-container {
+  min-height: 120px;
+}
+
+.header-image-container {
+  position: absolute;
+  display: block;
+  width: 100%;
+  z-index: 1;
+  max-height: 8%;
+  overflow: hidden;
+}
+.header-image-container .image-wrapper {
+  margin: 0;
+  height: 0;
+  padding-bottom: 9%;
+  position: relative;
+  overflow: hidden;
+}
+.header-image-container .image-wrapper .daimler-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1440px) and (min-width: $tablet + 1) {
+  .toolbar-column-left .box-10 .inner.pl0.ml0 {
+    margin-left: 10px !important;
+    padding-left: 10px !important;
+  }
+}
+@media (min-width: $tablet + 1) {
+  ::ng-deep .mat-toolbar .mat-accordion.user-actions-container {
+    width: 400px;
+  }
+  ::ng-deep
+    .mat-accordion.user-actions-container
+    .mat-expansion-panel:last-of-type {
+    max-width: 170px;
+    width: 130px;
+  }
+  ::ng-deep
+    .mat-accordion.settings-container
+    .mat-expansion-panel:last-of-type {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  ::ng-deep .mat-accordion.user-actions-container .mat-expansion-panel-header {
+    max-width: 320px;
+    user-select: none;
+    -webkit-user-drag: none;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    right: 5px;
+    padding-top: 15px;
+  }
+  ::ng-deep
+    .mat-accordion.user-actions-container
+    .mat-expansion-panel-content
+    .mat-expansion-panel-header {
+    width: 100%;
+  }
+
+  ::ng-deep
+    .mat-accordion.user-actions-container
+    .mat-expansion-panel-header-title {
+    margin-right: 0px;
+    max-width: 100%;
+  }
+  ::ng-deep .mat-accordion.user-actions-container .username {
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: right;
+    overflow: hidden;
+    max-width: 100%;
+    margin-right: 20px;
+    max-width: 400px;
+  }
+
+  ::ng-deep .mat-accordion.settings-container {
+    min-height: 28px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  ::ng-deep
+    .mat-accordion.settings-container
+    .mat-expansion-panel:last-of-type {
+    height: 28px !important;
+    min-height: 28px !important;
+    width: 100%;
+  }
+  ::ng-deep
+    .mat-accordion.user-actions-container
+    .mat-expansion-panel-content
+    .mat-expansion-panel-header {
+    height: 28px !important;
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  .header-image-container .image-wrapper {
+    padding-bottom: 25%;
+  }
+}
+
 @media (max-width: $tablet) {
-  // ::ng-deep .mat-toolbar .mat-icon-button.mat-primary{color: white;}
+  ::ng-deep .daimler-logo {
+    max-width: 135px !important;
+  }
+  .toolbar-column-left .box-2 {
+    width: 16.666665%;
+  }
+  .toolbar-column-left .box-10 {
+    width: 83.333332%;
+  }
+  .dm-toolbar-icon {
+    max-width: 40px !important;
+  }
+  .toolbar-column-left .box-10 .inner.pl0.ml0 {
+    margin-left: 10px !important;
+    padding-left: 10px !important;
+  }
+  .app-image-wrapper {
+    margin-top: 10px;
+  }
+  .app-image-wrapper img {
+    margin-bottom: 0;
+  }
+  .toolbar-column-center .app-image-wrapper {
+    margin-top: 0;
+  }
+  ::ng-deep
+    .mat-toolbar
+    .mat-accordion.settings-container.language-container
+    .mat-expansion-panel-content {
+    left: -60px;
+    top: 40px;
+  }
+  ::ng-deep .daimler-theme .header-image-container {
+    min-width: 480px;
+  }
+  .mode-copy {
+    display: none;
+  }
+
+  .mode-chooser {
+    flex: none !important;
+    order: 2;
+  }
   ::ng-deep .mat-toolbar .mat-accordion {
     width: 60px;
   }
+  ::ng-deep .mat-toolbar .mat-accordion.settings-container {
+    height: auto;
+    min-height: 30px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+  ::ng-deep
+    .mat-toolbar
+    .mat-accordion.settings-container
+    .mat-expansion-panel:last-of-type {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  ::ng-deep .mat-toolbar .mat-accordion .mat-expansion-panel-content {
+    right: 0px !important;
+    top: 60px;
+    min-width: 200px;
+    height: fit-content;
+  }
+  .settings-container .mat-raised-button.mat-primary:first-child {
+    display: block;
+  }
+
+  ::ng-deep
+    .mat-accordion.user-actions-container
+    .mat-expansion-panel-header-title {
+    margin: 0;
+  }
+
+  ::ng-deep
+    .mat-toolbar
+    .mat-accordion.settings-container
+    .mat-expansion-panel-content {
+    position: absolute;
+    left: -190px;
+    max-height: 155px;
+    max-width: 125px;
+    background: #ffffff;
+    top: -5px;
+    bottom: auto !important;
+    right: 0px !important;
+
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    display: block;
+    padding: 10px;
+    float: left !important;
+    z-index: 1;
+    flex-direction: column;
+  }
+
   .username {
-    display: none;
+    text-align: center;
+    width: 100%;
+    min-width: 100%;
+    font-weight: 700;
   }
-  .user-actions-container .mat-icon {
-    margin-left: 10px;
+
+  .user-actions-container .mat-raised-button:last-child {
+    position: relative;
+    display: block;
+    float: left;
   }
-  // .user-actions-container .mat-raised-button {
-  //   width: 100%;
-  //   float: left;
-  // }
+
+  .settings-container .mat-raised-button:last-child,
   .user-actions-container .mat-raised-button:last-child {
     margin-top: 10px;
   }
 
+  .settings-container .mat-toolbar.mat-accent,
   .user-actions-container .mat-toolbar.mat-accent {
     margin-bottom: 55px;
   }
 
   ::ng-deep .mat-toolbar .mat-expansion-panel-header {
     padding-left: 0;
+  }
+
+  ::ng-deep
+    .mat-toolbar
+    .mat-accordion.settings-container
+    .mat-expansion-panel-header {
+    user-select: none;
+    -webkit-user-drag: none;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    right: 0;
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .user-actions-container .logout-container .mat-icon {
+    margin-left: 0;
+  }
+
+  ::ng-deep .mat-toolbar .user-settings-icon {
+    left: 0 !important;
+    width: 100%;
+    text-align: left;
+    font-size: 28px;
+    right: 0 !important;
+    bottom: 0 !important;
+    height: 35px;
+    position: relative !important;
+    margin: 0;
+  }
+
+  ::ng-deep
+    .mat-toolbar
+    .mat-accordion.settings-container
+    .mat-expansion-panel-body {
+    padding: 0 !important;
   }
 }

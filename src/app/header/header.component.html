@@ -1,44 +1,86 @@
 <div class="header">
+  <div class="header-image-container">
+    <div class="image-wrapper">
+      <img id="daimler-background" class="daimler-image hidden" src="assets/images/daimler_background.jpg" />
+    </div>
+  </div>
+
   <mat-toolbar>
-    <img style="max-width: 200px;" src="assets/images/wts-global-logo.svg" />
-    <span style="flex: 1 1 auto;"></span>
-
-    <div class="search-container inner tablet-hidden">
-
-
-      <div class="list-input search-input">
-        <div class="inner">
-          <mat-form-field>
-            <mat-label>Search</mat-label>
-            <input matInput placeholder="Ex. Lorem" value="" />
-            <a [routerLink]="['/search']" title="search">
-              <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search
-              </mat-icon>
-            </a>
-          </mat-form-field>
+    <div class="box-4 toolbar-column-left">
+      <div class="box-2">
+        <div class="inner app-image-wrapper">
+          <img src="../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-toolbar-icon">
         </div>
       </div>
+      <div class="box-10">
+        <div class="inner pl0 ml0">
+          <span>
+            <h1 class="h6 app-title">DECISIONmanager</h1>
+          </span>
+        </div>
+      </div>
+      <div class="clearfix"></div>
     </div>
-    <div class="search-container inner tablet-displayed">
-      <a [routerLink]="['/search']" title="search">
-        <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search
-        </mat-icon>
-      </a>
-  </div>
-    <mat-accordion #headerAccordion="matAccordion" class="user-actions-container"
-      (clickOutside)="onClickedOutsideAccordion($event)" multi="true">
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <span class="username">Username X.</span>
-            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">account_circle
-            </mat-icon>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <button mat-raised-button color="primary" (click)="onSetTheme('dark-theme','')">Light theme</button>
-        <button mat-raised-button color="primary" (click)="onSetTheme('','dark-theme')">Dark theme</button>
-      </mat-expansion-panel>
-    </mat-accordion>
+    <div class="box-4 toolbar-column-center">
+      <div class="app-image-wrapper">
+        <img id="logo-img" class="default-logo" src="assets/images/sapCompanyLogo.gif" style="z-index: 2;" />
+      </div>
+    </div>
+    <!--User actions container-->
+    <div class="box-4 toolbar-column-right">
+      <div class="user-actions-wrapper">
+        <mat-accordion #headerAccordionUser="matAccordion" class="user-actions-container" multi="true">
+          <mat-expansion-panel [@.disabled]="true" clickOutside (clickOutside)="headerAccordionUser.closeAll()">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <span class="username tablet-hidden">Username UserLastName</span>
+                <mat-icon class="user-settings-icon" aria-hidden="false" aria-label="User settings" matTooltip="User settings"
+                  color="primary">
+                  account_circle
+                </mat-icon>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+
+            <!--User settings container-->
+            <div class="help-container">
+              <div class="settings-action" [routerLink]="['/user-settings']" (click)="closeThis(headerAccordionUser)">
+                <p>
+                  <mat-icon class="list-action-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                    settings</mat-icon><span>User settings</span>
+                </p>
+              </div>
+            </div>
+            <!-- / Help container-->
+
+            <!--Help container-->
+            <div class="help-container">
+              <div class="settings-action" [routerLink]="['/help']" (click)="closeThis(headerAccordionUser)">
+                <p>
+                  <mat-icon class="list-action-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                    help</mat-icon><span>Help</span>
+                </p>
+              </div>
+            </div>
+            <!-- / Help container-->
+
+            <!--Logout container-->
+            <div class="logout-container">
+              <div class="settings-action logout-wrapper" (click)="closeThis(headerAccordionUser)">
+                <button onclick="location.href = '/backend/logout?time=' + new Date().toISOString();">
+                  <p>
+                    <mat-icon class="list-action-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                      exit_to_app</mat-icon><span>Logout</span>
+                  </p>
+                </button>
+              </div>
+            </div>
+            <!-- / Logout container-->
+          </mat-expansion-panel>
+        </mat-accordion>
+        <!-- / User actions container-->
+        <div class="clearfix"></div>
+      </div>
+    </div>
   </mat-toolbar>
   <!---->
   <mat-toolbar color="accent">

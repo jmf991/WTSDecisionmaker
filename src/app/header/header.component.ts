@@ -30,4 +30,8 @@ export class HeaderComponent implements OnInit {
   onClickedOutsideAccordion(e: Event) {
     this.myPanels.closeAll();
   }
+
+  closeThis(myaccordion: MatAccordion) {
+    myaccordion.closeAll();
+  }
 }
