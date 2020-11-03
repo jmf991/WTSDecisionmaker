@@ -1,156 +1,335 @@
-<div class="box-container">
+<div class="box-container dashboard-container">
   <div class="inner">
-    <h1>Willkommen</h1>
+    <h1>Welcome</h1>
     <p>
-      Bacon ipsum dolor amet pastrami chicken corned beef pork flank. Pork
-      shankle beef ball tip. Shankle tongue ham, jowl alcatra cupim venison
-      chuck shank tri-tip buffalo pancetta kielbasa kevin ham hock. Shank chuck
-      jerky tri-tip strip steak doner alcatra. Drumstick shankle bacon boudin.
-      Pancetta chislic cupim, chicken capicola chuck prosciutto pig shankle
-      jerky rump venison filet mignon bacon. Landjaeger capicola jerky pancetta,
-      swine pork kielbasa ground round chicken tenderloin frankfurter rump
-      sausage.
-    </p>
-    <p>
-      <button mat-raised-button color="primary">
-        Tutorial starten <mat-icon>play_arrow</mat-icon></button
-      >&nbsp;
-      <button mat-button color="accent">nicht mehr anzeigen</button>&nbsp;
+      This platform offers you support in tax decision-making for your individual business transaction. The completed
+      decision-making is documented in accordance with the legal requirements. All decisions offered on this plattform
+      were created, tested and checked by tax advisors from the central tax department (FF) based on the current tax
+      laws. Therefore, the result of the decision-making process is the answer to your tax queries in your business
+      transaction. Further involvement of the responsible persons in the tax department is not necessary. If you have
+      any questions about your issue, you will be contacted by the tax department. Please feel free to give us your open
+      feedback on this platform at any time. Sincerely, Your Tax Department
     </p>
   </div>
 
-  <div class="box-4">
-    <div class="inner">
-      <h4>Prüfungsvorlagen</h4>
-   
-      <mat-accordion>
-        <mat-expansion-panel class="mb10">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Püfung auf Quellenseuer
-            </mat-panel-title>
-            <mat-panel-description>
-              Gültig bis 01.02.2022
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Pork shankle beef ball tip. Shankle tongue ham</p>
-          <button mat-raised-button color="accent">Prüfen</button>&nbsp;
-        </mat-expansion-panel>
+  <!--Starred Decisions-->
+  <div class="box-4 dashobard-column decisions-column">
+    <div class="inner column">
+      <div>
+        <div class="tile-header">
+          <div class="box-11 tile-title-container">
+            <h4 class="tile-title ellipsis" matTooltip="Favourite Decisions">
+              Favourite Decisions</h4>
+          </div>
+          <!--Tile actions-->
+          <div class="box-1 tile-actions">
+            <div class="tile-accordion-wrapper">
+              <mat-accordion class="tile-accordion" #starredDecisionsTileAccordion="matAccordion" multi="true">
+                <mat-expansion-panel clickOutside (clickOutside)="starredDecisionsTileAccordion.closeAll()">
+                  <mat-expansion-panel-header class="more-btn">
+                    <mat-panel-title>
+                      <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                        more_vert</mat-icon>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-card class="item-actions-wrapper">
+                    <div class="tile-action" routerLink="/decisions">
+                      <mat-icon class="list-action-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                        list</mat-icon>
+                      <p class="ellipsis" matTooltip="See all">
+                        See all
+                      </p>
+                    </div>
+                  </mat-card>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+          </div>
+          <!-- / Tile actions-->
+          <div class="clearfix"></div>
+        </div>
+        <div class="list-wrapper">
+          <!--list item-->
+          <mat-accordion class="tile-item">
+            <mat-expansion-panel class="mb10">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
 
-        <mat-expansion-panel class="mb10">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Püfung auf Quellenseuer
-            </mat-panel-title>
-            <mat-panel-description>
-              Gültig bis 01.02.2022
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Pork shankle beef ball tip. Shankle tongue ham</p>
-          <button mat-raised-button color="accent">Prüfen</button>&nbsp;
-        </mat-expansion-panel>
-        <mat-expansion-panel class="mb10">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Püfung auf Quellenseuer
-            </mat-panel-title>
-            <mat-panel-description>
-              Gültig bis 01.02.2022
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Pork shankle beef ball tip. Shankle tongue ham</p>
-          <button mat-raised-button color="accent">Prüfen</button>&nbsp;
-        </mat-expansion-panel>
-        <mat-expansion-panel class="mb10">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Püfung auf Quellenseuer
-            </mat-panel-title>
-            <mat-panel-description>
-              Gültig bis 01.02.2022
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Pork shankle beef ball tip. Shankle tongue ham</p>
-          <button mat-raised-button color="accent">Prüfen</button>&nbsp;
-        </mat-expansion-panel>
-        <mat-expansion-panel class="mb10">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Püfung auf Quellenseuer
-            </mat-panel-title>
-            <mat-panel-description>
-              Gültig bis 01.02.2022
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Pork shankle beef ball tip. Shankle tongue ham</p>
-          <button mat-raised-button color="accent">Prüfen</button>&nbsp;
-        </mat-expansion-panel>
-        <mat-expansion-panel class="mb10">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Püfung auf Quellenseuer
-            </mat-panel-title>
-            <mat-panel-description>
-              Gültig bis 01.02.2022
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Pork shankle beef ball tip. Shankle tongue ham</p>
-          <button mat-raised-button color="accent">Prüfen</button>&nbsp;
-        </mat-expansion-panel>
-      </mat-accordion>
+                  <div class="box-1 dm-icon-wrapper">
+                    <div class="image-container">
+                      <div class="image-wrapper">
+                        <img src="../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-icon">
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="list-item-name preserve-white-spaces">Decision name 1</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="preserve-white-spaces">Decision Description</p>
+              <p>
+                Status name
+              </p>
+              <button mat-raised-button color="accent">Details</button>&nbsp;
+
+              <button mat-raised-button color="accent">Evaluate</button>&nbsp;
+            </mat-expansion-panel>
+          </mat-accordion>
+          <!-- / list item-->
+          <!--list item-->
+          <mat-accordion class="tile-item">
+            <mat-expansion-panel class="mb10">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+
+                  <div class="box-1 dm-icon-wrapper">
+                    <div class="image-container">
+                      <div class="image-wrapper">
+                        <img src="../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-icon">
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="list-item-name preserve-white-spaces">Decision name 2</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="preserve-white-spaces">Decision Description</p>
+              <p>
+                Status name
+              </p>
+              <button mat-raised-button color="accent">Details</button>&nbsp;
+
+              <button mat-raised-button color="accent">Evaluate</button>&nbsp;
+            </mat-expansion-panel>
+          </mat-accordion>
+          <!-- / list item-->
+          <!--list item-->
+          <mat-accordion class="tile-item">
+            <mat-expansion-panel class="mb10">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+
+                  <div class="box-1 dm-icon-wrapper">
+                    <div class="image-container">
+                      <div class="image-wrapper">
+                        <img src="../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-icon">
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="list-item-name preserve-white-spaces">Decision name 3</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="preserve-white-spaces">Decision Description</p>
+              <p>
+                Status name
+              </p>
+              <button mat-raised-button color="accent">Details</button>&nbsp;
+
+              <button mat-raised-button color="accent">Evaluate</button>&nbsp;
+            </mat-expansion-panel>
+          </mat-accordion>
+          <!-- / list item-->
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="box-4">
-    <div class="inner">
-      <h4>Offene Prüfungen</h4>
-      <mat-accordion>
-        <mat-expansion-panel class="mb10">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Püfung auf Quellenseuer
-            </mat-panel-title>
-            <mat-panel-description>
-              Gültig bis 01.02.2022
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Pork shankle beef ball tip. Shankle tongue ham</p>
-          <button mat-raised-button color="accent">Prüfen</button>&nbsp;
-        </mat-expansion-panel>
-      </mat-accordion>
+  <!--New Decisions-->
+  <div class="box-4 dashobard-column decisions-column">
+    <div class="inner column">
+      <div>
+        <div class="tile-header">
+          <div class="box-11 tile-title-container">
+            <h4 class="tile-title ellipsis" matTooltip="Decisions">
+              Decisions</h4>
+          </div>
+          <!--Tile actions-->
+          <div class="box-1 tile-actions">
+            <div class="tile-accordion-wrapper">
+              <mat-accordion class="tile-accordion" #DecisionsTileAccordion="matAccordion" multi="true">
+                <mat-expansion-panel clickOutside (clickOutside)="DecisionsTileAccordion.closeAll()">
+                  <mat-expansion-panel-header class="more-btn">
+                    <mat-panel-title>
+                      <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                        more_vert</mat-icon>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-card class="item-actions-wrapper">
+                    <div class="tile-action" routerLink="/decisions">
+                      <mat-icon class="list-action-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                        list</mat-icon>
+                      <p class="ellipsis" matTooltip="See all">
+                        See all
+                      </p>
+                    </div>
+                    <div class="tile-action">
+                      <mat-icon class="list-action-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                        add</mat-icon>
+                      <p class="ellipsis" matTooltip="Add decision template">
+                        Add decision template
+                      </p>
+                    </div>
+                  </mat-card>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+          </div>
+          <!-- / Tile actions-->
+          <div class="clearfix"></div>
+        </div>
+        <!--loading spinner-->
+        <ng-template #loadingSpinnerDecisions>
+          <div class="spinner-wrapper decisions-spinner">
+            <mat-spinner></mat-spinner>
+          </div>
+        </ng-template>
+        <!-- / loading spinner-->
+        <div class="list-wrapper">
+          <!--list item-->
+          <mat-accordion class="tile-item">
+            <mat-expansion-panel class="mb10">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+
+                  <div class="box-1 dm-icon-wrapper">
+                    <div class="image-container">
+                      <div class="image-wrapper">
+                        <img src="../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-icon">
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="list-item-name preserve-white-spaces">Decision name 2</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="preserve-white-spaces">Category description
+              </p>
+              <p class="preserve-white-spaces">description</p>
+              <p>User Display Name</p>
+              <p>Status name</p>
+              <button mat-raised-button color="accent">Details</button>&nbsp;
+
+              <button mat-raised-button color="accent">Evaluate</button>&nbsp;
+            </mat-expansion-panel>
+          </mat-accordion>
+          <!-- / list item-->
+          <!--list item-->
+          <mat-accordion class="tile-item">
+            <mat-expansion-panel class="mb10">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+
+                  <div class="box-1 dm-icon-wrapper">
+                    <div class="image-container">
+                      <div class="image-wrapper">
+                        <img src="../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-icon">
+                      </div>
+                    </div>
+                  </div>
+
+                  <span class="list-item-name preserve-white-spaces">Decision name 3</span>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="preserve-white-spaces">Category description
+              </p>
+              <p class="preserve-white-spaces">description</p>
+              <p>User Display Name</p>
+              <p>Status name</p>
+              <button mat-raised-button color="accent">Details</button>&nbsp;
+
+              <button mat-raised-button color="accent">Evaluate</button>&nbsp;
+            </mat-expansion-panel>
+          </mat-accordion>
+          <!-- / list item-->
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="box-4">
-    <div class="inner">
-      <h4>Abgeschlossene Prüfungen</h4>
-      <mat-accordion>
-        <mat-expansion-panel class="mb10">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Püfung auf Quellenseuer
-            </mat-panel-title>
-            <mat-panel-description>
-              Gültig bis 01.02.2022
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Pork shankle beef ball tip. Shankle tongue ham</p>
-          <button mat-raised-button color="accent">Prüfen</button>&nbsp;
-        </mat-expansion-panel>
-
-        <mat-expansion-panel class="mb10">
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Püfung auf Quellenseuer
-            </mat-panel-title>
-            <mat-panel-description>
-              Gültig bis 01.02.2022
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>Pork shankle beef ball tip. Shankle tongue ham</p>
-          <button mat-raised-button color="accent">Prüfen</button>&nbsp;
-        </mat-expansion-panel>
-      </mat-accordion>
+  <!--Submitted Reports-->
+  <div class="box-4 dashobard-column submitted-reports-column">
+    <div class="inner column">
+      <div>
+        <div class="tile-header">
+          <div class="box-11 tile-title-container">
+            <h4 class="tile-title ellipsis" matTooltip="Documented Decision Runs">
+              Documented Decision Runs</h4>
+          </div>
+          <!--Tile actions-->
+          <div class="box-1 tile-actions">
+            <div class="tile-accordion-wrapper">
+              <mat-accordion class="tile-accordion" #DecisionsTileAccordion="matAccordion" multi="true">
+                <mat-expansion-panel clickOutside (clickOutside)="DecisionsTileAccordion.closeAll()">
+                  <mat-expansion-panel-header class="more-btn">
+                    <mat-panel-title>
+                      <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                        more_vert</mat-icon>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-card class="item-actions-wrapper">
+                    <div class="tile-action" routerLink="/reports">
+                      <mat-icon class="list-action-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                        list</mat-icon>
+                      <p class="ellipsis" matTooltip="See all">
+                        See all
+                      </p>
+                    </div>
+                  </mat-card>
+                </mat-expansion-panel>
+              </mat-accordion>
+            </div>
+          </div>
+          <!-- / Tile actions-->
+          <div class="clearfix"></div>
+        </div>
+        <!-- loading spinner-->
+        <ng-template #loadingSpinnerReports>
+          <div class="spinner-wrapper submitted-reports-spinner">
+            <mat-spinner></mat-spinner>
+          </div>
+        </ng-template>
+        <!-- / loading spinner-->
+        <div class="list-wrapper">
+          <!-- list item-->
+          <mat-accordion class="tile-item">
+            <mat-expansion-panel class="mb10">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Reference Number
+                </mat-panel-title>
+                <mat-panel-description>
+                  Decision Date
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>Decision Name</p>
+              <p>User Display Name</p>
+              <p>resultText</p>
+              <button mat-raised-button color="accent">Details</button>&nbsp;
+            </mat-expansion-panel>
+          </mat-accordion>
+          <!-- / list item-->
+          <!-- list item-->
+          <mat-accordion class="tile-item">
+            <mat-expansion-panel class="mb10">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Reference Number 2
+                </mat-panel-title>
+                <mat-panel-description>
+                  Decision Date
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>Decision Name 2</p>
+              <p>User Display Name 2</p>
+              <p>Result Text 2</p>
+              <button mat-raised-button color="accent">Details</button>&nbsp;
+            </mat-expansion-panel>
+          </mat-accordion>
+          <!-- / list item-->
+        </div>
+      </div>
     </div>
+
+    <div class="clearfix"></div>
   </div>
-</div>
