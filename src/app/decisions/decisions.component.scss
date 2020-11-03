@@ -13,6 +13,533 @@ span {
 }
 
 /*list*/
+::ng-deep .decisions .list-container {
+  padding: 0;
+  width: 100%;
+}
+.item-details,
+.properties-wrapper {
+  cursor: pointer;
+}
+::ng-deep .decisions:not(.decisions-selection) .list-card {
+  &:hover {
+    background-color: #9e9e9e;
+  }
+  padding: 0;
+  margin: 5px 0;
+  height: 100px;
+}
+
+::ng-deep .decisions .items-list {
+  position: relative;
+}
+::ng-deep .decisions .items-list .inner {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+::ng-deep .decisions .list-item {
+  width: 100%;
+  display: block;
+  height: 100%;
+  font-size: 14px;
+}
+
+::ng-deep .decisions .list-item .name {
+  font-weight: bold;
+}
+
+::ng-deep .decisions .upload-input .inner {
+  padding-top: 20px;
+}
+
+/*list item*/
+::ng-deep .decisions .item-wrapper {
+  height: 100%;
+}
+::ng-deep .decisions .item-wrapper .box-11 {
+  padding: 16px 0 16px 0;
+}
+::ng-deep .decisions .item-details {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+::ng-deep .decisions .item-name .inner,
+::ng-deep .decisions .item-details .inner {
+  overflow: hidden;
+  max-height: 20px;
+}
+
+::ng-deep .decisions .item-name .inner span,
+::ng-deep .decisions .item-details .inner span {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+::ng-deep .decisions .item-details .inner span {
+  display: inline-block;
+}
+
+::ng-deep .decisions .item-name span {
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  margin-bottom: 0;
+  font-size: 15px;
+  color: $primary-color;
+  font-weight: bold;
+}
+
+::ng-deep .daimler-theme .decisions .item-name span {
+  color: #000000 !important;
+  font-size: 14px !important;
+}
+
+::ng-deep .daimler-theme.dark-theme .decisions .item-name span {
+  color: #ffffff !important;
+}
+
+/*icons*/
+::ng-deep .decisions .play-icon {
+  left: 0;
+}
+::ng-deep .decisions .more-icon {
+  bottom: 7px;
+}
+::ng-deep .decisions .more-icon,
+::ng-deep .decisions .play-icon {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    color: #333333;
+  }
+  font-size: 30px;
+}
+::ng-deep .decisions .items-list .item-actions.decision-actions {
+  height: 48px;
+  top: 50%;
+  right: 10px;
+  padding: 16px 0 16px 0;
+}
+::ng-deep .decisions .items-list .item-actions:not(.decision-actions) {
+  z-index: 2;
+  cursor: pointer;
+}
+::ng-deep .decisions .items-list .item-actions {
+  text-align: right;
+  position: absolute;
+  padding: 0;
+  top: 10px;
+  height: 30px;
+  right: 40px;
+  width: 30px;
+}
+
+::ng-deep .decisions .items-list .item-actions-wrapper {
+  padding: 16px 0;
+  text-align: left;
+}
+
+::ng-deep .decisions .items-list .item-actions .inner {
+  position: relative;
+}
+
+::ng-deep .decisions .items-list .item-actions .inner,
+::ng-deep .decisions .items-list .item-details .inner,
+::ng-deep .decisions .items-list .item-name .inner {
+  margin: 0 10px;
+  padding: 0 10px;
+}
+::ng-deep .decisions .item-name .inner {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+::ng-deep .decisions .play-icon {
+  left: 0;
+  height: 30px;
+  width: 30px;
+}
+
+::ng-deep .decisions .items-list .item-actions .more-icon {
+  left: 0;
+  bottom: 0px;
+  font-size: 20px;
+}
+
+::ng-deep .decisions .items-list .item-actions .mat-accordion {
+  position: absolute;
+  bottom: calc(50% - 10px);
+  right: -60px;
+  height: 48px;
+  width: 50px;
+}
+::ng-deep
+  .decisions
+  .items-list
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header {
+  //height: 30px !important;
+  max-height: 48px !important;
+  width: 50px;
+  padding: 0 5px;
+}
+
+::ng-deep
+  .decisions
+  .items-list
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header:hover,
+::ng-deep
+  .decisions
+  .items-list
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header:focus,
+::ng-deep
+  .decisions
+  .items-list
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header.active {
+  background: transparent !important;
+}
+
+::ng-deep .decisions .items-list .item-actions .mat-expansion-indicator {
+  display: none;
+}
+
+::ng-deep
+  .decisions
+  .items-list
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel:last-of-type {
+  box-shadow: none;
+  background: transparent;
+  overflow: visible;
+}
+
+::ng-deep
+  .decisions
+  .items-list
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-body {
+  padding: 0;
+  width: 0;
+  min-width: 0;
+  z-index: 3;
+}
+::ng-deep .decisions .items-list .item-actions .mat-card {
+  min-width: 190px;
+  left: -140px;
+}
+/*dark theme*/
+::ng-deep .dark-theme .decisions .item-details {
+  color: #ffffff;
+}
+
+::ng-deep .decisions .report-item-action {
+  padding: 5px 15px;
+  max-height: 36px;
+}
+::ng-deep .decisions .report-item-action p {
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+::ng-deep .decisions .items-list .report-item-action .item-actions-icon {
+  position: absolute;
+  top: -2px;
+  font-size: 22px;
+}
+::ng-deep .decisions .action-text {
+  margin-left: 30px;
+}
+::ng-deep .decisions .report-item-action:hover,
+::ng-deep .decisions .report-item-action:focus,
+::ng-deep .decisions .report-item-action.active {
+  background: #9e9e9e;
+}
+::ng-deep .decisions .items-list .report-item-action:hover .item-actions-icon,
+::ng-deep .decisions .items-list .report-item-action:focus .item-actions-icon,
+::ng-deep .decisions .items-list .report-item-action.active .item-actions-icon {
+  color: #000000;
+}
+::ng-deep .dark-theme .items-list .report-item-action:hover .item-actions-icon,
+::ng-deep .dark-theme .items-list .report-item-action:focus .item-actions-icon,
+::ng-deep
+  .dark-theme
+  .items-list
+  .report-item-action.active
+  .item-actions-icon {
+  color: #ffffff !important;
+}
+::ng-deep .decisions .properties-wrapper {
+  padding: 16px 0 16px 0;
+  height: 50%;
+  z-index: 1;
+}
+::ng-deep .decisions .box-12.item-details {
+  height: 50%;
+}
+::ng-deep .decisions .spinner-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+}
+
+::ng-deep .decisions .dm-icon-wrapper {
+  max-width: 50px;
+  margin: 0 10px;
+}
+::ng-deep .decisions .dm-icon-wrapper .image-container {
+  max-width: 25px;
+  margin: 0 auto;
+}
+::ng-deep .decisions .dm-icon-wrapper .image-container .image-wrapper {
+  max-height: 25px;
+}
+/*Responsive*/
+@media (max-width: $tablet) {
+  ::ng-deep .decisions:not(.decisions-selection) {
+    .items-list .item-actions .mat-accordion .mat-expansion-panel-header {
+      max-height: 20px !important;
+    }
+
+    .properties-wrapper {
+      height: auto !important;
+    }
+    .list-card {
+      position: relative;
+      height: 150px;
+    }
+    .more-icon {
+      font-size: 35px;
+      left: -25px !important;
+      bottom: 20px !important;
+      height: 35px;
+      width: 35px;
+      position: relative !important;
+    }
+    .mobile-list-actions .more-icon {
+      left: 0 !important;
+    }
+
+    .items-list .item-actions.decision-actions {
+      top: 0%;
+      width: 40px;
+      padding-bottom: 0;
+      position: absolute !important;
+      right: 0;
+    }
+    .play-icon {
+      font-size: 35px;
+      left: -25px !important;
+      bottom: 0px !important;
+      height: 35px;
+      width: 35px;
+      position: relative !important;
+    }
+
+    .item-name {
+      margin-bottom: 20px;
+      width: 80%;
+    }
+
+    .item-name .inner {
+      padding: 0 10px 0 0;
+      margin: 0 10px 0 0;
+      overflow-x: hidden;
+    }
+
+    .item-details {
+      width: 100%;
+    }
+    .box-12.item-details {
+      padding-top: 46px;
+      position: absolute;
+      bottom: 0;
+    }
+    .item-wrapper .box-11 {
+      width: 91.666665%;
+    }
+
+    .items-list .item-actions:not(.decision-actions) {
+      width: 16%;
+    }
+    .items-list .item-actions {
+      position: relative;
+      float: left;
+    }
+
+    .items-list .item-actions:not(.decision-actions) {
+      display: block;
+      min-height: 80%;
+    }
+
+    ::ng-deep .items-list .item-actions .mat-accordion {
+      top: 0 !important;
+      right: 0 !important;
+      width: 40px;
+    }
+    ::ng-deep .items-list .item-actions .more-icon {
+      left: 0 !important;
+      bottom: 0 !important;
+    }
+
+    ::ng-deep .items-list .item-actions .mat-content {
+      height: 100%;
+    }
+
+    .properties-wrapper {
+      width: 83.333332%;
+    }
+    .dm-icon-wrapper {
+      width: 8.333332%;
+    }
+  }
+}
+@media (max-width: 1440px) and (min-width: $tablet) {
+  ::ng-deep .decisions .items-list .item-actions,
+  ::ng-deep .decisions .box-12.item-details {
+    height: auto !important;
+  }
+
+  ::ng-deep .decisions-selection .item-name {
+    width: 33.333%;
+  }
+  ::ng-deep .decisions:not(.decisions-selection) {
+    .items-list .item-actions .mat-accordion .mat-expansion-panel-header {
+      max-height: 20px !important;
+    }
+    .items-list .item-actions.decision-actions {
+      top: 0%;
+      width: 40px;
+      height: 40px !important;
+      padding-bottom: 0 !important;
+      position: absolute !important;
+      right: 0;
+    }
+
+    .properties-wrapper {
+      height: auto !important;
+    }
+    .list-card {
+      position: relative;
+      height: 150px;
+    }
+    .more-icon {
+      left: -25px !important;
+      bottom: 20px !important;
+      height: 35px;
+      width: 35px;
+      position: relative !important;
+    }
+
+    .play-icon {
+      left: -60px;
+      bottom: -5px !important;
+      height: 35px;
+      width: 35px;
+      position: relative !important;
+    }
+
+    .item-name {
+      margin-bottom: 20px;
+      width: 88%;
+    }
+
+    .item-name .inner {
+      padding: 0 10px 0 0;
+      margin: 0 10px 0 0;
+    }
+
+    .item-details {
+      width: 100%;
+    }
+    .box-12.item-details {
+      padding-top: 75px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .item-wrapper .box-11 {
+      width: 91.666665%;
+    }
+
+    .items-list .item-actions.decision-actions {
+      top: 0%;
+    }
+    .items-list .item-actions {
+      width: 8.333332%;
+      position: relative;
+      float: left;
+    }
+
+    .items-list .item-actions:not(.decision-actions) {
+      width: 16%;
+      display: block;
+      min-height: 80%;
+      position: absolute;
+      right: 40px;
+    }
+
+    ::ng-deep .items-list .item-actions .mat-accordion {
+      top: 0;
+      right: 0;
+      width: 40px;
+    }
+    ::ng-deep .items-list .item-actions .more-icon {
+      left: 0 !important;
+      bottom: 0 !important;
+    }
+
+    ::ng-deep .items-list .item-actions .mat-content {
+      height: 100%;
+    }
+
+    .properties-wrapper {
+      width: 83.333332%;
+    }
+
+    .dm-icon-wrapper {
+      width: 8.333332%;
+      margin: 0 0 10px 10px;
+      padding: 0 10px 0 0;
+    }
+  }
+}
+
+@media (min-width: 1440px +1) {
+  ::ng-deep .decisions {
+    .items-list .item-actions .mat-card {
+      right: 170px;
+    }
+    .list-card {
+      height: 120px;
+    }
+  }
+}
+
+span {
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.page-title {
+  margin-bottom: 0;
+}
+
+/*list*/
 .list-container {
   padding: 0;
   width: 100%;
@@ -21,7 +548,7 @@ span {
 .list-card {
   cursor: pointer;
   &:hover {
-    background-color: lightgrey;
+    background-color: #9e9e9e;
   }
   padding: 16px 0 16px 0;
   margin: 5px 0;
@@ -60,9 +587,9 @@ span {
   color: rgba(0, 0, 0, 0.54);
 }
 
-.item-actions .inner,
-.item-details .inner,
-.item-name .inner {
+.list-container .item-actions .inner,
+.list-container .item-details .inner,
+.list-container .item-name .inner {
   margin: 0 10px;
   padding: 0 10px;
 }
@@ -72,7 +599,11 @@ span {
   width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.item-details .inner div {
+  display: inline-block;
 }
 
 .item-name div {
@@ -81,53 +612,78 @@ span {
   color: $primary-color;
   font-weight: bold;
 }
-
-/*icons*/
-.more-icon,
-.play-icon {
-  position: relative;
-  cursor: pointer;
-  &:hover {
-    color: #333333;
-  }
-  left: 30px;
-  bottom: 7px;
-  font-size: 30px;
+::ng-deep .daimler-theme .item-name div {
+  color: #000000 !important;
+  font-size: 14px !important;
 }
 
-::ng-deep .item-actions .mat-accordion {
+::ng-deep .daimler-theme.dark-theme .item-name div {
+  color: #ffffff !important;
+}
+::ng-deep .daimler-theme.dark-theme .mat-paginator {
+  background: #424242;
+}
+::ng-deep .daimler-theme.dark-theme .mat-paginator,
+.daimler-theme.dark-theme .mat-paginator-page-size .mat-select-trigger {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+::ng-deep .decisions .item-actions .mat-accordion {
   position: absolute;
   bottom: -32px;
   right: 0;
   height: 48px;
   width: 50px;
-  //z-index: 1;
 }
-::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header {
+::ng-deep
+  .list-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header {
   //height: 30px !important;
   max-height: 48px !important;
   width: 50px;
   padding: 0 5px;
 }
-::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header:hover,
-::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header:focus,
-::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header.active {
+::ng-deep
+  .list-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header:hover,
+::ng-deep
+  .list-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header:focus,
+::ng-deep
+  .list-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header.active {
   background: transparent !important;
 }
-::ng-deep .item-actions .mat-expansion-indicator {
+::ng-deep .list-container .item-actions .mat-expansion-indicator {
   display: none;
 }
-::ng-deep .item-actions .more-icon {
+::ng-deep .list-container .item-actions .more-icon {
   left: 0;
   bottom: 0px;
   font-size: 20px;
 }
-::ng-deep .item-actions .mat-accordion .mat-expansion-panel:last-of-type {
+::ng-deep
+  .list-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel:last-of-type {
   box-shadow: none;
   background: transparent;
   overflow: visible;
 }
-::ng-deep .item-actions .mat-accordion .mat-expansion-panel-body {
+::ng-deep
+  .list-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-body {
   padding: 0;
   min-width: 130px;
   z-index: 1;
@@ -140,6 +696,12 @@ span {
   color: #ffffff;
 }
 
+::ng-deep .cdk-overlay-pane {
+  height: auto !important;
+}
+::ng-deep .mat-dialog-actions {
+  margin-bottom: 0 !important;
+}
 /*Responsive*/
 @media (max-width: $tablet) {
   .list-card {
@@ -164,19 +726,23 @@ span {
     width: 90%;
   }
 
-  .item-actions {
+  .list-container .item-actions {
     width: 10%;
   }
 
   ::ng-deep .item-actions .mat-accordion {
     bottom: -20px;
   }
-  ::ng-deep .item-actions .more-icon {
+  ::ng-deep .list-container .item-actions .more-icon {
     left: 0 !important;
     bottom: 0 !important;
   }
 
-  ::ng-deep .item-actions .mat-card {
+  ::ng-deep .list-container .item-actions .mat-card {
     right: 60px;
+  }
+
+  ::ng-deep .cdk-overlay-pane {
+    max-width: 100vw !important;
   }
 }

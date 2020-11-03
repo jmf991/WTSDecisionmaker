@@ -1,201 +1,575 @@
 <div class="decisions">
   <div class="inner">
-    <h1 class="page-title ">DMN Models</h1>
+    <h1 class="page-title ">Decisions</h1>
   </div>
   <div class="list-container">
     <app-list-actions [showUploadInput]=true></app-list-actions>
     <div class="items-list">
-      <div class="inner">
-        <!--card item-->
+      <div class="list-wrapper">
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/decision-details']">
-            <div class="box-12">
-              <div class="box-4 item-name">
-                <div class="inner">
-                  <div>TT-Aufsichtsratvergütung</div>
-                </div>
-              </div>
-              <div class="box-7 item-details">
-                <div class="inner">
-                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola
-                    pancetta.</div>
-                </div>
-              </div>
-              <div class="box-1 item-actions">
-                <div class="inner">
-                  <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
-                      play_circle_outline</mat-icon>
+          <mat-card class="list-card">
+            <div class="box-12 item-wrapper">
+              <div class="box-12 properties-wrapper"  [routerLink]="['/decision-details']">
+                <div class="box-1 dm-icon-wrapper">
+                  <div class="image-container">
+                    <div class="image-wrapper">
+                      <img src="../../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-icon">
+                    </div>
                   </div>
                 </div>
+                <div class="box-4 item-name">
+                  <div class="inner">
+                    <div><span class="preserve-white-spaces">Decision 1 Name</span></div>
+                    <ng-template #nbspDiv>
+                      &nbsp;
+                    </ng-template>
+                  </div>
+                </div>
+                <div class="box-3 item-details">
+                  <div class="inner">
+                    <div>Decision 1 description</div>
+                  </div>
+                </div>
+                <div class="box-2 item-details">
+                  <div class="inner">
+                    <div>Decision 1 user Display Name</div>
+                  </div>
+                </div>
+                <div class="box-2 item-details">
+                  <div class="inner">
+                    <div>
+                      <div>
+                        Decision 1 status</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
               </div>
+              <div class="item-actions">
+                <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                  play_circle_outline</mat-icon>
+              </div>
+              <div class="clearfix"></div>
+              <!--item actions-->
+              <div class="item-actions decision-actions">
+                <div class="inner">
+                  <mat-accordion class="item-accordion" #listAccordion="matAccordion" multi="true">
+                    <mat-expansion-panel clickOutside (clickOutside)="listAccordion.closeAll()">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon decision-actions-icon" aria-hidden="false"
+                            aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card class="item-actions-wrapper">
+
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Remove Favourite">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie"
+                              color="primary">remove_circle_outline
+                            </mat-icon>&nbsp;<span class="action-text">Remove Favourite</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Set Favourite">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie"
+                              color="primary">star_rate
+                            </mat-icon>&nbsp;<span class="action-text">Set Favourite</span>
+                          </p>
+                        </div>
+
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="edit">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Edit" color="primary">
+                              edit
+                            </mat-icon>&nbsp;<span class="action-text">Edit</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Delete">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Delete" color="primary">
+                              delete
+                            </mat-icon>&nbsp;<span class="action-text">Delete</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Copy Link">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Copy evaluation link"
+                              color="primary">link
+                            </mat-icon>&nbsp;<span class="action-text">Copy Link</span>
+                          </p>
+                        </div>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </div>
+              </div>
+              <!-- / item actions-->
+              <div class="box-12 item-details">
+                <div class="inner">
+                  <div><span>Description</span></div>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
           </mat-card>
         </mat-list-item>
-        <!-- / card item-->
-        <!--card item-->
+
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/decision-details']">
-            <div class="box-12">
-              <div class="box-4 item-name">
-                <div class="inner">
-                  <div>TT-Aufsichtsratvergütung TT-Aufsichtsratvergütung Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                </div>
-              </div>
-              <div class="box-7 item-details">
-                <div class="inner">
-                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
-                    fatback
-                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
-                    fatback
-                    pancetta.</div>
-                </div>
-              </div>
-              <div class="box-1 item-actions">
-                <div class="inner">
-                  <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
-                      play_circle_outline</mat-icon>
+          <mat-card class="list-card">
+            <div class="box-12 item-wrapper">
+              <div class="box-12 properties-wrapper">
+                <div class="box-1 dm-icon-wrapper">
+                  <div class="image-container">
+                    <div class="image-wrapper">
+                      <img src="../../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-icon">
+                    </div>
                   </div>
                 </div>
+                <div class="box-4 item-name">
+                  <div class="inner">
+                    <div><span class="preserve-white-spaces">Decision 1 Name</span></div>
+                    <ng-template #nbspDiv>
+                      &nbsp;
+                    </ng-template>
+                  </div>
+                </div>
+                <div class="box-3 item-details">
+                  <div class="inner">
+                    <div>Decision 1 description</div>
+                  </div>
+                </div>
+                <div class="box-2 item-details">
+                  <div class="inner">
+                    <div>Decision 1 user Display Name</div>
+                  </div>
+                </div>
+                <div class="box-2 item-details">
+                  <div class="inner">
+                    <div>
+                      <div>
+                        Decision 1 status</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
               </div>
+              <div class="item-actions">
+                <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                  play_circle_outline</mat-icon>
+              </div>
+              <div class="clearfix"></div>
+              <!--item actions-->
+              <div class="item-actions decision-actions">
+                <div class="inner">
+                  <mat-accordion class="item-accordion" #listAccordion="matAccordion" multi="true">
+                    <mat-expansion-panel clickOutside (clickOutside)="listAccordion.closeAll()">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon decision-actions-icon" aria-hidden="false"
+                            aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card class="item-actions-wrapper">
+
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Remove Favourite">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie"
+                              color="primary">remove_circle_outline
+                            </mat-icon>&nbsp;<span class="action-text">Remove Favourite</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Set Favourite">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie"
+                              color="primary">star_rate
+                            </mat-icon>&nbsp;<span class="action-text">Set Favourite</span>
+                          </p>
+                        </div>
+
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="edit">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Edit" color="primary">
+                              edit
+                            </mat-icon>&nbsp;<span class="action-text">Edit</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Delete">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Delete" color="primary">
+                              delete
+                            </mat-icon>&nbsp;<span class="action-text">Delete</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Copy Link">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Copy evaluation link"
+                              color="primary">link
+                            </mat-icon>&nbsp;<span class="action-text">Copy Link</span>
+                          </p>
+                        </div>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </div>
+              </div>
+              <!-- / item actions-->
+              <div class="box-12 item-details">
+                <div class="inner">
+                  <div><span>Description</span></div>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
           </mat-card>
         </mat-list-item>
-        <!-- / card item-->
-        <!--card item-->
+
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/decision-details']">
-            <div class="box-12">
-              <div class="box-4 item-name">
-                <div class="inner">
-                  <div>TT-Aufsichtsratvergütung example </div>
-                </div>
-              </div>
-              <div class="box-7 item-details">
-                <div class="inner">
-                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
-                    fatback
-                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
-                    fatback
-                    pancetta.</div>
-                </div>
-              </div>
-              <div class="box-1 item-actions">
-                <div class="inner">
-                  <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
-                      play_circle_outline</mat-icon>
+          <mat-card class="list-card">
+            <div class="box-12 item-wrapper">
+              <div class="box-12 properties-wrapper">
+                <div class="box-1 dm-icon-wrapper">
+                  <div class="image-container">
+                    <div class="image-wrapper">
+                      <img src="../../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-icon">
+                    </div>
                   </div>
                 </div>
+                <div class="box-4 item-name">
+                  <div class="inner">
+                    <div><span class="preserve-white-spaces">Decision 1 Name</span></div>
+                    <ng-template #nbspDiv>
+                      &nbsp;
+                    </ng-template>
+                  </div>
+                </div>
+                <div class="box-3 item-details">
+                  <div class="inner">
+                    <div>Decision 1 description</div>
+                  </div>
+                </div>
+                <div class="box-2 item-details">
+                  <div class="inner">
+                    <div>Decision 1 user Display Name</div>
+                  </div>
+                </div>
+                <div class="box-2 item-details">
+                  <div class="inner">
+                    <div>
+                      <div>
+                        Decision 1 status</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
               </div>
+              <div class="item-actions">
+                <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                  play_circle_outline</mat-icon>
+              </div>
+              <div class="clearfix"></div>
+              <!--item actions-->
+              <div class="item-actions decision-actions">
+                <div class="inner">
+                  <mat-accordion class="item-accordion" #listAccordion="matAccordion" multi="true">
+                    <mat-expansion-panel clickOutside (clickOutside)="listAccordion.closeAll()">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon decision-actions-icon" aria-hidden="false"
+                            aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card class="item-actions-wrapper">
+
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Remove Favourite">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie"
+                              color="primary">remove_circle_outline
+                            </mat-icon>&nbsp;<span class="action-text">Remove Favourite</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Set Favourite">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie"
+                              color="primary">star_rate
+                            </mat-icon>&nbsp;<span class="action-text">Set Favourite</span>
+                          </p>
+                        </div>
+
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="edit">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Edit" color="primary">
+                              edit
+                            </mat-icon>&nbsp;<span class="action-text">Edit</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Delete">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Delete" color="primary">
+                              delete
+                            </mat-icon>&nbsp;<span class="action-text">Delete</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Copy Link">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Copy evaluation link"
+                              color="primary">link
+                            </mat-icon>&nbsp;<span class="action-text">Copy Link</span>
+                          </p>
+                        </div>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </div>
+              </div>
+              <!-- / item actions-->
+              <div class="box-12 item-details">
+                <div class="inner">
+                  <div><span>Description</span></div>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
           </mat-card>
         </mat-list-item>
-        <!-- / card item-->
-        <!--card item-->
+
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/decision-details']">
-            <div class="box-12">
-              <div class="box-4 item-name">
-                <div class="inner">
-                  <div>TT-Aufsichtsratvergütung example </div>
-                </div>
-              </div>
-              <div class="box-7 item-details">
-                <div class="inner">
-                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
-                    fatback
-                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
-                    fatback
-                    pancetta.</div>
-                </div>
-              </div>
-              <div class="box-1 item-actions">
-                <div class="inner">
-                  <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
-                      play_circle_outline</mat-icon>
+          <mat-card class="list-card">
+            <div class="box-12 item-wrapper">
+              <div class="box-12 properties-wrapper">
+                <div class="box-1 dm-icon-wrapper">
+                  <div class="image-container">
+                    <div class="image-wrapper">
+                      <img src="../../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-icon">
+                    </div>
                   </div>
                 </div>
+                <div class="box-4 item-name">
+                  <div class="inner">
+                    <div><span class="preserve-white-spaces">Decision 1 Name</span></div>
+                    <ng-template #nbspDiv>
+                      &nbsp;
+                    </ng-template>
+                  </div>
+                </div>
+                <div class="box-3 item-details">
+                  <div class="inner">
+                    <div>Decision 1 description</div>
+                  </div>
+                </div>
+                <div class="box-2 item-details">
+                  <div class="inner">
+                    <div>Decision 1 user Display Name</div>
+                  </div>
+                </div>
+                <div class="box-2 item-details">
+                  <div class="inner">
+                    <div>
+                      <div>
+                        Decision 1 status</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
               </div>
+              <div class="item-actions">
+                <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                  play_circle_outline</mat-icon>
+              </div>
+              <div class="clearfix"></div>
+              <!--item actions-->
+              <div class="item-actions decision-actions">
+                <div class="inner">
+                  <mat-accordion class="item-accordion" #listAccordion="matAccordion" multi="true">
+                    <mat-expansion-panel clickOutside (clickOutside)="listAccordion.closeAll()">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon decision-actions-icon" aria-hidden="false"
+                            aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card class="item-actions-wrapper">
+
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Remove Favourite">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie"
+                              color="primary">remove_circle_outline
+                            </mat-icon>&nbsp;<span class="action-text">Remove Favourite</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Set Favourite">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie"
+                              color="primary">star_rate
+                            </mat-icon>&nbsp;<span class="action-text">Set Favourite</span>
+                          </p>
+                        </div>
+
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="edit">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Edit" color="primary">
+                              edit
+                            </mat-icon>&nbsp;<span class="action-text">Edit</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Delete">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Delete" color="primary">
+                              delete
+                            </mat-icon>&nbsp;<span class="action-text">Delete</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Copy Link">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Copy evaluation link"
+                              color="primary">link
+                            </mat-icon>&nbsp;<span class="action-text">Copy Link</span>
+                          </p>
+                        </div>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </div>
+              </div>
+              <!-- / item actions-->
+              <div class="box-12 item-details">
+                <div class="inner">
+                  <div><span>Description</span></div>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
           </mat-card>
         </mat-list-item>
-        <!-- / card item-->
-        <!--card item-->
+
         <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/decision-details']">
-            <div class="box-12">
-              <div class="box-4 item-name">
-                <div class="inner">
-                  <div>TT-Aufsichtsratvergütung example </div>
-                </div>
-              </div>
-              <div class="box-7 item-details">
-                <div class="inner">
-                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
-                    fatback
-                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
-                    fatback
-                    pancetta.</div>
-                </div>
-              </div>
-              <div class="box-1 item-actions">
-                <div class="inner">
-                  <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
-                      play_circle_outline</mat-icon>
+          <mat-card class="list-card">
+            <div class="box-12 item-wrapper">
+              <div class="box-12 properties-wrapper">
+                <div class="box-1 dm-icon-wrapper">
+                  <div class="image-container">
+                    <div class="image-wrapper">
+                      <img src="../../../assets/images/DM-icon.png" alt="DM icon" id="dm-icon-img" class="dm-icon">
+                    </div>
                   </div>
                 </div>
+                <div class="box-4 item-name">
+                  <div class="inner">
+                    <div><span class="preserve-white-spaces">Decision 1 Name</span></div>
+                    <ng-template #nbspDiv>
+                      &nbsp;
+                    </ng-template>
+                  </div>
+                </div>
+                <div class="box-3 item-details">
+                  <div class="inner">
+                    <div>Decision 1 description</div>
+                  </div>
+                </div>
+                <div class="box-2 item-details">
+                  <div class="inner">
+                    <div>Decision 1 user Display Name</div>
+                  </div>
+                </div>
+                <div class="box-2 item-details">
+                  <div class="inner">
+                    <div>
+                      <div>
+                        Decision 1 status</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
               </div>
+              <div class="item-actions">
+                <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                  play_circle_outline</mat-icon>
+              </div>
+              <div class="clearfix"></div>
+              <!--item actions-->
+              <div class="item-actions decision-actions">
+                <div class="inner">
+                  <mat-accordion class="item-accordion" #listAccordion="matAccordion" multi="true">
+                    <mat-expansion-panel clickOutside (clickOutside)="listAccordion.closeAll()">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          <mat-icon class="more-icon decision-actions-icon" aria-hidden="false"
+                            aria-label="Item actions" color="primary">
+                            more_vert</mat-icon>
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-card class="item-actions-wrapper">
+
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Remove Favourite">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie"
+                              color="primary">remove_circle_outline
+                            </mat-icon>&nbsp;<span class="action-text">Remove Favourite</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Set Favourite">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie"
+                              color="primary">star_rate
+                            </mat-icon>&nbsp;<span class="action-text">Set Favourite</span>
+                          </p>
+                        </div>
+
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="edit">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Edit" color="primary">
+                              edit
+                            </mat-icon>&nbsp;<span class="action-text">Edit</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Delete">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Delete" color="primary">
+                              delete
+                            </mat-icon>&nbsp;<span class="action-text">Delete</span>
+                          </p>
+                        </div>
+                        <div class="report-item-action">
+                          <p class="ellipsis" matTooltip="Copy Link">
+                            <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Copy evaluation link"
+                              color="primary">link
+                            </mat-icon>&nbsp;<span class="action-text">Copy Link</span>
+                          </p>
+                        </div>
+                      </mat-card>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                </div>
+              </div>
+              <!-- / item actions-->
+              <div class="box-12 item-details">
+                <div class="inner">
+                  <div><span>Description</span></div>
+                </div>
+              </div>
+
+              <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
           </mat-card>
         </mat-list-item>
-        <!-- / card item-->
-        <!--card item-->
-        <mat-list-item class="list-item">
-          <mat-card class="list-card" [routerLink]="['/decision-details']">
-            <div class="box-12">
-              <div class="box-4 item-name">
-                <div class="inner">
-                  <div>TT-Aufsichtsratvergütung example </div>
-                </div>
-              </div>
-              <div class="box-7 item-details">
-                <div class="inner">
-                  <div>Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork fatback
-                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
-                    fatback
-                    pancetta. Pastrami beef tongue, doner short ribs pig sausage capicola ham landjaeger leberkas pork
-                    fatback
-                    pancetta.</div>
-                </div>
-              </div>
-              <div class="box-1 item-actions">
-                <div class="inner">
-                  <div class="box-12" [routerLink]="['/wizard']">
-                    <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
-                      play_circle_outline</mat-icon>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="clearfix"></div>
-          </mat-card>
-        </mat-list-item>
-        <!-- / card item-->
         <div class="clearfix"></div>
       </div>
+    </div>
+    <div class="inner pt0">
+      <mat-paginator #paginator [length]="5" [pageIndex]="0" [pageSize]="5" [pageSizeOptions]="[5 ,10 , 20, 100]">
+      </mat-paginator>
     </div>
   </div>
