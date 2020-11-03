@@ -1,0 +1,11 @@
+::ng-deep .mat-badge-medium.mat-badge-after .mat-badge-content {
+  margin-right: 12px;
+  background-color: #c03;
+  color: #fff;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+}
+::ng-deep .daimler-theme .mat-badge-medium.mat-badge-after .mat-badge-content {
+  background-color: #007a93;
+}
