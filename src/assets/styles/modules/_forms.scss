@@ -9,23 +9,26 @@
   padding-right: 35px;
   border-radius: $border-radius; /*margin-bottom: $global-margin;*/ /* Remove First */
 }
+::ng-deep .daimler-theme .input-default {
+  @extend .daimler-font; /*max-width: 245px;*/
+}
 
-input[type="checkbox"] {
+input[type='checkbox'] {
 }
-input[type="radio"] {
+input[type='radio'] {
 }
-input[type="text"],
-input[type="number"],
-input[type="password"],
-input[type="tel"],
-input[type="url"],
-input[type="email"],
-input[type="date"] {
+input[type='text'],
+input[type='number'],
+input[type='password'],
+input[type='tel'],
+input[type='url'],
+input[type='email'],
+input[type='date'] {
   @extend .input-default;
 }
 
-input[type="password"]::-ms-reveal,
-input[type="password"]::-ms-clear {
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
   display: none;
 }
 select {
@@ -48,7 +51,7 @@ select[multiple] {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-input[type="date"] {
+input[type='date'] {
   height: 36px;
   border: $global-border;
   padding-left: 5px;
@@ -75,11 +78,14 @@ textarea {
   border-radius: $border-radius;
   @extend .smooth-transition-color;
 }
+::ng-deep .daimler-theme .btn {
+  @extend .daimler-font;
+}
 .btn:not(span) {
   cursor: pointer;
 }
-input[type="submit"],
-input[type="button"],
+input[type='submit'],
+input[type='button'],
 button {
   @extend .btn;
 }
@@ -129,8 +135,8 @@ textarea.small {
   color: #fff;
 }
 .btn,
-input[type="submit"],
-input[type="button"] {
+input[type='submit'],
+input[type='button'] {
   &:not(span) {
     &:hover,
     &:focus,
@@ -141,7 +147,7 @@ input[type="button"] {
 }
 
 .fake-input {
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   color: $primary-color;
   cursor: pointer;
   display: inline-block;
@@ -154,24 +160,24 @@ a.fake-input {
   text-decoration: none;
 }
 .fake-input.checkbox:before {
-  content: "\f0c8";
+  content: '\f0c8';
   pointer-events: none;
 }
 .fake-input.checkbox.active:before {
-  content: "\f14a";
+  content: '\f14a';
 }
 .fake-input.checkbox {
-  content: "\f14a";
+  content: '\f14a';
 }
 .fake-input.radio:before {
-  content: "\f111";
+  content: '\f111';
   pointer-events: none;
 }
 .fake-input.radio.active:before {
-  content: "\f192";
+  content: '\f192';
 }
 .fake-input.radio {
-  content: "\f192";
+  content: '\f192';
 }
 .fake-input input,
 .fake-select select {
@@ -199,7 +205,7 @@ a.fake-input {
   @extend .input-default;
 }
 .fake-select-arrow:before {
-  content: "\f107";
+  content: '\f107';
 }
 .fake-select select {
   display: none;
@@ -317,7 +323,7 @@ fieldset {
   padding: 10px;
 }
 .input-icon {
-  content: " ";
+  content: ' ';
   background-size: 100% 100%;
   display: block;
   height: 10px;
@@ -382,13 +388,13 @@ label.error {
   /*display: none;*/
 }
 .input-default[required] ~ .input-label:after {
-  content: "*";
+  content: '*';
   color: $red;
   margin-left: 3px;
 }
 /*Show/Hide password*/
 .input-wrapper .show-hide-password {
-  content: " ";
+  content: ' ';
   background-size: 100% 100%;
   display: block;
   height: 22px;
@@ -398,10 +404,10 @@ label.error {
   right: 0;
   margin-right: 10px;
   transform: translateY(-50%);
-  background-image: url("/assets/images/icon-eye-open.png") !important;
+  background-image: url('/assets/images/icon-eye-open.png') !important;
 }
 .input-wrapper .show-hide-password.visible {
-  background-image: url("/assets/images/icon-eye-close.png") !important;
+  background-image: url('/assets/images/icon-eye-close.png') !important;
 }
 .valid ~ .show-hide-password,
 .error ~ .show-hide-password {
@@ -434,10 +440,10 @@ label.error {
   right: auto !important;
 }
 .input-default.error ~ .input-icon {
-  background-image: url("/assets/images/icon-error.png") !important;
+  background-image: url('/assets/images/icon-error.png') !important;
 }
 .input-default.valid ~ .input-icon {
-  background-image: url("/assets/images/icon-correct.png") !important;
+  background-image: url('/assets/images/icon-correct.png') !important;
 }
 
 .invalid {
@@ -578,7 +584,7 @@ label.error {
     border-color: $red;
   }
   .input-container:after {
-    content: "\f00d";
+    content: '\f00d';
     color: $red;
   }
 }
@@ -590,7 +596,7 @@ label.error {
     border-color: $green;
   }
   .input-container:after {
-    content: "\f00c";
+    content: '\f00c';
     color: $green;
   }
 }
@@ -604,7 +610,7 @@ label.error {
   position: absolute;
   top: 50%;
   right: 0;
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
   transform: translateY(-50%);
   margin: 0 20px;
@@ -641,7 +647,7 @@ label.error {
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
 }
 .fake-input input {
   position: absolute;
@@ -652,13 +658,13 @@ label.error {
   opacity: 0;
 }
 .fake-input:before {
-  content: "\f0c8";
+  content: '\f0c8';
 }
 .fake-input.active:before {
-  content: "\f14a";
+  content: '\f14a';
 }
 .fake-input.partial:before {
-  content: "\f146";
+  content: '\f146';
 }
 
 /*remove key icon in password field (Safari)*/
@@ -732,7 +738,7 @@ button.toggle-visibility {
 
 .input-wrapper.validation-required {
   label:after {
-    content: "*";
+    content: '*';
     color: $active-color;
   }
 }

@@ -11,6 +11,8 @@ $success-color: #4dbd74 !default;
 $default-color: #666 !default;
 $error-color: #f86c6b !default;
 $info-color: #2987df !default;
+$default-grey-color:#525f6b !default;
+$blue-primary-color:#007a93 !default;
 
 $white: #fff !default;
 $gray-100: #f8f9fa !default;
@@ -59,6 +61,9 @@ $banner-aspect: 27.08% !default; /*1920*520*/
 /*fonts*/
 $global-font-family: Arial !default;
 $special-font-family: "AkkoRoundedPro", Arial !default;
+
+$daimler-font-family: "Daimler CS", Arial !default;
+
 $global-font-size: 14px !default;
 $global-line-height: 18px !default;
 
@@ -71,11 +76,24 @@ $small-font-size: 11px !default;
   font-weight: 400;
   color: $font-color;
 }
+
+.daimler-font {
+  font-family: $daimler-font-family;
+  font-size: 15px;
+  line-height: $global-line-height;
+  font-weight: 400;
+  color: $font-color;
+}
+
 .headers {
   color: $primary-color;
   margin: 0 0 $global-margin * 2 0;
   font-weight: 400;
   font-family: $special-font-family;
+}
+.daimler-theme .headers {
+  color: #000000;
+  font-family: $daimler-font-family;
 }
 
 $transition: 0.3s;
