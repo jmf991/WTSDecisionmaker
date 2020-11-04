@@ -1,0 +1,247 @@
+/********** START FONT **********/
+
+@font-face {
+  font-family: 'AkkoRoundedPro';
+  src: url('assets/fonts/34CDA1_0_0.eot');
+  src: url('assets/fonts/34CDA1_0_0.eot?#iefix') format('embedded-opentype'),
+    url('assets/fonts/34CDA1_0_0.woff2') format('woff2'),
+    url('assets/fonts/34CDA1_0_0.woff') format('woff'),
+    url('assets/fonts/34CDA1_0_0.ttf') format('truetype');
+  font-weight: normal;
+}
+
+body {
+  @extend .global-font;
+}
+::ng-deep .daimler-theme body {
+  @extend .daimler-font;
+}
+
+h1,
+.h1 {
+  font-size: 64px !important;
+  line-height: 70px;
+  @extend .headers;
+}
+h2,
+.h2 {
+  font-size: 44px !important;
+  line-height: 48px;
+  @extend .headers;
+}
+h3,
+.h3 {
+  font-size: 36px !important;
+  line-height: 40px;
+  @extend .headers;
+}
+h4,
+.h4 {
+  font-size: 32px !important;
+  line-height: 36px;
+  @extend .headers;
+}
+h5,
+.h5 {
+  font-size: 24px !important;
+  line-height: 28px;
+  @extend .headers;
+}
+h6,
+.h6 {
+  font-size: 20px !important;
+  line-height: 24px;
+  @extend .headers;
+}
+p,
+.p {
+  @extend .global-font;
+  margin: 0 0 $global-margin * 2 0;
+}
+
+small,
+.small {
+  font-size: $small-font-size;
+  line-height: $global-line-height;
+}
+.title {
+  border-bottom: $global-border;
+  padding-bottom: $global-padding;
+}
+a {
+  color: $primary-color;
+  text-decoration: none;
+  @extend .smooth-transition-color;
+}
+.daimler-theme a {
+  color: $blue-primary-color;
+}
+
+.form-title {
+  margin-bottom: 30px;
+}
+
+///////Dark theme
+.dark-theme h2,
+.dark-theme .h2,
+.dark-theme h3,
+.dark-theme .h3,
+.dark-theme h4,
+.dark-theme .h4,
+.dark-theme h5,
+.dark-theme .h5,
+.dark-theme h6,
+.dark-theme .h6 {
+  color: #fff;
+}
+
+///////Daimler
+@font-face {
+  font-display: fallback;
+  font-family: 'Daimler CS';
+  font-style: normal;
+  font-weight: 300;
+  src: url('assets/fonts/DaimlerCS-Light.woff2') format('woff2'),
+    url('assets/fonts/DaimlerCS-Light.woff') format('woff'),
+    url('assets/fonts/DaimlerCS-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Daimler CS';
+  font-style: italic;
+  font-weight: 300;
+  src: url('assets/fonts/DaimlerCS-LightItalic.woff2') format('woff2'),
+    url('assets/fonts/DaimlerCS-LightItalic.woff') format('woff'),
+    url('assets/fonts/DaimlerCS-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Daimler CS';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/DaimlerCS-Regular.woff2') format('woff2'),
+    url('assets/fonts/DaimlerCS-Regular.woff') format('woff'),
+    url('assets/fonts/DaimlerCS-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Daimler CS';
+  font-style: italic;
+  font-weight: 400;
+  src: url('assets/fonts/DaimlerCS-RegularItalic.woff2') format('woff2'),
+    url('assets/fonts/DaimlerCS-RegularItalic.woff') format('woff'),
+    url('assets/fonts/DaimlerCS-RegularItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Daimler CS';
+  font-style: normal;
+  font-weight: 600;
+  src: url('assets/fonts/DaimlerCS-Demi.woff2') format('woff2'),
+    url('assets/fonts/DaimlerCS-Demi.woff') format('woff'),
+    url('assets/fonts/DaimlerCS-Demi.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Daimler CS';
+  font-style: italic;
+  font-weight: 600;
+  src: url('assets/fonts/DaimlerCS-DemiItalic.woff2') format('woff2'),
+    url('assets/fonts/DaimlerCS-DemiItalic.woff') format('woff'),
+    url('assets/fonts/DaimlerCS-DemiItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Daimler CS';
+  font-style: normal;
+  font-weight: 700;
+  src: url('assets/fonts/DaimlerCS-Bold.woff2') format('woff2'),
+    url('assets/fonts/DaimlerCS-Bold.woff') format('woff'),
+    url('assets/fonts/DaimlerCS-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Daimler CS';
+  font-style: italic;
+  font-weight: 700;
+  src: url('assets/fonts/DaimlerCS-BoldItalic.woff2') format('woff2'),
+    url('assets/fonts/DaimlerCS-BoldItalic.woff') format('woff'),
+    url('assets/fonts/DaimlerCS-BoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Daimler CS';
+  font-style: normal;
+  font-weight: 800;
+  src: url('assets/fonts/DaimlerCS-ExtraBold.woff2') format('woff2'),
+    url('assets/fonts/DaimlerCS-ExtraBold.woff') format('woff'),
+    url('assets/fonts/DaimlerCS-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-display: fallback;
+  font-family: 'Daimler CS';
+  font-style: italic;
+  font-weight: 800;
+  src: url('assets/fonts/DaimlerCS-ExtraBoldItalic.woff2') format('woff2'),
+    url('assets/fonts/DaimlerCS-ExtraBoldItalic.woff') format('woff'),
+    url('assets/fonts/DaimlerCS-ExtraBoldItalic.ttf') format('truetype');
+}
+.daimler-theme h1,
+.daimler-theme .h1 {
+  font-size: 3.77rem !important;
+} // 62px
+.daimler-theme h2,
+.daimler-theme .h2 {
+  font-size: 3.625rem !important;
+} // 58px
+.daimler-theme h3,
+.daimler-theme .h3 {
+  font-size: 2.1rem !important;
+} // 42px
+.daimler-theme h4,
+.daimler-theme .h4 {
+  font-size: 1.9rem !important;
+} // 27px
+.daimler-theme h5,
+.daimler-theme .h5 {
+  font-size: 1.375rem !important;
+} // 22px
+.daimler-theme h6,
+.daimler-theme .h6 {
+  font-size: 1.2rem !important;
+} // 20px
+.daimler-theme body {
+  font-size: 1rem !important;
+} // 16px
+.daimler-theme .subtitle {
+  font-size: 1rem !important;
+} // 16px
+.daimler-theme .caption {
+  font-size: 0.875rem !important;
+} // 14px
+
+::ng-deep .daimler-theme p,
+::ng-deep .daimler-theme .p {
+  @extend .daimler-font;
+  font-size: 15px !important;
+}
+
+.daimler-theme.dark-theme h1,
+.daimler-theme.dark-theme h2,
+.daimler-theme.dark-theme h3,
+.daimler-theme.dark-theme h4,
+.daimler-theme.dark-theme h5,
+.daimler-theme.dark-theme h6 {
+  color: #fff;
+}
+
+/********** END FONT **********/

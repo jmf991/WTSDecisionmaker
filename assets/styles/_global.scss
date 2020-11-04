@@ -1,0 +1,242 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: $global-font-family;
+  min-width: 480px;
+}
+
+/*Daimler theme*/
+.daimler-theme body,
+.daimler-theme p,
+.daimler-theme span,
+.daimler-theme a,
+.daimler-theme div {
+  font-family: $daimler-font-family !important;
+}
+
+::ng-deep .daimler-theme .mat-dialog-title {
+  font-size: 2.625rem !important;
+}
+::ng-deep .daimler-theme .mat-cell {
+  font-weight: 600;
+}
+
+.daimler-theme.dark-theme .mat-drawer-container {
+  background-color: #222222 !important;
+  color: white !important;
+}
+.mat-flat-button.mat-primary:hover,
+.mat-raised-button.mat-primary:hover,
+.mat-fab.mat-primary:hover,
+.mat-mini-fab.mat-primary:hover {
+  background-color: #db4d70;
+}
+/*Daimler btns*/
+//primary btn
+.daimler-theme .mat-flat-button.mat-primary,
+.daimler-theme .mat-raised-button.mat-primary,
+.daimler-theme .mat-fab.mat-primary,
+.daimler-theme .mat-mini-fab.mat-primary {
+  background-color: #000000 !important;
+}
+
+.daimler-theme .mat-flat-button.mat-primary:hover,
+.daimler-theme .mat-raised-button.mat-primary:hover,
+.daimler-theme .mat-fab.mat-primary:hover,
+.daimler-theme .mat-mini-fab.mat-primary:hover {
+  background-color: #9e9e9e !important;
+  color: #000000 !important;
+}
+
+//accent btn
+.daimler-theme .mat-flat-button.mat-accent:hover,
+.daimler-theme .mat-raised-button.mat-accent:hover,
+.daimler-theme .mat-fab.mat-accent:hover,
+.daimler-theme .mat-mini-fab.mat-accent:hover {
+  background-color: #000000 !important;
+  color: #ffffff;
+}
+
+//disabled btn
+.daimler-theme .mat-raised-button.mat-primary[disabled],
+.daimler-theme .mat-raised-button[disabled][disabled] {
+  background-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+.daimler-theme .mat-raised-button.mat-primary[disabled]:hover,
+.daimler-theme .mat-raised-button[disabled][disabled]:hover {
+  color: rgba(0, 0, 0, 0.26) !important;
+}
+/*End Daimler theme*/
+
+::ng-deep .mat-dialog-container {
+  padding: 30px 24px;
+}
+
+::ng-deep .mat-dialog-title {
+  font-family: $special-font-family !important;
+  font-weight: 300;
+  margin: 0 0 10px;
+  height: 50px;
+}
+
+::ng-deep .mat-dialog-content {
+  min-height: 20vh;
+}
+
+::ng-deep .small-dialog .mat-dialog-content {
+  min-height: 4vh;
+}
+
+ol,
+ul {
+  margin: 0 0 $global-margin * 2 $global-margin * 2;
+  padding: 0;
+}
+li {
+  margin-bottom: $global-margin/2;
+}
+img {
+  max-width: 100%;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0 0 $global-margin * 2 0;
+  width: 100%;
+  border: $global-border;
+}
+
+table td,
+table th {
+  border: $global-border;
+  padding: $global-padding/2;
+}
+pre {
+  margin-bottom: $global-margin * 2;
+}
+hr {
+  border-bottom: $global-border;
+}
+
+.responsive-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+// .mat-toolbar.mat-accent {
+//   margin-bottom: 30px;
+// }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.mat-drawer {
+  width: 60%;
+}
+
+::ng-deep .mat-drawer-container {
+  padding-top: 15px;
+  //min-height: 100% !important;
+}
+::ng-deep
+  .mat-drawer-container
+  .mat-drawer-inner-container
+  div[fxlayout='column'] {
+  flex-direction: column;
+  box-sizing: border-box;
+  display: flex;
+}
+::ng-deep .mat-drawer-content {
+  overflow-y: inherit !important;
+  overflow: visible !important;
+}
+.mat-drawer-inner-container {
+  margin-top: 20px;
+}
+::ng-deep .mat-drawer-container,
+::ng-deep .mat-drawer-transition .mat-drawer-content {
+  overflow: visible;
+}
+
+.mat-drawer-inner-container .mat-button {
+  min-height: 55px;
+  font-size: 20px;
+  text-align: left;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.header {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.dark-theme .header {
+  background: #303030;
+}
+.daimler-theme.dark-theme .header {
+  background: #222222;
+}
+.daimler-theme.dark-theme .list-card:hover {
+  background-color: #9e9e9e;
+}
+.daimler-theme .mat-raised-button:not(.mat-primary):hover {
+  background-color: #9e9e9e;
+}
+.daimler-theme.dark-theme
+  .mat-raised-button.mat-accent:hover
+  .daimler-theme
+  .mat-raised-button.mat-accent:hover {
+  color: #000000 !important;
+  background-color: #c8c8c8 !important;
+}
+
+.mat-raised-button.mat-accent:hover {
+  background-color: lightslategray;
+}
+
+.dark-theme .mat-raised-button.mat-accent:hover {
+  background-color: #9e9e9e;
+}
+
+@media (max-width: $tablet) {
+  .mat-toolbar.mat-accent {
+    margin-bottom: 0;
+  }
+  .mat-toolbar.mat-accent.mat-toolbar-single-row div:nth-child(2) {
+    flex: auto;
+  }
+  ::ng-deep .mat-drawer-container {
+    min-height: 100vh !important;
+    height: auto !important;
+  }
+  .header {
+    height: 100vh !important;
+  }
+  .mat-dialog-container {
+    min-height: 255px !important;
+  }
+  ::ng-deep .edit-dialog .mat-dialog-title {
+    height: 65px;
+  }
+   
+}
