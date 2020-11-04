@@ -28,6 +28,9 @@
 .app-image-wrapper img {
   margin-bottom: -8px;
 }
+::ng-deep .user-actions-wrapper .mat-expansion-panel {
+  position: relative;
+}
 ::ng-deep .daimler-theme .username,
 ::ng-deep .daimler-theme .app-title,
 ::ng-deep .daimler-theme.dark-theme .username,
@@ -372,7 +375,7 @@
 .settings-action p {
   margin-bottom: 0;
 }
-::ng-deep .settings-action.logout-wrapper{
+::ng-deep .settings-action.logout-wrapper {
   padding: 0;
 }
 ::ng-deep .settings-action button {
