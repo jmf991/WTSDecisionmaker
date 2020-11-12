@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { DeleteDialogComponent } from "../shared/component/dialog/dialog.component";
 import { EditDialogComponent } from "../shared/component/dialog/dialog.component";
 import { CopyDialogComponent } from "../shared/component/dialog/dialog.component";
+import { FormBuilder } from '@angular/forms';
 
 export interface TableElement {
   position: number;
@@ -64,15 +65,28 @@ export class DecisionEditComponent implements OnInit {
   dataSource = ELEMENT_DATA;
   columnsToDisplay = ['name'];
   expandedElement: TableElement | null;
+  showEditDocsList: boolean;
 
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+    private readonly fb: FormBuilder) { }
 
   async ngOnInit() {
   }
 
   files: any = [];
 
+  decisionEditForm = this.fb.group({
+    name: [''],
+    category: [''],
+    owner: [''],
+    status: [''],
+    description: ['']
+  });
+
+  displayEditDocsList() {
+    this.showEditDocsList = !this.showEditDocsList;
+  }
   uploadFile(event) {
     for (let index = 0; index < event.length; index++) {
       const element = event[index];

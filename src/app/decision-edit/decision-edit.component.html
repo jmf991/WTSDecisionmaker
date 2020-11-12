@@ -1,4 +1,4 @@
-<div class="decisions">
+<!-- <div class="decisions">
   <app-docs-list></app-docs-list>
   <div class="box-9 edit-container">
     <div class="inner">
@@ -82,6 +82,135 @@
           <button mat-raised-button color="primary" [routerLink]="['/decision-details']">Save</button>&nbsp;
           <button mat-button mat-raised-button [routerLink]="['/decision-details']">Discard</button>&nbsp;
         </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="decisions edit-page-container">
+  <div class="box-3 documents-container">
+    <div class="inner">
+      <mat-card>
+        <div>
+          <span class="docs-title-wrapper">
+            <h3 class="ellipsis" matTooltip="Documents">
+              Documents</h3>
+          </span>
+          <div class="icon-link-wrapper">
+            <button class="icon-link" mat-button color="accent" (click)="displayEditDocsList()">
+              <mat-icon matTooltip="Edit" *ngIf="!showEditDocsList" aria-label="Edit documents">edit</mat-icon>
+              <mat-icon matTooltip="Save changes" *ngIf="showEditDocsList" aria-label="Edit documents">check</mat-icon>
+            </button>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div>
+          <mat-list>
+            <button class="icon-link" mat-button color="accent" matTooltip="File display name">
+              <mat-icon>attachment</mat-icon><span class="preserve-white-spaces">File display name</span> <span
+                class="doc-date">11.11.2020</span>
+            </button>&nbsp;
+          </mat-list>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <div class="box-9 edit-container">
+    <div class="box-9">
+      <div class="inner mb0 pb0">
+        <p class="h6">Edit Decision details</p>
+        <h2 class="preserve-white-spaces">Decision name</h2>
+      </div>
+    </div>
+    <div class="box-3 details-actions-container">
+      <div class="inner inner details-actions">
+        <div class="action-btn check-btn" [routerLink]="['/decision-details']">
+          <mat-icon class="play-icon" aria-hidden="false" aria-label="Save changes" color="primary"
+            matTooltip="Save Changes">check
+          </mat-icon>
+        </div>
+        <div class="action-btn discard-btn" [routerLink]="['/decision-details']">
+          <mat-icon class="play-icon" aria-hidden="false" aria-label="Discard changes" color="primary"
+            matTooltip="Discard changes">close
+          </mat-icon>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="box-12">
+      <div class="inner">
+        <mat-card class="custom-card">
+          <form [formGroup]="decisionEditForm">
+            <div class="box-4">
+              <div class="inner">
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Name</mat-label>
+                    <input matInput required formControlName="name">
+                  </mat-form-field>
+                </p>
+                <p class="owner-field mb0">
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Owner</mat-label>
+                    <mat-select value="1" formControlName="owner">
+                      <mat-option value="1">
+                        User 1
+                      </mat-option>
+                      <mat-option value="2">
+                        User 2
+                      </mat-option>
+                      <mat-option value="2">
+                        User 3
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+              </div>
+            </div>
+            <div class="box-4">
+              <div class="inner">
+                <p>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Category</mat-label>
+                    <mat-select formControlName="category">
+                      <mat-option>
+                        Category description 1
+                      </mat-option>
+                      <mat-option>
+                        Category description 2
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+                <p class="status-field mb0">
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Status</mat-label>
+                    <mat-select formControlName="status">
+                      <mat-option>
+                        Status 1
+                      </mat-option>
+                      <mat-option>
+                        Status 2
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </p>
+              </div>
+            </div>
+            <div class="box-12">
+              <div class="inner">
+                <p>
+                  <mat-form-field class="example-full-width decision-description-field">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                      cdkAutosizeMaxRows="40" maxlength="1000" cols="50" formControlName="description"></textarea>
+                  </mat-form-field>
+                </p>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </form>
+        </mat-card>
       </div>
     </div>
   </div>
