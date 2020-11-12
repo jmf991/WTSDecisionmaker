@@ -12,8 +12,12 @@ export class DecisionDetailsComponent implements OnInit {
 
   constructor() { }
 
+  showEditDocsList: boolean;
   async ngOnInit() {
   }
 
+  displayEditDocsList() {
+    this.showEditDocsList = !this.showEditDocsList;
+  }
 
 }

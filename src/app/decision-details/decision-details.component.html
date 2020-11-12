@@ -1,4 +1,4 @@
-<div class="details-page-container">
+<!-- <div class="details-page-container">
   <div class="box-3 documents-container">
     <div class="inner">
       <mat-card class="example-card">
@@ -75,4 +75,254 @@
     </div>
   </div>
   <div class="clearfix"></div>
+</div> -->
+<div class="details-page-container decision-details-container">
+  <div class="box-3 documents-container">
+    <div class="inner">
+      <mat-card>
+        <div>
+          <span class="docs-title-wrapper">
+            <h3 class="ellipsis" matTooltip="Documents">
+              Documents</h3>
+          </span>
+          <div class="icon-link-wrapper">
+            <button class="icon-link" mat-button color="accent" (click)="displayEditDocsList()">
+              <mat-icon matTooltip="Edit" *ngIf="!showEditDocsList" aria-label="Edit documents">edit</mat-icon>
+              <mat-icon matTooltip="Save changes" *ngIf="showEditDocsList" aria-label="Edit documents">check</mat-icon>
+            </button>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+        <div>
+          <mat-list>
+            <button class="icon-link" mat-button color="accent" matTooltip="File display name">
+              <mat-icon>attachment</mat-icon><span class="preserve-white-spaces">File display name</span> <span
+                class="doc-date">11.11.2020</span>
+              <mat-icon>attachment</mat-icon><span class="preserve-white-spaces">File display name2</span> <span
+                class="doc-date">11.11.2020</span>
+            </button>&nbsp;
+          </mat-list>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+  <div class="box-9 details-container">
+    <div class="box-9">
+      <div class="inner mb0 pb0">
+        <p class="h6">Decision details</p>
+        <h2 class="decisions-name preserve-white-spaces">Decision name</h2>
+      </div>
+    </div>
+    <div class="box-3 details-actions-container">
+      <div class="inner details-actions">
+        <div class="item-actions decision-actions">
+          <div class="inner">
+            <mat-accordion class="item-accordion list-card" #listAccordion="matAccordion" multi="true">
+              <mat-expansion-panel clickOutside (clickOutside)="listAccordion.closeAll()">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                      more_vert</mat-icon>
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+                <mat-card class="item-actions-wrapper">
+                  <div class="report-item-action"  [routerLink]="['/decision-edit']">
+                    <p class="ellipsis" matTooltip="Edit decision model">
+                      <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Edit decision model"
+                        color="primary">edit
+                      </mat-icon>&nbsp;<span class="action-text">Edit decision model</span>
+                    </p>
+                  </div>
+                  <div class="report-item-action">
+                    <p class="ellipsis" matTooltip="Copy link">
+                      <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Copy evaluation link"
+                        color="primary">link
+                      </mat-icon>&nbsp;<span class="action-text">Copy link</span>
+                    </p>
+                  </div>
+                  <div class="report-item-action"  [routerLink]="['/wizard']">
+                    <p class="ellipsis" matTooltip="Evaluate Decision model">
+                      <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Evaluate Decision model"
+                        color="primary">play_circle_outline
+                      </mat-icon>&nbsp;<span class="action-text">Evaluate Decision model</span>
+                    </p>
+                  </div>
+                </mat-card>
+              </mat-expansion-panel>
+            </mat-accordion>
+          </div>
+        </div>
+        <div class="back-btn" [routerLink]="['/decisions']">
+          <mat-icon class="play-icon" aria-hidden="false" aria-label="Go back" aria-label="Go back" color="primary"
+            matTooltip="Go Back">
+            arrow_back</mat-icon>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="box-12">
+      <div class="inner mt0 pt0">
+        <mat-card class="custom-card">
+
+          <div class="box-4">
+            <div class="inner">
+              <p><span class="detail-name">Name:</span></p>
+              <p class="detail-field preserve-white-spaces">Decision name</p><br>
+              <p><span class="detail-name">Owner:</span></p>
+              <p class="mb0">User Display Name</p>
+            </div>
+          </div>
+
+          <div class="box-4">
+            <div class="inner">
+              <p><span class="detail-name">Category:</span></p>
+              <p class="detail-field preserve-white-spaces">Decision category description</p><br>
+              <p><span class="detail-name">Status:</span>
+              </p>
+              <p class="detail-field preserve-white-spaces mb0">Decision Status</p>
+            </div>
+          </div>
+
+          <div class="box-4">
+            <div class="inner">
+              <p><span class="detail-name">Version:</span></p>
+              <p>Decision upload Version</p>
+            </div>
+          </div>
+
+          <div class="box-12">
+            <div class="inner">
+              <p><span class="detail-name">Description:</span></p>
+              <p class="detail-description"><span>Decision description</span>
+              </p><br>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </mat-card>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <!--Versions-->
+  <div class="versions">
+    <div class="box-9">
+      <div class="inner mb0 pb0">
+        <p class="h6">Older versions</p>
+      </div>
+    </div>
+    <div class="box-12">
+      <div class="inner mb0 pb0 mt0 pt0">
+        <mat-accordion class="versions-accordion" #DecisionVersionAccordion="matAccordion" multi="true" clickOutside
+          (clickOutside)="DecisionVersionAccordion.closeAll()">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header class="more-btn">
+              <mat-panel-title>
+                <h5 class="preserve-white-spaces version-name">Version name (v1.1.1)</h5>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="box-3 documents-container tablet-hidden mobile-hidden">
+              <div class="inner">
+                <mat-card>
+                  <div>
+                    <span class="docs-title-wrapper">
+                      <h5 class="ellipsis mb0" matTooltip="Documents">
+                        Documents</h5>
+                    </span>
+                    <div class="icon-link-wrapper">
+                      <button class="icon-link" mat-button color="accent">
+                        <mat-icon class="docs-action" matTooltip="Edit" aria-label="Edit documents">edit</mat-icon>
+                      </button>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div>
+                    <mat-list>
+                      <button class="icon-link" mat-button color="accent" matTooltip="File display name">
+                        <mat-icon>attachment</mat-icon><span class="preserve-white-spaces">File display name 3</span>
+                        <span class="doc-date">11.11.2020</span>
+                        <mat-icon>attachment</mat-icon><span class="preserve-white-spaces">File display name 4</span>
+                        <span class="doc-date">11.11.2020</span>
+                      </button>&nbsp;
+                    </mat-list>
+                  </div>
+                </mat-card>
+              </div>
+            </div>
+            <div class="box-9 details-container">
+              <div class="box-12">
+                <div class="inner">
+                  <mat-card class="custom-card">
+                    <div class="box-4">
+                      <div class="inner">
+                        <p><span class="detail-name">Name:</span></p>
+                        <p class="detail-field preserve-white-spaces">Version name</p><br>
+                        <p><span class="detail-name">Owner:</span></p>
+                        <p class="detail-field preserve-white-spaces">Version userDisplayName</p>
+                      </div>
+                    </div>
+                    <div class="box-4">
+                      <div class="inner">
+                        <p><span class="detail-name">Category:</span></p>
+                        <p class="detail-field preserve-white-spaces">Version description</p><br>
+                        <p><span class="detail-name">Status:</span></p>
+                        <p class="detail-field preserve-white-spaces">Version status</p>
+                      </div>
+                    </div>
+                    <div class="box-4">
+                      <div class="inner">
+                        <p><span class="detail-name">Version:</span></p>
+                        <p>Version version</p>
+                      </div>
+                    </div>
+                    <div class="box-12">
+                      <div class="inner">
+                        <p><span class="detail-name">Description:</span></p>
+                        <p class="detail-description"><span>Version Description</span></p>
+                        <br>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </mat-card>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="box-3 documents-container tablet-displayed mobile-displayed">
+              <div class="inner">
+                <mat-card>
+                  <div>
+                    <span class="docs-title-wrapper">
+                      <h5 class="ellipsis mb0" matTooltip="documents">
+                        Documents</h5>
+                      <h6>(v1.1.1)</h6>
+                    </span>
+                    <div class="icon-link-wrapper">
+                      <button class="icon-link" mat-button color="accent">
+                        <mat-icon class="docs-action" matTooltip="edit" aria-label="Edit documents">edit</mat-icon>
+                      </button>
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+
+                  <div>
+                    <mat-list>
+                      <button class="icon-link" mat-button color="accent" matTooltip="File display name">
+                        <mat-icon>attachment</mat-icon><span class="preserve-white-spaces">File display name 5</span>
+                        <span class="doc-date">11.11.2020</span>
+                        <mat-icon>attachment</mat-icon><span class="preserve-white-spaces">File display name 6</span>
+                        <span class="doc-date">11.11.2020</span>
+                      </button>&nbsp;
+                    </mat-list>
+                  </div>
+                </mat-card>
+              </div>
+            </div>
+          </mat-expansion-panel>
+          <div class="clearfix"></div>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+  <!-- / Versions-->
 </div>
