@@ -1,4 +1,4 @@
-<div class="box-3">
+<!-- <div class="box-3">
   <div class="inner">
     <mat-card class="example-card">
       <h3>Info</h3>
@@ -136,7 +136,6 @@
           Biltong corned beef pastrami spare ribs kevin.
         </p>
         <div>
-          <!-- <button mat-raised-button matStepperPrevious>Back</button> -->
           <button mat-raised-button color="primary" (click)="stepper.reset()">
             <mat-icon>done</mat-icon>&nbsp; Abschließen
           </button>
@@ -146,6 +145,143 @@
         </div>
       </mat-step>
     </mat-vertical-stepper>
+  </div>
+</div>
+<div class="clearfix"></div> -->
+<!---------------------------------->
+<div class="box-3">
+  <div class="inner">
+    <mat-card>
+      <div class="info-wrapper">
+        <h3>Info</h3>
+        <p>Evaluating Decision description</p>
+        <p>Evaluating Decision userDisplayName</p>
+
+        <mat-list>
+          <button class="icon-link" mat-button color="accent" matTooltip="file name">
+            <mat-icon>attachment</mat-icon><span>file Display name</span> <span class="doc-date">11.11.2020</span>
+          </button>&nbsp;
+        </mat-list>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+<div class="box-9">
+  <div class="inner">
+    <p class="h6">Examination procedure</p>
+    <h2 class="ellipsis">Evaluation</h2>
+    <div class="steps-container">
+      <div class="step displayed-step">
+        <mat-card class="mat-card-0" disabled="">
+          <div class="step-question-container">
+            <div class="mat-step-icon mat-step-icon-state-number mat-step-icon-selected">
+              <div class="mat-step-icon-content">
+                <span class="ng-star-inserted">
+                  <mat-icon>edit</mat-icon>
+                </span>
+              </div>
+            </div>
+            <div class="step-question">Set a Reference Number for this Report</div>
+          </div>
+          <div class="step-answer">
+            <mat-form-field class="input-fields">
+              <mat-label>Please enter value</mat-label>
+              <input matInput required placeholder="Please enter value" maxlength="50">
+            </mat-form-field>
+          </div>
+
+          <div class="next-btn-container">
+            <button mat-raised-button color="primary" mat-button (click)="showNextStep(1)">
+              Start Evaluation </button>
+          </div>
+        </mat-card>
+      </div>
+      <div class="step">
+        <mat-card id="step-1">
+          <div class="step-question-container">
+            <div class="mat-step-icon mat-step-icon-state-number mat-step-icon-selected">
+              <div class="mat-step-icon-content">
+                <span>
+                  <mat-icon>edit</mat-icon>
+                </span>
+              </div>
+            </div>
+            <div class="step-question">This is a question label</div>
+          </div>
+          <div class="step-answer">
+            <mat-form-field class="input-fields">
+              <mat-label> Answer </mat-label>
+              <mat-select>
+                <mat-option>
+                  1
+                </mat-option>
+                <mat-option>
+                  2
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <div class="next-btn-container">
+            <button mat-raised-button color="primary" mat-button (click)="showNextStep(2)">
+              Next Step </button>
+          </div>
+        </mat-card>
+      </div>
+      <div class="step">
+        <mat-card id="step-2">
+          <div class="step-question-container">
+            <div class="mat-step-icon mat-step-icon-state-number mat-step-icon-selected">
+              <div class="mat-step-icon-content">
+                <span>
+                  <mat-icon>edit</mat-icon>
+                </span>
+              </div>
+            </div>
+            <div class="step-question">This is a question label</div>
+          </div>
+          <div class="step-answer">
+            <mat-radio-group aria-labelledby="radio-group-label" class="radio-group input-fields">
+              <mat-radio-button class="radio-button" value="True"> True
+              </mat-radio-button>
+              <mat-radio-button class="radio-button" value="False">
+                False </mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <div class="next-btn-container">
+            <button mat-raised-button color="primary" mat-button (click)="showNextStep(3)">
+              Next Step </button>
+          </div>
+        </mat-card>
+      </div>
+
+    </div>
+    <div class="result-wrapper">
+      <div id="step-3">
+        <div class="result-container">
+          <div class="clearfix mb10"></div>
+          <div class="notification notification-success">
+            <div class="icon">
+              <i>
+                <mat-icon>info</mat-icon>
+              </i>
+            </div>
+            <div class="copy">
+              <p>Bacon ipsum dolor amet sirloin 5000 - 10000 alcatra shankle 45% bemessen</p>
+            </div>
+          </div>
+        </div>
+        <mat-card class="evaluation-actions-container">
+          <button mat-raised-button color="primary" (click)="stepper.reset()">
+            <mat-icon>done</mat-icon>&nbsp; Document Decision Run
+          </button>
+          <button mat-raised-button color="primary" (click)="stepper.reset()">
+            <mat-icon>done</mat-icon>&nbsp; Mark decision as trial
+          </button>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </div>
 <div class="clearfix"></div>

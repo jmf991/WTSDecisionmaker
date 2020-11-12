@@ -32,7 +32,7 @@ export class WizardComponent implements OnInit {
 
   @ViewChild('stepper') stepper: MatStepper;
   showNextStep(index: number) {
-    var stepLabel ='cdk-step-label-0-'.concat(index.toString());
+    var stepLabel ='step-'.concat(index.toString());
     var stepHeader = this.document.getElementById(stepLabel)
     var stepElement = stepHeader.parentElement;
     stepElement.classList.add("displayed-step");
