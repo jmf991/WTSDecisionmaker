@@ -379,6 +379,7 @@ a:active {
 ::ng-deep .user-settings-sidenav-container .nav-caption {
   display: inline-block;
   padding-left: 6px;
+  overflow-x: inherit;
 }
 /*Sidenav Content*/
 .user-settings,
