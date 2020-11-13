@@ -1,218 +1,207 @@
-
-    <div class="actions-container tablet-hidden">
-      <div class="box-2 upload-input">
-        <div class="inner">
-          <button class="upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()" *ngIf="_showUploadInput">
-            <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="Example delete icon">
-              cloud_upload</mat-icon>
-          </button>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-      <div class="list-input filter-input">
-        <div class="inner" style="position: relative;">
-          <mat-accordion #myaccordion="matAccordion" (clickOutside)="onClickedOutsideAccordion($event)" multi="true">
-            <mat-expansion-panel >
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  <mat-icon class="filter-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
-                    filter_list</mat-icon>
-                </mat-panel-title>
-              </mat-expansion-panel-header>
-              <mat-card>
-                <p>
-                  <mat-form-field class="example-full-width">
-                    <mat-label>Select filter</mat-label>
-                    <mat-select>
-                      <mat-option value="1">
-                        Name
+<!--desktop list actions-->
+<div class="actions-container tablet-hidden" [formGroup]="actionsForm">
+  <div class="box-2 upload-input">
+    <div class="inner">
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="list-input filter-input">
+    <div class="inner" style="position: relative;">
+      <mat-accordion #headerAccordionActions="matAccordion" multi="true">
+        <mat-expansion-panel clickOutside (clickOutside)="headerAccordionActions.closeAll()">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="filter-icon" aria-hidden="false" aria-label="Run decision button" color="primary">
+                filter_list</mat-icon>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-card formGroupName="filterBy">
+            <p>
+              <mat-form-field class="example-full-width">
+                <mat-label>Select Filter</mat-label>
+                <mat-select formControlName="key">
+                  <mat-option value="name">
+                    Name
+                  </mat-option>
+                  <mat-option value="submitDate">
+                    Submitted
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field class="example-full-width" *ngIf="!showSubmitFilterValues">
+                <mat-label>Value</mat-label>
+                <input matInput placeholder="Filter value" value="Filter value" formControlName="alternativeValue" />
+              </mat-form-field>
+              <mat-form-field class="example-full-width" *ngIf="showSubmitFilterValues">
+                <mat-label>Value</mat-label>
+                <mat-select formControlName="value">
+                  <mat-option value="submitted">
+                    Submitted
+                  </mat-option>
+                  <mat-option value="notSubmitted">
+                    Not Submitted
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+            <p>
+              <button class="clear-btn" mat-raised-button color="primary" (click)="clearFilters()">
+                Clear Filters
+              </button></p>
+          </mat-card>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="list-input search-input">
+    <div class="inner">
+      <mat-form-field>
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" formControlName="search" />
+        <a href="javascript:;" title="search">
+          <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Search" matTooltip="Search">search
+          </mat-icon>
+        </a>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="list-input">
+    <div class="inner">
+      <mat-form-field>
+        <mat-label>Sort By</mat-label>
+        <mat-select formControlName="sortBy">
+          <mat-option value="refNo">
+            Reference Number
+          </mat-option>
+          <mat-option value="decisionDate">
+            Date
+          </mat-option>
+          <mat-option value="name">
+            Name
+          </mat-option>
+          <mat-option value="status">
+            Status
+          </mat-option>
+          <mat-option value="submitDate">
+            Submitted
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<!-- / desktop list actions-->
+<!--tablet-mobile list actions-->
+<div class="actions-container tablet-displayed" [formGroup]="actionsForm">
+  <div class="mobile-list-actions box-mobile-9 box-tablet-9">
+    <div class="inner">
+      <div class="clearfix"></div>
+    </div>
+  </div>
+  <div class="mobile-list-actions list-inputs box-mobile-3 box-tablet-3">
+    <div class="box-mobile-12 box-tablet-12">
+      <div class="inner">
+        <mat-accordion #headerAccordionActionsTabletHeader="matAccordion" multi="true">
+          <mat-expansion-panel clickOutside (clickOutside)="headerAccordionActionsTabletHeader.closeAll()">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <mat-icon class="more-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
+                  more_vert</mat-icon>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-card>
+              <div class="inner">
+                <mat-accordion #headerAccordionActionsTablet="matAccordion" multi="true"
+                  class="filter-accordion-tablet">
+                  <mat-expansion-panel clickOutside (clickOutside)="headerAccordionActionsTablet.closeAll()">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        <mat-icon class="filter-icon" aria-hidden="false" aria-label="Run decision button"
+                          color="primary">
+                          filter_list</mat-icon>
+                      </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <div formGroupName="filterBy">
+                      <p>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Select Filter</mat-label>
+                          <mat-select formControlName="key">
+                            <mat-option value="name">
+                              name
+                            </mat-option>
+                            <mat-option value="submitDate">
+                              submitted
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </p>
+                      <p>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>value</mat-label>
+                          <input matInput placeholder="Filter value" value="Filter value" formControlName="value" />
+                        </mat-form-field>
+                      </p>
+                    </div>
+                  </mat-expansion-panel>
+                </mat-accordion>
+              </div>
+              <div class="list-input search-input">
+                <div class="inner">
+                  <mat-form-field>
+                    <mat-label>search</mat-label>
+                    <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" formControlName="search" />
+                    <a href="javascript:;" title="search">
+                      <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Search" matTooltip="search">
+                        search
+                      </mat-icon>
+                    </a>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="list-input">
+                <div class="inner">
+                  <mat-form-field>
+                    <mat-label>sort By</mat-label>
+                    <mat-select formControlName="sortBy">
+                      <mat-option value="refNo">
+                        refNo
                       </mat-option>
-                      <mat-option value="2">
-                        Category
+                      <mat-option value="decisionDate">
+                        date
                       </mat-option>
-                      <mat-option value="2">
-                        Description
+                      <mat-option value="name">
+                        name
                       </mat-option>
-                      <mat-option value="2">
-                        Owner
+                      <mat-option value="status">
+                        status
                       </mat-option>
-                      <mat-option value="2">
-                        State
+                      <mat-option value="submitDate">
+                        submitted
                       </mat-option>
                     </mat-select>
                   </mat-form-field>
-                </p>
-                <p>
-                  <mat-form-field class="example-full-width">
-                    <mat-label>Value</mat-label>
-                    <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
-                  </mat-form-field>
-                </p>
-              </mat-card>
-            </mat-expansion-panel>
-          </mat-accordion>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-      <div class="list-input search-input">
-        <div class="inner">
-          <mat-form-field>
-            <mat-label>Search</mat-label>
-            <input matInput placeholder="Ex. Lorem" value="" />
-            <a href="javascript:;" title="search">
-              <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">search
-              </mat-icon>
-            </a>
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="list-input">
-        <div class="inner">
-          <mat-form-field>
-            <mat-label>Sort by</mat-label>
-            <mat-select>
-              <mat-option value="1">
-                Name
-              </mat-option>
-              <mat-option value="2">
-                Category
-              </mat-option>
-              <mat-option value="2">
-                Description
-              </mat-option>
-              <mat-option value="2">
-                Owner
-              </mat-option>
-              <mat-option value="2">
-                State
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-    </div>
-    <!-------->
-    <div class="actions-container tablet-displayed">
-      <div class="mobile-list-actions box-mobile-9 box-tablet-9">
-        <div class="inner">
-          <div style="margin-bottom:30px" *ngIf="!_showUploadInput"></div>
-          <button class="upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()" *ngIf="_showUploadInput">
-            <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="Example delete icon">
-              cloud_upload</mat-icon>
-          </button>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-      <div class="mobile-list-actions list-inputs box-mobile-3 box-tablet-3">
-        <div class="box-mobile-12 box-tablet-12">
-          <div class="inner">
-            <mat-accordion class="actions-accordion"
-            #myaccordionTablet="matAccordion"
-            (clickOutside)="onClickedOutsideAccordionTablet($event)"
-            multi="true"
-            [clickOutsideEvents]="'click,touchstart'"
-            [exclude]="'.mat-option'"
-            [excludeBeforeClick]="'.mat-option'">
-              <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                  <mat-panel-title>
-                    <mat-icon class="more-icon" aria-hidden="false" aria-label="Run decision buton" color="primary">
-                      more_vert</mat-icon>
-                  </mat-panel-title>
-                </mat-expansion-panel-header>
-                <mat-card>
-                    <div class="inner">
-                      <mat-accordion class="filter-accordion-tablet"
-                      multi="true"
-                      #myaccordionTabletFilter="matAccordion" >
-                        <mat-expansion-panel>
-                          <mat-expansion-panel-header>
-                            <mat-panel-title>
-                              <mat-icon class="play-icon" aria-hidden="false" aria-label="Run decision buton"
-                                color="primary">
-                                filter_list</mat-icon>
-                            </mat-panel-title>
-                          </mat-expansion-panel-header>
-                            <p>
-                              <mat-form-field class="example-full-width">
-                                <mat-label>Select filter</mat-label>
-                                <mat-select>
-                                  <mat-option value="1">
-                                    Name
-                                  </mat-option>
-                                  <mat-option value="2">
-                                    Category
-                                  </mat-option>
-                                  <mat-option value="2">
-                                    Description
-                                  </mat-option>
-                                  <mat-option value="2">
-                                    Owner
-                                  </mat-option>
-                                  <mat-option value="2">
-                                    State
-                                  </mat-option>
-                                </mat-select>
-                              </mat-form-field>
-                            </p>
-                            <p>
-                              <mat-form-field class="example-full-width">
-                                <mat-label>Value</mat-label>
-                                <input matInput placeholder="Ex. Lorem" value="Lorem ipsum" />
-                              </mat-form-field>
-                            </p>
-                        </mat-expansion-panel>
-                      </mat-accordion>
-                    </div>
-                  <div class="list-input search-input">
-                    <div class="inner">
-                      <mat-form-field>
-                        <mat-label>Search</mat-label>
-                        <input matInput placeholder="Ex. Lorem" value="" />
-                        <a href="javascript:;" title="search">
-                          <mat-icon class="input-icon search-icon" aria-hidden="false" aria-label="Example delete icon">
-                            search
-                          </mat-icon>
-                        </a>
-                      </mat-form-field>
-                    </div>
-                  </div>
-                  <div class="list-input">
-                    <div class="inner">
-                      <mat-form-field>
-                        <mat-label>Sort by</mat-label>
-                        <mat-select>
-                          <mat-option value="1">
-                            Name
-                          </mat-option>
-                          <mat-option value="2">
-                            Category
-                          </mat-option>
-                          <mat-option value="2">
-                            Description
-                          </mat-option>
-                          <mat-option value="2">
-                            Owner
-                          </mat-option>
-                          <mat-option value="2">
-                            State
-                          </mat-option>
-                        </mat-select>
-                      </mat-form-field>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="clearfix"></div>
-                </mat-card>
-              </mat-expansion-panel>
-            </mat-accordion>
-            <div class="clearfix"></div>
-          </div>
-        </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <p>
+                <button class="clear-btn" mat-raised-button color="primary">
+                  Clear Filters
+                </button>
+              </p>
+              <div class="clearfix"></div>
+            </mat-card>
+          </mat-expansion-panel>
+        </mat-accordion>
         <div class="clearfix"></div>
       </div>
-
-      <div class="clearfix"></div>
     </div>
-    <!-------->
+    <div class="clearfix"></div>
+  </div>
+
+  <div class="clearfix"></div>
+</div>
+<!-- / tablet-mobile list actions-->

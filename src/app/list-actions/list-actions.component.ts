@@ -3,6 +3,7 @@ import { } from "@angular/forms";
 import { MatDialog } from '@angular/material/dialog';
 import { UploadDialogComponent } from "../shared/component/dialog/dialog.component";
 import { MatAccordion } from '@angular/material/expansion';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-list-actions',
@@ -12,7 +13,8 @@ import { MatAccordion } from '@angular/material/expansion';
 
 export class ListActionsComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(
+    private fb: FormBuilder,public dialog: MatDialog) { }
 
   @ViewChild('myaccordion') myPanels: MatAccordion;
   @ViewChild('myaccordionTablet') myPanelsTablet: MatAccordion;
@@ -20,6 +22,15 @@ export class ListActionsComponent implements OnInit {
   //@Input('_showUploadInput') showUploadInput: boolean;
 
 
+  actionsForm = this.fb.group({
+    sortBy: [''],
+    search: [''],
+    filterBy: this.fb.group({
+      key: [''],
+      value: [''],
+      alternativeValue: ['']
+    })
+  });
   openUploadDialog(): void {
     const dialogRef = this.dialog.open(UploadDialogComponent, {
       width: '500px',
