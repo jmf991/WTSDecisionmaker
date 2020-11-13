@@ -86,51 +86,27 @@
     </div>
     <div _ngcontent-mca-c243="" class="box-3 details-actions-container">
       <div _ngcontent-mca-c243="" class="inner details-actions">
-        <div _ngcontent-mca-c243="" class="item-actions decision-actions">
-          <div _ngcontent-mca-c243="" class="inner">
-            <mat-accordion _ngcontent-mca-c243="" multi="true"
-              class="mat-accordion item-accordion list-card mat-accordion-multi" ng-reflect-multi="true">
-              <mat-expansion-panel _ngcontent-mca-c243="" clickoutside="" class="mat-expansion-panel ng-tns-c37-72">
-                <mat-expansion-panel-header _ngcontent-mca-c243="" role="button"
-                  class="mat-expansion-panel-header mat-focus-indicator ng-tns-c39-73 ng-trigger ng-trigger-expansionHeight ng-tns-c37-72 mat-expansion-toggle-indicator-after ng-star-inserted"
-                  id="mat-expansion-panel-header-27" tabindex="0" aria-controls="cdk-accordion-child-27"
-                  aria-expanded="false" aria-disabled="false" style="height: 48px;"><span
-                    class="mat-content ng-tns-c39-73">
-                    <mat-panel-title _ngcontent-mca-c243="" class="mat-expansion-panel-header-title ng-tns-c39-73">
-                      <mat-icon _ngcontent-mca-c243="" role="img" aria-hidden="false" aria-label="Item actions"
-                        color="primary" class="mat-icon notranslate more-icon mat-primary material-icons"
-                        ng-reflect-color="primary"> more_vert</mat-icon>
-                    </mat-panel-title>
-                  </span><span
-                    class="mat-expansion-indicator ng-tns-c39-73 ng-trigger ng-trigger-indicatorRotate ng-star-inserted"
-                    style="transform: rotate(0deg);"></span>
-                  <!--bindings={
-  "ng-reflect-ng-if": "true"
-}-->
+        <div class="item-actions decision-actions">
+          <div class="inner">
+            <mat-accordion class="item-accordion list-card" #listAccordion="matAccordion" multi="true">
+              <mat-expansion-panel clickOutside (clickOutside)="listAccordion.closeAll()">
+                <mat-expansion-panel-header>
+                  <mat-panel-title>
+                    <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
+                      more_vert</mat-icon>
+                  </mat-panel-title>
                 </mat-expansion-panel-header>
-                <div role="region" class="mat-expansion-panel-content ng-tns-c37-72 ng-trigger ng-trigger-bodyExpansion"
-                  id="cdk-accordion-child-27" aria-labelledby="mat-expansion-panel-header-27"
-                  style="height: 0px; visibility: hidden;">
-                  <div class="mat-expansion-panel-body ng-tns-c37-72">
-                    <mat-card _ngcontent-mca-c243=""
-                      class="mat-card mat-focus-indicator item-actions-wrapper ng-tns-c37-72">
-                      <div _ngcontent-mca-c243="" class="report-item-action">
-                        <p _ngcontent-mca-c243="" class="ellipsis" ng-reflect-message="Send report as e-mail"
-                          aria-describedby="cdk-describedby-message-11" cdk-describedby-host="">
-                          <mat-icon _ngcontent-mca-c243="" role="img" aria-hidden="false"
-                            aria-label="Send report as e-mail" color="primary"
-                            class="mat-icon notranslate item-actions-icon mat-primary material-icons"
-                            ng-reflect-color="primary">email </mat-icon>&nbsp;<span _ngcontent-mca-c243=""
-                            class="action-text">Send report as e-mail</span>
-                        </p>
-                        <!--container-->
-                      </div>
-                    </mat-card>
-                    <!--bindings={}-->
+                <mat-card class="item-actions-wrapper">
+                  <div class="report-item-action">
+                    <p class="ellipsis" matTooltip="Send Report As Email">
+                      <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Send report as e-mail"
+                        color="primary">email
+                      </mat-icon>&nbsp;<span
+                        class="action-text">Send Report As Email</span>
+                    </p>
                   </div>
-                </div>
+                </mat-card>
               </mat-expansion-panel>
-              <!--container-->
             </mat-accordion>
           </div>
         </div>
@@ -140,7 +116,7 @@
             ng-reflect-message="Download report"> cloud_download</mat-icon>
           <!--container-->
         </div>
-        <div _ngcontent-mca-c243="" class="report-btn back-btn">
+        <div _ngcontent-mca-c243="" class="report-btn back-btn" [routerLink]="['/reports']">
           <mat-icon _ngcontent-mca-c243="" role="img" aria-hidden="false" aria-label="Go back" color="primary"
             class="mat-icon notranslate play-icon mat-primary material-icons" ng-reflect-color="primary"
             ng-reflect-message="Go back"> arrow_back</mat-icon>

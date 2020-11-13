@@ -1,0 +1,503 @@
+@import '../../assets/styles/variables.scss';
+.custom-label {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 11px;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+::ng-deep .dark-theme .custom-label {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+}
+
+::ng-deep .daimler-theme.dark-theme .custom-label {
+  color: #ffffff !important;
+}
+
+span {
+  width: 200px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.favourites-container {
+  max-width: 515px;
+}
+
+/*list*/
+.list-container {
+  padding: 0;
+  width: 100%;
+}
+
+.list-card {
+  cursor: pointer;
+  &:hover {
+    background-color: #9e9e9e;
+  }
+  padding: 8px 0 8px 0;
+  margin: 5px 0;
+  height: 35px;
+  position: relative;
+}
+
+// .item-name,
+// .item-details,
+// .item-actions{
+//   padding: 16px 0 16px 0;
+// }
+.items-list {
+  position: relative;
+}
+.items-list .inner {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.list-item {
+  width: 100%;
+  display: block;
+  height: 100%;
+  font-size: 14px;
+}
+
+.list-item .name {
+  font-weight: bold;
+}
+
+.upload-input .inner {
+  padding-top: 20px;
+}
+
+/*list item*/
+
+.item-details {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.item-actions .inner,
+.item-details .inner,
+.item-name .inner {
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+.item-name .inner div,
+.item-details .inner div {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.item-details .inner div {
+  display: inline-block;
+}
+
+.item-name div {
+  margin-bottom: 0;
+  font-size: 15px;
+  color: $primary-color;
+  font-weight: bold;
+}
+.report-item-action {
+  text-align: right;
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 8px);
+  right: -45px;
+}
+::ng-deep .daimler-theme .item-name div {
+  color: #000000 !important;
+  font-size: 14px !important;
+}
+
+::ng-deep .daimler-theme.dark-theme .item-name div {
+  color: #ffffff !important;
+}
+
+/*icons*/
+.more-icon,
+.play-icon {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    color: #333333;
+  }
+  left: 30px;
+  bottom: 7px;
+  font-size: 30px;
+}
+
+::ng-deep .item-actions .mat-accordion {
+  position: absolute;
+  bottom: -32px;
+  right: 0;
+  height: 48px;
+  width: 50px;
+}
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header {
+  //height: 30px !important;
+  max-height: 48px !important;
+  width: 50px;
+  padding: 0 5px;
+}
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header:hover,
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header:focus,
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel-header.active {
+  background: transparent !important;
+}
+::ng-deep .item-actions .mat-expansion-indicator {
+  display: none;
+}
+::ng-deep .item-actions .more-icon {
+  left: 0;
+  bottom: 0px;
+  font-size: 20px;
+}
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel:last-of-type {
+  box-shadow: none;
+  background: transparent;
+  overflow: visible;
+}
+::ng-deep .item-actions .mat-accordion .mat-expansion-panel-body {
+  padding: 0;
+  width: 0;
+  min-width: 0;
+  z-index: 1;
+}
+
+.item-actions .mat-card {
+  min-width: 130px;
+}
+/*dark theme*/
+::ng-deep .dark-theme .item-details {
+  color: #ffffff;
+}
+.item-actions-wrapper {
+  padding: 16px 0;
+}
+.favourite-item-action {
+  padding: 5px 15px;
+}
+.favourite-item-action p {
+  margin-bottom: 0;
+}
+.favourite-item-action:hover,
+.favourite-item-action:focus,
+.favourite-item-action.active {
+  background: #9e9e9e;
+}
+.favourite-item-action:hover .item-actions-icon,
+.favourite-item-action:focus .item-actions-icon,
+.favourite-item-action.active .item-actions-icon {
+  color: #000000;
+}
+::ng-deep .dark-theme .favourite-item-action:hover .item-actions-icon,
+::ng-deep .dark-theme .favourite-item-action:focus .item-actions-icon,
+::ng-deep .dark-theme .favourite-item-action.active .item-actions-icon {
+  color: #ffffff !important;
+}
+
+.spinner-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+}
+
+.dm-icon-wrapper {
+  max-width: 50px;
+  margin: 0 10px;
+}
+.dm-icon-wrapper .image-container {
+  max-width: 25px;
+  margin: 0 auto;
+}
+.dm-icon-wrapper .image-container .image-wrapper {
+  max-height: 25px;
+}
+.item-actions-icon:hover,
+.item-actions-icon:focus,
+.item-actions-icon.active {
+  color: #000000;
+}
+/*Responsive*/
+@media (max-width: $tablet) {
+  .more-icon {
+    font-size: 30px;
+  }
+  .play-icon {
+    font-size: 35px;
+  }
+  .more-icon,
+  .play-icon {
+    left: -25px !important;
+    bottom: 20px !important;
+    height: 35px;
+    width: 35px;
+    position: relative !important;
+  }
+
+  .item-name {
+    margin-bottom: 10px;
+  }
+
+  .item-name {
+    width: 70%;
+  }
+  .item-details {
+    width: 10%;
+  }
+
+  .item-actions {
+    width: 10%;
+    position: absolute;
+    top: 40px;
+    right: 0;
+  }
+
+  ::ng-deep .item-actions .mat-accordion {
+    bottom: -20px;
+  }
+  ::ng-deep .item-actions .more-icon {
+    left: 0 !important;
+    bottom: 0 !important;
+  }
+
+  ::ng-deep .item-actions .mat-card {
+    right: 80px;
+  }
+  .favourites-container .dm-icon-wrapper {
+    width: 7%;
+  }
+  .favourites-container .report-item-action {
+    text-align: left !important;
+  }
+}
+
+@media (max-width: $mobile) {
+  .favourites-container {
+    max-width: 260px;
+  }
+}
+@media (max-width: $desktop) and (min-width: $tablet+1) {
+  .item-actions .mat-card {
+    right: 115px;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: $tablet + 1) {
+  .box-1.item-details {
+    width: 6%;
+  }
+  .box-1.item-details .inner {
+    margin: 0;
+    padding: 0;
+  }
+}
+.custom-label {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 11px;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+::ng-deep .dark-theme .custom-label {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+}
+
+::ng-deep .daimler-theme.dark-theme .custom-label {
+  color: #ffffff !important;
+}
+/*SIDENAV*/
+::ng-deep .user-settings-sidenav-container,
+::ng-deep .user-settings-sidenav-container .user-settings-sidenav,
+::ng-deep .user-settings-sidenav-container .user-settings-sidenav-content {
+  height: 100%;
+}
+
+/*Sidenav*/
+::ng-deep .user-settings-sidenav-container .user-settings-sidenav {
+  transform: none;
+  visibility: visible;
+  position: fixed;
+  top: 128px;
+  bottom: 60px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  background: #525f6b;
+  overflow: initial;
+}
+::ng-deep .dark-theme .user-settings-sidenav-container .user-settings-sidenav {
+  background: #bdbdbd;
+}
+::ng-deep
+  .dark-theme
+  .user-settings-sidenav-container
+  .mat-list-base
+  .mat-list-item {
+  color: #000000 !important;
+}
+::ng-deep
+  .daimler-theme
+  .user-settings-sidenav-container
+  .user-settings-sidenav {
+  background: #9e9e9e;
+}
+::ng-deep
+  .user-settings-sidenav-container
+  .mat-drawer-inner-container
+  .mat-button {
+  color: #ffffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+::ng-deep .user-settings-sidenav-container a {
+  text-decoration: none;
+  color: #ffffffff !important;
+}
+
+::ng-deep .daimler-theme .user-settings-sidenav-container a {
+  color: #000000 !important;
+}
+::ng-deep .user-settings-sidenav-container a:hover .mat-icon,
+::ng-deep .user-settings-sidenav-container a:focus .mat-icon,
+::ng-deep .user-settings-sidenav-container a.active .mat-icon {
+  color: $primary-color !important;
+}
+
+::ng-deep .daimler-theme .user-settings-sidenav-container a:hover .mat-icon,
+::ng-deep .daimler-theme .user-settings-sidenav-container a:focus .mat-icon,
+::ng-deep .daimler-theme .user-settings-sidenav-container a.active .mat-icon,
+a:active {
+  color: $blue-primary-color !important;
+}
+::ng-deep .user-settings-sidenav-container .nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+/*Sidenav Content*/
+.user-settings,
+::ng-deep .user-settings-sidenav-container .user-settings-sidenav-content {
+  max-width: 1280px;
+  margin: 0 auto !important;
+  clear: left;
+  padding: 0;
+}
+
+@media (max-width: 1600px) and (min-width: 1400px + 1) {
+  .user-settings {
+    max-width: 860px;
+  }
+}
+@media (max-width: 1400px) and (min-width: $tablet + 1) {
+  .user-settings {
+    max-width: 700px;
+    margin-left: 25% !important;
+  }
+}
+
+@media (max-width: $tablet) and (min-width: $mobile + 1) {
+  .user-settings {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .user-settings {
+    position: relative;
+    max-width: 500px;
+  }
+  .user-settings-container {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+  }
+}
+@media (max-width: $mobile) {
+  .user-settings-sidenav-container .user-settings-sidenav {
+    top: 100px;
+    width: 140px;
+  }
+  .user-settings {
+    max-width: 150px;
+    margin-left: 25% !important;
+  }
+  .user-settings-container {
+    left: 15%;
+  }
+}
+
+/*CONTENTS*/
+
+::ng-deep .settings-container .back-btn .mat-icon,
+::ng-deep .settings-container .action-btn .mat-icon {
+  font-size: 33px;
+}
+.settings-container .settings-header-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.settings-container .settings-actions-container {
+  display: flex;
+  position: relative;
+}
+.settings-container .settings-actions {
+  margin-top: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.settings-container .action-btn {
+  margin-left: 20px;
+  cursor: pointer;
+  float: left;
+  width: 50px;
+  text-align: right;
+}
+
+::ng-deep .back-btn:hover .mat-icon,
+::ng-deep .back-btn:focus .mat-icon,
+::ng-deep .back-btn.active .mat-icon,
+::ng-deep .action-btn:hover .mat-icon,
+::ng-deep .action-btn:focus .mat-icon,
+::ng-deep .action-btn.active .mat-icon {
+  color: #333333;
+}
+::ng-deep .dark-theme .back-btn:hover .mat-icon,
+::ng-deep .dark-theme .back-btn:focus .mat-icon,
+::ng-deep .dark-theme .back-btn.active .mat-icon,
+::ng-deep .dark-theme .action-btn:hover .mat-icon,
+::ng-deep .dark-theme .action-btn:focus .mat-icon,
+::ng-deep .dark-theme .action-btn.active .mat-icon {
+  color: #ffffff;
+}
+
+@media (max-width: 1440px) {
+  .settings-header-container .box-9 {
+    width: 66%;
+  }
+  .settings-actions-container {
+    width: 33%;
+  }
+  .settings-container .action-btn {
+    width: 25px;
+    margin-left: 5px;
+  }
+  .settings-container .action-btn .mat-icon {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .settings-container .action-btn {
+    margin-left: 0;
+  }
+  .settings-container .action-btn .mat-icon {
+    font-size: 25px;
+  }
+}
