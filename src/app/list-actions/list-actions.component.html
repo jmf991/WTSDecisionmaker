@@ -30,24 +30,13 @@
               </mat-form-field>
             </p>
             <p>
-              <mat-form-field class="example-full-width" *ngIf="!showSubmitFilterValues">
+              <mat-form-field class="example-full-width" >
                 <mat-label>Value</mat-label>
                 <input matInput placeholder="Filter value" value="Filter value" formControlName="alternativeValue" />
               </mat-form-field>
-              <mat-form-field class="example-full-width" *ngIf="showSubmitFilterValues">
-                <mat-label>Value</mat-label>
-                <mat-select formControlName="value">
-                  <mat-option value="submitted">
-                    Submitted
-                  </mat-option>
-                  <mat-option value="notSubmitted">
-                    Not Submitted
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
             </p>
             <p>
-              <button class="clear-btn" mat-raised-button color="primary" (click)="clearFilters()">
+              <button class="clear-btn" mat-raised-button color="primary" >
                 Clear Filters
               </button></p>
           </mat-card>

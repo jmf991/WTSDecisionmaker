@@ -1,10 +1,9 @@
-@import "../../assets/styles/_variables.scss";
-span {
+@import '../../assets/styles/_variables.scss';
+.ellipsis {
   width: 200px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow-x: hidden;
-  text-align: center;
 }
 
 .detail-name {
@@ -13,9 +12,442 @@ span {
 
 .details-container h2 {
   color: $primary-color;
+  overflow: hidden;
 }
 
+::ng-deep .daimler-theme .details-container h2 {
+  font-size: 2.625rem !important;
+  color: #000000 !important;
+}
+
+::ng-deep .daimler-theme.dark-theme .details-container h2 {
+  color: #ffffff !important;
+}
+
+.details-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.details-container .details-actions-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.icon-link-wrapper {
+  margin-bottom: 10px;
+  width: 20%;
+  margin-left: 10px;
+  float: left;
+  display: block;
+  height: 30px;
+}
+.docs-title-wrapper.info-wrapper {
+  width: 90%;
+}
+.docs-title-wrapper.info-wrapper .ellipsis {
+  width: 230px;
+}
+.docs-title-wrapper {
+  width: 70%;
+  float: left;
+  display: block;
+}
+
+.docs-title-wrapper h3 {
+  font-size: 34px !important;
+}
+::ng-deep .report-details-list .mat-list-item {
+  height: auto !important;
+}
+::ng-deep .report-details-list .mat-list-item-content {
+  margin-bottom: 15px;
+  display: block !important;
+  padding: 0 !important;
+}
+.report-result-header {
+  margin-top: 30px;
+}
+.report-result-header span {
+  text-decoration: underline;
+}
+
+.report-result {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.report-result p {
+  font-weight: bold;
+}
+
+.report-result,
+.report-details-list .answer {
+  font-weight: 500;
+}
+
+::ng-deep .daimler-theme .report-result,
+::ng-deep .daimler-theme .report-details-list .answer {
+  font-weight: 600 !important;
+}
+.report-details-list .answer,
+.report-details-list .question {
+  margin-bottom: 5px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.details-actions-container .inner {
+  margin-top: 25px;
+}
+.report-btn,
+.download-btn {
+  cursor: pointer;
+  float: right;
+  width: 50px;
+}
+::ng-deep .decision-actions .list-card:hover .more-icon,
+::ng-deep .decision-actions .list-card:focus .more-icon,
+::ng-deep .decision-actions .list-card.active .more-icon,
+::ng-deep .report-btn:hover .mat-icon,
+::ng-deep .report-btn:focus .mat-icon,
+::ng-deep .report-btn.active .mat-icon,
+::ng-deep .download-btn:hover .mat-icon,
+::ng-deep .download-btn:focus .mat-icon,
+::ng-deep .download-btn.active .mat-icon {
+  color: #333333;
+}
+
+::ng-deep
+  .daimler-theme.dark-theme
+  .decision-actions
+  .list-card:hover
+  .more-icon,
+::ng-deep
+  .daimler-theme.dark-theme
+  .decision-actions
+  .list-card:focus
+  .more-icon,
+::ng-deep
+  .daimler-theme.dark-theme
+  .decision-actions
+  .list-card.active
+  .more-icon
+  ::ng-deep
+  .daimler-theme.dark-theme
+  .decision-actions
+  .list-card:hover
+  .more-icon,
+::ng-deep
+  .daimler-theme.dark-theme
+  .decision-actions
+  .list-card:focus
+  .more-icon,
+::ng-deep
+  .daimler-theme.dark-theme
+  .decision-actions
+  .list-card.active
+  .more-icon,
+::ng-deep .dark-theme .decision-actions .list-card:hover .more-icon,
+::ng-deep .dark-theme .decision-actions .list-card:focus .more-icon,
+::ng-deep .dark-theme .decision-actions .list-card.active .more-icon,
+::ng-deep .dark-theme .report-btn:hover .mat-icon,
+::ng-deep .dark-theme .report-btn:focus .mat-icon,
+::ng-deep .dark-theme .report-btn.active .mat-icon,
+::ng-deep .dark-theme .download-btn:hover .mat-icon,
+::ng-deep .dark-theme .download-btn:focus .mat-icon,
+::ng-deep .dark-theme .download-btn.active .mat-icon {
+  color: #ffffff !important;
+}
+
+::ng-deep .daimler-theme .decision-actions .list-card:hover .more-icon,
+::ng-deep .daimler-theme .decision-actions .list-card:focus .more-icon,
+::ng-deep .daimler-theme .decision-actions .list-card.active .more-icon {
+  color: #000000 !important;
+}
+::ng-deep .daimler-theme.dark-theme .decision-actions .list-card:hover,
+::ng-deep .daimler-theme.dark-theme .decision-actions .list-card:focus,
+::ng-deep .daimler-theme.dark-theme .decision-actions .list-card.active {
+  background-color: transparent !important;
+}
+
+::ng-deep .report-btn .mat-icon,
+::ng-deep .download-btn .mat-icon {
+  font-size: 33px;
+}
+
+.download-btn {
+  margin-left: 20px;
+}
+
+.list-card {
+  cursor: pointer;
+  padding: 0;
+  margin: 5px 0;
+  height: 48px;
+}
+
+.icon-link:hover .mat-icon,
+.icon-link:focus .mat-icon,
+.icon-link.active .mat-icon {
+  color: $primary-color;
+}
+
+::ng-deep .icon-link:hover .mat-icon,
+::ng-deep .icon-link:focus .mat-icon,
+::ng-deep .icon-link.active .mat-icon {
+  color: $primary-color !important;
+}
+::ng-deep .dark-theme .icon-link:hover .mat-icon,
+::ng-deep .dark-theme .icon-link:focus .mat-icon,
+::ng-deep .dark-theme .icon-link.active .mat-icon {
+  color: #ffffff !important;
+}
+::ng-deep .daimler-theme .icon-link:hover .mat-icon,
+::ng-deep .daimler-theme .icon-link:focus .mat-icon,
+::ng-deep .daimler-theme .icon-link.active .mat-icon {
+  color: $blue-primary-color !important;
+}
+
+.icon-link .mat-line {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.details-container .details-actions-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.details-actions-container .details-actions {
+  margin-top: 25px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.item-actions {
+  padding: 16px 0 16px 0;
+  float: right;
+  width: 50px;
+}
+
+.item-actions-wrapper {
+  padding: 16px 0;
+  text-align: left;
+}
+
+.item-actions .inner {
+  position: relative;
+}
+
+.item-actions .inner,
+.item-details .inner,
+.item-name .inner {
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+::ng-deep .item-actions .more-icon {
+  left: 0;
+  bottom: 0px;
+  font-size: 20px;
+}
+
+::ng-deep .item-actions .mat-accordion {
+  position: absolute;
+  bottom: -32px;
+  right: -15px;
+  height: 48px;
+  width: 50px;
+}
+
+::ng-deep
+  .details-page-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header {
+  max-height: 48px !important;
+  width: 50px;
+  padding: 0 5px;
+}
+
+::ng-deep
+  .details-page-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header:hover,
+::ng-deep
+  .details-page-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header:focus,
+::ng-deep
+  .details-page-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-header.active {
+  background: transparent !important;
+}
+
+::ng-deep .details-page-container .item-actions .mat-expansion-indicator {
+  display: none;
+}
+
+::ng-deep
+  .details-page-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel:last-of-type {
+  box-shadow: none;
+  background: transparent;
+  overflow: visible;
+}
+
+::ng-deep
+  .details-page-container
+  .item-actions
+  .mat-accordion
+  .mat-expansion-panel-body {
+  padding: 0;
+  min-width: 225px;
+}
+
+.details-page-container .item-actions .mat-card {
+  z-index: 1;
+}
+
+.report-item-action {
+  padding: 5px 15px;
+  max-height: 36px;
+}
+.report-item-action p {
+  margin-top: 3px;
+  position: relative;
+}
+.report-item-action:hover,
+.report-item-action:focus,
+.report-item-action.active {
+  background: #9e9e9e;
+}
+.report-item-action:hover .item-actions-icon,
+.report-item-action:focus .item-actions-icon,
+.report-item-action.active .item-actions-icon {
+  color: #000000;
+}
+::ng-deep .dark-theme .report-item-action:hover .item-actions-icon,
+::ng-deep .dark-theme .report-item-action:focus .item-actions-icon,
+::ng-deep .dark-theme .report-item-action.active .item-actions-icon {
+  color: #ffffff !important;
+}
+
+::ng-deep .report-item-action .mat-icon {
+  position: absolute;
+  top: -3px;
+}
+
+.action-text {
+  margin-left: 30px;
+}
+
+.report-details-container .details-card {
+  margin-bottom: 20px;
+}
+.details-item {
+  margin-bottom: 0;
+}
+::ng-deep .report-details-table .mat-cell {
+  color: #000;
+  font-weight: 400;
+}
+::ng-deep .dark-theme .report-details-table .mat-cell {
+  color: #ffffff !important;
+}
+::ng-deep .report-details-table td.mat-cell:first-of-type,
+::ng-deep .report-details-table .element-row td {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  max-width: 66%;
+  width: 66%;
+  padding-right: 20px;
+  padding-left: 0;
+}
+::ng-deep .report-details-table th.mat-header-cell:last-of-type,
+::ng-deep .report-details-table td.mat-cell:last-of-type,
+::ng-deep .report-details-table td.mat-footer-cell:last-of-type {
+  border: none;
+}
+@media (max-width: 1440px) and (min-width: $tablet+1) {
+  .download-report-btn {
+    margin-left: 15px !important;
+  }
+  .docs-title-wrapper h3 {
+    font-size: 1.5rem !important;
+  }
+  ::ng-deep .documents-container td.mat-cell {
+    max-width: 185px;
+  }
+  ::ng-deep .documents-container .file-title {
+    display: inline-block;
+    width: 140px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-left: 5px;
+  }
+
+  .report-btn,
+  .download-btn {
+    width: 30px;
+  }
+  .details-page-container .item-actions .decision-actions {
+    position: relative;
+  }
+  ::ng-deep
+    .report-details.details-page-container
+    .item-actions
+    .mat-expansion-panel-content {
+    left: -190px;
+    position: absolute;
+  }
+  ::ng-deep .details-page-container .item-actions .mat-accordion {
+    right: -30px;
+  }
+}
+
+@media (max-width: $tablet) and (min-width: $mobile+1) {
+  .download-report-btn {
+    margin-left: 15px !important;
+  }
+  .details-actions-container {
+    width: 25% !important;
+  }
+  .details-container .box-9 {
+    width: 75% !important;
+  }
+  .report-btn,
+  .download-btn {
+    width: 27px;
+  }
+  .details-actions-container .details-actions {
+    position: absolute !important;
+  }
+}
 @media (max-width: $tablet) {
+  .download-report-btn {
+    margin-left: 15px !important;
+  }
+
   .custom-card .inner {
     margin-bottom: 0;
     padding-bottom: 0;
@@ -31,15 +463,322 @@ span {
   .details-container {
     order: 1;
   }
+
+  .report-btn {
+    margin-left: 0;
+  }
+  .details-actions-container .details-actions {
+    position: relative;
+    margin-top: 0;
+  }
+
+  .details-page-container .item-actions {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .details-page-container .item-actions:not(.decision-actions) {
+    display: block;
+  }
+
+  ::ng-deep .details-page-container .item-actions .mat-accordion {
+    bottom: 0;
+    right: 0;
+    width: 40px;
+  }
+  ::ng-deep .details-page-container .item-actions .more-icon {
+    left: 0 !important;
+    bottom: 0 !important;
+  }
+
+  ::ng-deep .details-page-container .item-actions .mat-card {
+    right: 0;
+  }
+
+  ::ng-deep
+    .report-details.details-page-container
+    .item-actions
+    .mat-expansion-panel-content {
+    left: -190px;
+    position: absolute;
+  }
+  .list-card {
+    position: relative;
+    height: 110px;
+  }
 }
 
-.icon-link:hover .mat-icon,
-.icon-link:focus .mat-icon,
-.icon-link.active .mat-icon {
-  color: $primary-color;
+@media (max-width: $mobile) {
+  ::ng-deep .details-page-container .item-actions .mat-card {
+    right: -40px !important;
+  }
 }
 
-.icon-link .mat-line {
+.file-upload-container {
+  margin-bottom: 30px;
+}
+
+.upload-btn {
+  width: auto;
+  padding: 5px;
+  height: 30px;
+}
+
+.upload-icon {
+  left: 20px;
+  bottom: 3px !important;
+  position: absolute;
+  right: 0px;
+}
+
+.upload-btn:hover,
+.upload-btn:focus,
+.upload-btn.active {
+  background-color: #333333;
+}
+
+.uploadfilecontainer {
+  background-image: url('../../assets/images/cloud-icon.png');
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position: center;
+  height: 75px;
+  width: 100%;
+  border: 2px dashed #9ecbec;
+  border-radius: 10px;
+}
+
+.uploadfilecontainer:hover {
+  cursor: pointer;
+  background-color: #9ecbec !important;
+  opacity: 0.8;
+}
+/*Table*/
+table {
+  width: 100%;
+}
+
+tr.detail-row {
+  height: 0;
+}
+
+tr.element-row:not(.expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.element-row:not(.expanded-row):active {
+  background: #efefef;
+}
+
+.element-row td {
+  border-bottom-width: 0;
+}
+.element-description,
+td.mat-cell:last-of-type {
+  padding: 0 5px !important;
+}
+
+.element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.element-description {
+  padding: 16px;
+  width: 100%;
+}
+.element-description .mat-button {
+  display: flex;
+  padding: 0px 20px;
+}
+.element-description-attribution .inner {
+  text-align: center;
+}
+::ng-deep .mat-table thead {
+  display: none;
+}
+::ng-deep .daimler-theme table.mat-table,
+::ng-deep table.mat-table {
+  box-shadow: none !important;
+  border: none;
+}
+::ng-deep td.mat-cell:first-of-type,
+::ng-deep .element-row td {
+  border: none;
+}
+::ng-deep .mat-cell {
+  color: $default-grey-color;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
   font-size: 14px;
   font-weight: 500;
+}
+.action-box {
+  text-align: center;
+}
+tr.mat-row:hover {
+  cursor: pointer;
+}
+::ng-deep .dark-theme .mat-table {
+  box-shadow: none;
+}
+
+::ng-deep .dark-theme tr.element-row:not(.expanded-row):hover {
+  background-color: #9e9e9e;
+}
+
+::ng-deep .daimler-theme.dark-theme tr.element-row:not(.expanded-row):hover {
+  background-color: #9E9E9E;
+}
+
+::ng-deep .element-row {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+::ng-deep .detail-row {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.icon-link span {
+  display: inline-block;
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.icon-link .doc-date {
+  display: block;
+}
+
+@media (max-width: $laptop) {
+  .icon-link span {
+    width: 135px;
+  }
+  .element-description .mat-button {
+    display: contents;
+  }
+}
+
+@media (max-width: $desktop) and (min-width: $tablet+1) {
+  .icon-link .doc-date {
+    display: block;
+  }
+  .icon-link span {
+    width: 135px;
+  }
+}
+
+@media (max-width: $tablet) {
+
+  .element-description .box-3 {
+    width: 25% !important;
+  }
+
+  .inner {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .custom-card .box-12 .inner {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+
+  .upload-input .inner {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  .element-description-attribution .box-4 {
+    width: 33.333332%;
+  }
+
+  .documents-table .box-11 {
+    width: 90%;
+  }
+  .documents-table .box-1 {
+    width: 8%;
+  }
+}
+
+.uploadfilecontainer {
+  background-image: url('../../assets/images/cloud-icon.png');
+  background-repeat: no-repeat;
+  background-size: 60px;
+  background-position: center;
+  height: 75px;
+  width: 80%;
+  margin: 20px auto;
+  border: 2px dashed #9ecbec;
+  border-radius: 10px;
+}
+
+.delete-file-icon {
+  background-image: url('../../assets/images/Recycle_Bin_Full.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+  height: 20px;
+}
+.uploadfilecontainer:hover {
+  cursor: pointer;
+  background-color: #9ecbec !important;
+  opacity: 0.8;
+}
+
+.files-list {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 10px auto;
+  background: #ffffff;
+  border: 1px dashed;
+  border-radius: 12px;
+  padding: 5px;
+  color: #1c8adb;
+}
+
+.files-list .delete-file {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+}
+.files-list .delete-file:hover,
+.files-list .delete-file:focus,
+.files-list .delete-file.active {
+  background: #9ecbec;
+  padding: 2px;
+  border-radius: inherit;
+}
+.files-list p {
+  margin-bottom: 0;
+}
+
+.files-list .delete-file span {
+  display: block;
+  width: 30px;
 }
