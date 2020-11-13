@@ -2,6 +2,10 @@
 <div class="actions-container tablet-hidden" [formGroup]="actionsForm">
   <div class="box-2 upload-input">
     <div class="inner">
+      <button class="upload-btn" mat-raised-button color="primary" (click)="openUploadDialog()" >
+        <mat-icon class="input-icon upload-icon" aria-hidden="false" aria-label="upload">
+          cloud_upload</mat-icon>
+      </button>
       <div class="clearfix"></div>
     </div>
   </div>

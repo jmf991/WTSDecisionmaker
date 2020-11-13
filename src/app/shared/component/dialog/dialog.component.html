@@ -1,14 +1,17 @@
-<h1 mat-dialog-title>Upload file</h1>
+<h2 mat-dialog-title>Upload file</h2>
 <p>Drag and drop files here, or click and browse to begin the upload</p>
 <div mat-dialog-content>
   <div class="file-upload-container">
     <div class="inner">
       <div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
         <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+        <div class="form-group">
+          <input hidden type="file" accept=".dmn" #fileInput (change)="uploadFile($event.target.files)">
+        </div>
       </div>
     </div>
   </div>
 </div>
 <div mat-dialog-actions>
-  <button mat-raised-button (click)="onNoClick()">Close</button>
+  <button mat-raised-button color="accent" (click)="onNoClick()">Close</button>
 </div>

@@ -68,6 +68,7 @@ import { ClickOutsideModule } from 'ng-click-outside';
 import { DocsListComponent } from './docs-list/docs-list.component';
 import { ListActionsComponent } from './list-actions/list-actions.component';
 import { userSettingsComponent } from "./user-settings/user-settings.component";
+import { HighlightDirective } from './highlight.directive';
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -97,6 +98,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    HighlightDirective,
     HeaderComponent,
     FooterComponent,
     GlobalElementsComponent,

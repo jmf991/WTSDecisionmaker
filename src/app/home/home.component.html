@@ -167,7 +167,7 @@
                         See all
                       </p>
                     </div>
-                    <div class="tile-action">
+                    <div class="tile-action" (click)="openUploadDialog()">
                       <mat-icon class="list-action-icon" aria-hidden="false" aria-label="Item actions" color="primary">
                         add</mat-icon>
                       <p class="ellipsis" matTooltip="Add decision template">
@@ -263,8 +263,8 @@
           <!--Tile actions-->
           <div class="box-1 tile-actions">
             <div class="tile-accordion-wrapper">
-              <mat-accordion class="tile-accordion" #DecisionsTileAccordion="matAccordion" multi="true">
-                <mat-expansion-panel clickOutside (clickOutside)="DecisionsTileAccordion.closeAll()">
+              <mat-accordion class="tile-accordion" #ReportsTileAccordion="matAccordion" multi="true">
+                <mat-expansion-panel clickOutside (clickOutside)="ReportsTileAccordion.closeAll()">
                   <mat-expansion-panel-header class="more-btn">
                     <mat-panel-title>
                       <mat-icon class="more-icon" aria-hidden="false" aria-label="Item actions" color="primary">
