@@ -1,0 +1,64 @@
+<div class="settings-container app-settings-container">
+  <div class="settings-header-container">
+    <div class="inner mb0 pb0">
+      <h6 class="page-title ">User settings</h6>
+      <h2 class="page-title ">App Settings</h2>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="app-container">
+    <div class="inner">
+      <mat-card>
+        <form [formGroup]="appSettingsForm">
+          <div class="inner">
+            <p *ngIf="userPermissions != undefined && userPermissions.admin.access">
+              <mat-form-field class="example-full-width">
+                <mat-label>Theme</mat-label>
+                <mat-select value="WTS" formControlName="appTheme" (selectionChange)="changeTheme($event.value)">
+                  <mat-option value="light-theme">
+                    WTS
+                  </mat-option>
+                  <mat-option value="daimler-theme">
+                    Daimler
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+            <p *ngIf="userPermissions != undefined && !userPermissions.admin.access">
+              <span class="custom-label">Theme:
+              </span><br>
+              <span *ngIf="user != undefined && user.appTheme == 'light-theme'">WTS theme</span>
+              <span *ngIf="user != undefined && user.appTheme != 'light-theme'">Daimler theme</span>
+            </p>
+            <p>
+              <mat-form-field class="example-full-width">
+                <mat-label>Mode</mat-label>
+                <mat-select value="Light" formControlName="appMode" (selectionChange)="changeMode($event.value)">
+                  <mat-option value="light-theme">
+                    Light
+                  </mat-option>
+                  <mat-option value="dark-theme">
+                    Dark
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+            <p>
+              <mat-form-field class="example-full-width">
+                <mat-label>Language</mat-label>
+                <mat-select value="en" formControlName="appLanguage" (selectionChange)="setLanguage($event.value)">
+                  <mat-option value="en">
+                    English
+                  </mat-option>
+                  <mat-option value="ge">
+                    German
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </p>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -67,7 +67,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ClickOutsideModule } from 'ng-click-outside';
 import { DocsListComponent } from './docs-list/docs-list.component';
 import { ListActionsComponent } from './list-actions/list-actions.component';
-import { UserSettingsComponent } from "./user-settings/user-settings.component";
+import { userSettingsComponent } from "./user-settings/user-settings.component";
 
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
@@ -91,7 +91,7 @@ const appRoutes: Routes = [
   { path: "report-details", component: ReportDetailsComponent },
   { path: "report-edit", component: ReportEditComponent },
   { path: "search", component: SearchComponent },
-  { path: "user-settings", component: UserSettingsComponent }
+  { path: "user-settings", component: userSettingsComponent }
 ];
 
 @NgModule({
@@ -122,7 +122,7 @@ const appRoutes: Routes = [
     SearchComponent,
     DocsListComponent,
     ListActionsComponent,
-    UserSettingsComponent
+    userSettingsComponent
   ],
   imports: [
     RouterModule.forRoot(

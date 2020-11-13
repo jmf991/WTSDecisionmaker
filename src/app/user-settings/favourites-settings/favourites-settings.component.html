@@ -1,0 +1,49 @@
+<div class="settings-container favourites-settings-container">
+  <div class="settings-header-container">
+    <div class="box-9">
+      <div class="inner">
+        <h6 class="page-title ">User settings</h6>
+        <h2 class="page-title ">Favourites Settings</h2>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="favourites-container">
+    <!--loading spinner-->
+    <ng-template #loadingSpinnerStarredDecisions>
+      <div class="spinner-wrapper decisions-spinner">
+        <mat-spinner></mat-spinner>
+      </div>
+    </ng-template>
+    <!-- / loading spinner-->
+    <div class="list-wrapper" *ngIf="starredDecisions as decisions; else loadingSpinnerStarredDecisions">
+      <mat-list-item class="list-item" *ngFor="let decision of starredDecisions">
+        <!--card item-->
+        <mat-card class="list-card" style="cursor: default;">
+          <div class="box-12">
+            <div class="box-9 item-name">
+              <div class="inner">
+                <div *ngIf="decision.name; else nbspDiv">{{ decision.name }}</div>
+                <ng-template #nbspDiv>
+                  &nbsp;
+                </ng-template>
+              </div>
+            </div>
+            <div class="box-1 item-details report-item-action" style="text-align: right;cursor: pointer;">
+              <div (click)="removeAsFavourite(decision.key)">
+                <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie" color="primary"
+                  matTooltip="Remove Favourite" style="font-size: 25px;
+                  line-height: 15px;
+                  margin-right: 16px;">remove_circle_outline
+                </mat-icon>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </mat-card>
+        <!-- / card item-->
+        <div class="clearfix"></div>
+      </mat-list-item>
+    </div>
+  </div>
+</div>

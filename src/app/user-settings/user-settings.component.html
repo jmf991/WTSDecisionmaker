@@ -1,108 +1,170 @@
-<div _nghost-mca-c249="" class="ng-star-inserted">
-  <div _ngcontent-mca-c249="" class="user-settings">
-    <div _ngcontent-mca-c249="" class="user-settings-container">
-      <mat-sidenav-container _ngcontent-mca-c249=""
-        class="mat-drawer-container mat-sidenav-container user-settings-sidenav-container">
-        <div class="mat-drawer-backdrop ng-star-inserted"></div>
-        <!--bindings={
-  "ng-reflect-ng-if": "true"
-}-->
-        <div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
-        <mat-sidenav _ngcontent-mca-c249="" tabindex="-1" mode="side" opened=""
-          class="mat-drawer mat-sidenav user-settings-sidenav mat-drawer-side ng-tns-c69-152 ng-trigger ng-trigger-transform mat-drawer-opened ng-star-inserted"
-          style="transform: none; visibility: visible;" ng-reflect-mode="side" ng-reflect-opened="">
-          <div class="mat-drawer-inner-container ng-tns-c69-152">
-            <mat-nav-list _ngcontent-mca-c249="" role="navigation" class="mat-nav-list mat-list-base ng-tns-c69-152"><a
-                _ngcontent-mca-c249="" mat-list-item="" class="mat-list-item mat-focus-indicator active"
-                ng-reflect-ng-class="active">
-                <div class="mat-list-item-content">
-                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple" ng-reflect-trigger=""
-                    ng-reflect-disabled="false"></div>
-                  <div class="mat-list-text"></div>
-                  <mat-icon _ngcontent-mca-c249="" role="img"
-                    class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">account_circle
-                  </mat-icon><span _ngcontent-mca-c249="" class="nav-caption">Profile</span>
-                </div>
-              </a><a _ngcontent-mca-c249="" mat-list-item="" class="mat-list-item mat-focus-indicator"
-                ng-reflect-ng-class="">
-                <div class="mat-list-item-content">
-                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple" ng-reflect-trigger=""
-                    ng-reflect-disabled="false"></div>
-                  <div class="mat-list-text"></div>
-                  <mat-icon _ngcontent-mca-c249="" role="img"
-                    class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">settings</mat-icon>
-                  <span _ngcontent-mca-c249="" class="nav-caption">App</span>
-                </div>
-              </a><a _ngcontent-mca-c249="" mat-list-item="" class="mat-list-item mat-focus-indicator"
-                ng-reflect-ng-class="">
-                <div class="mat-list-item-content">
-                  <div mat-ripple="" class="mat-ripple mat-list-item-ripple" ng-reflect-trigger=""
-                    ng-reflect-disabled="false"></div>
-                  <div class="mat-list-text"></div>
-                  <mat-icon _ngcontent-mca-c249="" role="img"
-                    class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">star</mat-icon>
-                  <span _ngcontent-mca-c249="" class="nav-caption">Favourites</span>
-                </div>
-              </a></mat-nav-list>
-          </div>
-        </mat-sidenav>
-        <div class="cdk-visually-hidden cdk-focus-trap-anchor" aria-hidden="true"></div>
-        <mat-sidenav-content _ngcontent-mca-c249=""
-          class="mat-drawer-content mat-sidenav-content user-settings-sidenav-content" style="margin-left: 200px;">
-          <div _ngcontent-mca-c249="" _nghost-mca-c245="" class="ng-star-inserted">
-            <div _ngcontent-mca-c245="" class="settings-container profile-settings-container">
-              <div _ngcontent-mca-c245="" class="settings-header-container">
-                <div _ngcontent-mca-c245="" class="inner mb0 pb0">
-                  <h6 _ngcontent-mca-c245="" class="page-title">User settings</h6>
-                  <h2 _ngcontent-mca-c245="" class="page-title">Profile Settings</h2>
-                </div>
+<div class="user-settings">
+  <div class="user-settings-container">
+    <mat-sidenav-container class="user-settings-sidenav-container">
+      <mat-sidenav mode="side" opened class="user-settings-sidenav mat-drawer-side" style="transform: none;
+      visibility: visible;">
+        <mat-nav-list>
+          <a mat-list-item (click)="displayProfileComponent()" [ngClass]="(showProfileComponent)?'active':''">
+            <mat-icon>account_circle</mat-icon> <span class="nav-caption">Profile </span>
+          </a>
+          <a mat-list-item (click)="displayAppSettingsComponent()" [ngClass]="(showAppSettingsComponent)?'active':''">
+            <mat-icon>settings</mat-icon> <span class="nav-caption">App</span>
+          </a>
+          <a mat-list-item (click)="displayFavouritesSettingsComponent()" [ngClass]="(showFavouritesSettingsComponent)?'active':''">
+            <mat-icon>star</mat-icon><span class="nav-caption">Favourites </span>
+          </a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content class="user-settings-sidenav-content">
+        <div *ngIf="showProfileComponent">
+          <div class="settings-container profile-settings-container">
+            <div class="settings-header-container">
+              <div class="inner mb0 pb0">
+                <h6 class="page-title ">User settings</h6>
+                <h2 class="page-title ">Profile Settings</h2>
               </div>
-              <div _ngcontent-mca-c245="" class="profile-container">
-                <div _ngcontent-mca-c245="" class="inner">
-                  <mat-card _ngcontent-mca-c245="" class="mat-card mat-focus-indicator">
-                    <form _ngcontent-mca-c245="" novalidate="" ng-reflect-form="[object Object]"
-                      class="ng-untouched ng-pristine ng-valid">
-                      <div _ngcontent-mca-c245="" class="inner">
-                        <p _ngcontent-mca-c245=""><span _ngcontent-mca-c245="" class="custom-label">Username: </span><br
-                            _ngcontent-mca-c245=""><span _ngcontent-mca-c245="">FakeFirstname FakeLastname</span></p>
-                        <p _ngcontent-mca-c245=""><span _ngcontent-mca-c245="" class="custom-label">Roles: </span><br
-                            _ngcontent-mca-c245=""><span _ngcontent-mca-c245="" class="ng-star-inserted">- Admin</span>
-                          <!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><br _ngcontent-mca-c245=""><span _ngcontent-mca-c245="" class="ng-star-inserted">- Decision Owner</span>
-                          <!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><br _ngcontent-mca-c245=""><span _ngcontent-mca-c245="" class="ng-star-inserted">- Modeler</span>
-                          <!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><br _ngcontent-mca-c245=""><span _ngcontent-mca-c245="" class="ng-star-inserted">- Tech Admin</span>
-                          <!--bindings={
-  "ng-reflect-ng-if": "true"
-}--><br _ngcontent-mca-c245="">
-                          <!--bindings={
-  "ng-reflect-ng-if": "false"
-}--><br _ngcontent-mca-c245=""></p>
-                      </div>
-                    </form>
-                  </mat-card>
-                </div>
+            </div>
+            <div class="profile-container">
+              <div class="inner">
+                <mat-card>
+                  <form [formGroup]="profileSettingsForm">
+                    <div class="inner">
+                      <p>
+                        <span class="custom-label">Username:
+                        </span><br>
+                        <span>{{userName}}</span>
+                      </p>
+                      <p>
+                        <span class="custom-label">Roles:
+                        </span><br>
+                        <span *ngIf="admin!=''">- {{admin}}</span><br>
+                        <span *ngIf="decisionOwner!=''">- {{decisionOwner}}</span><br>
+                        <span *ngIf="modeler!=''">- {{modeler}}</span><br>
+                        <span *ngIf="techAdmin!=''">- {{techAdmin}}</span><br>
+                        <span *ngIf="userRole!=''">- {{userRole}}</span><br>
+                      </p>
+                    </div>
+                  </form>
+                </mat-card>
               </div>
             </div>
           </div>
-          <!--bindings={
-  "ng-reflect-ng-if": "true"
-}-->
-          <!--bindings={
-  "ng-reflect-ng-if": "false"
-}-->
-          <!--bindings={
-  "ng-reflect-ng-if": "false"
-}-->
-        </mat-sidenav-content>
-        <!--bindings={
-  "ng-reflect-ng-if": "false"
-}-->
-      </mat-sidenav-container>
-    </div>
+
+        </div>
+        <div *ngIf="showAppSettingsComponent">
+          <div class="settings-container app-settings-container">
+            <div class="settings-header-container">
+              <div class="inner mb0 pb0">
+                <h6 class="page-title ">User settings</h6>
+                <h2 class="page-title ">App Settings</h2>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="app-container">
+              <div class="inner">
+                <mat-card>
+                  <form [formGroup]="appSettingsForm">
+                    <div class="inner">
+                      <p>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Theme</mat-label>
+                          <mat-select value="WTS" formControlName="appTheme" (selectionChange)="changeTheme($event.value)">
+                            <mat-option value="light-theme">
+                              WTS
+                            </mat-option>
+                            <mat-option value="daimler-theme">
+                              Daimler
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </p>
+                      <p>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Mode</mat-label>
+                          <mat-select value="Light" formControlName="appMode" (selectionChange)="changeMode($event.value)">
+                            <mat-option value="light-theme">
+                              Light
+                            </mat-option>
+                            <mat-option value="dark-theme">
+                              Dark
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </p>
+                      <p>
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Language</mat-label>
+                          <mat-select value="en" formControlName="appLanguage" (selectionChange)="setLanguage($event.value)">
+                            <mat-option value="en">
+                              English
+                            </mat-option>
+                            <mat-option value="ge">
+                              German
+                            </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                      </p>
+                    </div>
+                  </form>
+                </mat-card>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div *ngIf="showFavouritesSettingsComponent">
+          <div class="settings-container favourites-settings-container">
+            <div class="settings-header-container">
+              <div class="box-9">
+                <div class="inner">
+                  <h6 class="page-title ">User settings</h6>
+                  <h2 class="page-title ">Favourites Settings</h2>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="favourites-container">
+              <!--loading spinner-->
+              <ng-template #loadingSpinnerStarredDecisions>
+                <div class="spinner-wrapper decisions-spinner">
+                  <mat-spinner></mat-spinner>
+                </div>
+              </ng-template>
+              <!-- / loading spinner-->
+              <div class="list-wrapper" *ngIf="starredDecisions as decisions; else loadingSpinnerStarredDecisions">
+                <mat-list-item class="list-item" *ngFor="let decision of starredDecisions">
+                  <!--card item-->
+                  <mat-card class="list-card" style="cursor: default;">
+                    <div class="box-12">
+                      <div class="box-9 item-name">
+                        <div class="inner">
+                          <div *ngIf="decision.name; else nbspDiv">{{ decision.name }}</div>
+                          <ng-template #nbspDiv>
+                            &nbsp;
+                          </ng-template>
+                        </div>
+                      </div>
+                      <div class="box-1 item-details report-item-action" style="text-align: right;cursor: pointer;">
+                        <div (click)="removeAsFavourite(decision.key)">
+                          <mat-icon class="item-actions-icon" aria-hidden="false" aria-label="Set as favourtie" color="primary"
+                            matTooltip="Remove Favourite" style="font-size: 25px;
+                            line-height: 15px;
+                            margin-right: 16px;">remove_circle_outline
+                          </mat-icon>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </mat-card>
+                  <!-- / card item-->
+                  <div class="clearfix"></div>
+                </mat-list-item>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
   </div>
 </div>

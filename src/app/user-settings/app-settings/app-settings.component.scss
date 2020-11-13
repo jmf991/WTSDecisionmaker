@@ -1,0 +1,14 @@
+@import '../user-settings.component.scss';
+.custom-label {
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 11px;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+::ng-deep .dark-theme .custom-label {
+  color: hsla(0, 0%, 100%, 0.7) !important;
+}
+
+::ng-deep .daimler-theme.dark-theme .custom-label {
+  color: #ffffff !important;
+}

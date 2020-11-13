@@ -1,0 +1,32 @@
+<div class="settings-container profile-settings-container">
+  <div class="settings-header-container">
+    <div class="inner mb0 pb0">
+      <h6 class="page-title ">User settings</h6>
+      <h2 class="page-title ">Profile Settings</h2>
+    </div>
+  </div>
+  <div class="profile-container">
+    <div class="inner">
+      <mat-card>
+        <form [formGroup]="profileSettingsForm">
+          <div class="inner">
+            <p>
+              <span class="custom-label">Username:
+              </span><br>
+              <span>{{userName}}</span>
+            </p>
+            <p>
+              <span class="custom-label">Roles:
+              </span><br>
+              <span *ngIf="admin!=''">- {{admin}}</span><br>
+              <span *ngIf="decisionOwner!=''">- {{decisionOwner}}</span><br>
+              <span *ngIf="modeler!=''">- {{modeler}}</span><br>
+              <span *ngIf="techAdmin!=''">- {{techAdmin}}</span><br>
+              <span *ngIf="userRole!=''">- {{userRole}}</span><br>
+            </p>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

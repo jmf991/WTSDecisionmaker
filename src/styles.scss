@@ -1,38 +1,6 @@
-@import "assets/styles/main.scss";
-@import "~@angular/material/theming";
+@import 'assets/styles/main.scss';
+@import '~@angular/material/theming';
 @include mat-core();
-// $md-mcgpalette0: (
-//   50: #eaeced,
-//   100: #cbced2,
-//   200: #a8aeb4,
-//   300: #858e96,
-//   400: #6b7580,
-//   500: #515d69,
-//   600: #4a5561,
-//   700: #404b56,
-//   800: #37414c,
-//   900: #27303b,
-//   A100: #86bcff,
-//   A200: #53a0ff,
-//   A400: #2083ff,
-//   A700: #0775ff,
-//   contrast: (
-//     50: #000000,
-//     100: #000000,
-//     200: #000000,
-//     300: #000000,
-//     400: #ffffff,
-//     500: #ffffff,
-//     600: #ffffff,
-//     700: #ffffff,
-//     800: #ffffff,
-//     900: #ffffff,
-//     A100: #000000,
-//     A200: #000000,
-//     A400: #ffffff,
-//     A700: #ffffff
-//   )
-// );
 
 $md-wtsprimary: (
   50: #f9e0e7,
@@ -63,8 +31,8 @@ $md-wtsprimary: (
     A100: #000000,
     A200: #000000,
     A400: #000000,
-    A700: #000000,
-  ),
+    A700: #000000
+  )
 );
 $md-wtsaccent: (
   50: #e0edf1,
@@ -95,43 +63,110 @@ $md-wtsaccent: (
     A100: #000000,
     A200: #000000,
     A400: #000000,
-    A700: #ffffff,
-  ),
-);
-
-$md-mcgpalette0: (
-  50 : #dfe3e7,
-  100 : #b4bdc6,
-  200 : #94a1ad,
-  300 : #6d7e8e,
-  400 : #5f6e7c,
-  500 : #525f6b,
-  600 : #45505a,
-  700 : #374048,
-  800 : #2a3137,
-  900 : #1d2126,
-  A100 : #d0dfec,
-  A200 : #87accf,
-  A400 : #56799a,
-  A700 : #586c7f,
-  contrast: (
-      50 : #000000,
-      100 : #000000,
-      200 : #000000,
-      300 : #ffffff,
-      400 : #ffffff,
-      500 : #ffffff,
-      600 : #ffffff,
-      700 : #ffffff,
-      800 : #ffffff,
-      900 : #ffffff,
-      A100 : #000000,
-      A200 : #000000,
-      A400 : #ffffff,
-      A700 : #ffffff,
+    A700: #ffffff
   )
 );
 
+$md-mcgpalette0: (
+  50: #dfe3e7,
+  100: #b4bdc6,
+  200: #94a1ad,
+  300: #6d7e8e,
+  400: #5f6e7c,
+  500: #525f6b,
+  600: #45505a,
+  700: #374048,
+  800: #2a3137,
+  900: #1d2126,
+  A100: #d0dfec,
+  A200: #87accf,
+  A400: #56799a,
+  A700: #586c7f,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+////
+
+$md-daimlerprimary: (
+  50: #9deeff,
+  100: #51e1ff,
+  200: #19d8ff,
+  300: #00add0,
+  400: #0093b2,
+  500: #007a93,
+  600: #006174,
+  700: #004756,
+  800: #002e37,
+  900: #001419,
+  A100: #93edff,
+  A200: #2ddbff,
+  A400: #00a4c6,
+  A700: #008fac,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+$md-daimleraccent: (
+  50: #ffffff,
+  100: #fcfcfc,
+  200: #e0e0e0,
+  300: #bdbdbd,
+  400: #adadad,
+  500: #9e9e9e,
+  600: #8f8f8f,
+  700: #7f7f7f,
+  800: #707070,
+  900: #616161,
+  A100: #ffffff,
+  A200: #f1e4e4,
+  A400: #c2adad,
+  A700: #afa7a7,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+////
 $my-app-primary: mat-palette($md-wtsprimary);
 $my-app-accent: mat-palette($md-mcgpalette0, 500, 900, A100);
 $my-app-warn: mat-palette($mat-deep-orange);
@@ -154,6 +189,26 @@ body {
   @include angular-material-theme($dark-theme);
 }
 
+//daimler-theme
+.daimler-theme {
+  color: $light-primary-text;
+  $daimler-primary: mat-palette($md-daimlerprimary);
+  $daimler-accent: mat-palette($md-daimleraccent);
+  $daimler-warn: mat-palette($mat-red);
+  $daimler-theme: mat-light-theme(
+    $daimler-primary,
+    $daimler-accent,
+    $daimler-warn
+  );
+
+  @include angular-material-theme($daimler-theme);
+}
+
+html.daimler-theme.dark-theme,
+body.daimler-theme.dark-theme {
+  background: #222222 !important;
+}
+
 html.dark-theme,
 body.dark-theme {
   background: #303030;
@@ -171,5 +226,45 @@ body.dark-theme {
 .dark-theme p,
 .dark-theme .p,
 .dark-theme body {
-  color: #ffff;
+  color: rgb(255, 255, 255);
+}
+
+.daimler-theme.dark-theme .mat-expansion-panel {
+  background: #424242;
+}
+
+.daimler-theme.dark-theme .mat-card,
+.daimler-theme.dark-theme .mat-select-arrow,
+.daimler-theme.dark-theme .mat-select-value,
+.daimler-theme.dark-theme .mat-option,
+.daimler-theme.dark-theme .mat-list-base .mat-list-item,
+.daimler-theme.dark-theme .mat-expansion-panel-header-description,
+.daimler-theme.dark-theme .mat-expansion-indicator::after,
+.daimler-theme.dark-theme .mat-expansion-panel-header-title {
+  color: white;
+}
+.daimler-theme.dark-theme .username {
+  color: #000000;
+}
+.daimler-theme.dark-theme .mat-select-panel {
+  background: #424242;
+}
+.daimler-theme.dark-theme .mat-option.mat-selected {
+  color: $blue-primary-color;
+}
+
+.daimler-theme.dark-theme .mat-cell,
+.daimler-theme.dark-theme .mat-footer-cell,
+.daimler-theme.dark-theme .mat-form-field-label,
+.daimler-theme.dark-theme .mat-form-field.mat-focused .mat-form-field-label {
+  color: white !important;
+  border-bottom: white !important;
+}
+
+.daimler-theme.dark-theme .mat-table {
+  background: #424242;
+}
+
+.daimler-theme.dark-theme .mat-dialog-container {
+  background: #424242;
 }
